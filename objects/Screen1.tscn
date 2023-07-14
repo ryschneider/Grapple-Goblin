@@ -1,8 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhsjfpa1k5plq"]
+[gd_scene load_steps=5 format=3 uid="uid://bhsjfpa1k5plq"]
 
+[ext_resource type="Texture2D" uid="uid://hlxvxsygqxx6" path="res://assets/Level/Tiles/firetilesv1-Sheet.png" id="2_knw50"]
 [ext_resource type="PackedScene" uid="uid://cdrym56evtx8a" path="res://objects/Player.tscn" id="2_sh5py"]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qwmsy"]
+texture = ExtResource("2_knw50")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSet" id="TileSet_af05n"]
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
+sources/0 = SubResource("TileSetAtlasSource_qwmsy")
 
 [node name="Screen1" type="Node2D"]
 

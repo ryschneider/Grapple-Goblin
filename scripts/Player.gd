@@ -18,9 +18,6 @@ var momentumVel = Vector2()
 
 @onready var Hook = get_node("../Hook")
 
-const CROUCH_FRAMES = 6
-var crouchFrame = 0
-var jumping = false
 func _physics_process(delta):
 	if not is_on_floor():
 		momentumVel.y += GRAVITY * delta
@@ -32,24 +29,14 @@ func _physics_process(delta):
 	elif Input.is_action_just_released("grapple"):
 		Hook.destroy()
 
-	if Input.is_action_just_pressed("jump") and not jumping:
+	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
-			jumping = true
-			crouchFrame = 0
+			momentumVel.y += FLOOR_JUMP
 		elif Hook.isHooked:
 			momentumVel.y += GRAPPLE_JUMP
 			Hook.destroy()
 
 	var direction = Input.get_axis("move_left", "move_right")
-	
-#	if direction != 0:
-#		if is_on_floor() and (not Input.is_action_just_pressed("jump")):
-#			$AnimatedSprite2D.play("Run")
-#	else:
-#		if is_on_floor():
-#			$AnimatedSprite2D.play("Idle")
-#	if Input.is_action_just_pressed("jump"):
-#		$AnimatedSprite2D.frame = 0
 	
 	# movement
 	if direction != 0:
@@ -80,12 +67,6 @@ func _physics_process(delta):
 		else:
 			momentumVel.x += dx
 	
-#		var velChange = momentumVel.x
-#		momentumVel.x = lerp(momentumVel.x, 0.0, friction)
-#		velChange = momentumVel.x - velChange
-#		if velChange < 1:
-#			moveVel.x = lerp(moveVel.x, 0.0, friction)
-	
 	moveVel = Hook.apply(moveVel)
 	momentumVel = Hook.apply(momentumVel)
 	if is_on_ceiling() or (is_on_floor() and not Input.is_action_just_pressed("jump")):
@@ -93,22 +74,12 @@ func _physics_process(delta):
 		momentumVel.y = 0
 	
 	# animation stuff
-	if jumping:
+	if not is_on_floor():
 		$AnimatedSprite2D.play("Jump")
-		if crouchFrame >= CROUCH_FRAMES:
-			momentumVel.y += FLOOR_JUMP
-			$AnimatedSprite2D.frame = 1
-			jumping = false
-		else:
-			$AnimatedSprite2D.frame = 0
-			crouchFrame += 1
+	elif direction != 0:
+		$AnimatedSprite2D.play("Run")
 	else:
-		if not is_on_floor():
-			$AnimatedSprite2D.play("Jump")
-		elif direction != 0:
-			$AnimatedSprite2D.play("Run")
-		else:
-			$AnimatedSprite2D.play("Idle")
+		$AnimatedSprite2D.play("Idle")
 	
 	# combine velocities
 	var moveDir = moveVel.normalized()
