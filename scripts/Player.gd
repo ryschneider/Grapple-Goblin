@@ -24,6 +24,7 @@ func die():
 #	position = Vector2()
 	get_tree().reload_current_scene()
 
+var direction = 0
 func _physics_process(delta):
 	if not is_on_floor():
 		momentumVel.y += GRAVITY * delta
@@ -42,7 +43,20 @@ func _physics_process(delta):
 			momentumVel.y += GRAPPLE_JUMP
 			Hook.destroy()
 
-	var direction = Input.get_axis("move_left", "move_right")
+#	var direction = Input.get_axis("move_left", "move_right")
+	# handle inputs with priority for movement direction just pressed
+	if Input.is_action_just_pressed("move_left") and Input.is_action_just_pressed("move_right"):
+		direction = 0
+	elif Input.is_action_just_pressed("move_left"):
+		direction = -1
+	elif Input.is_action_just_pressed("move_right"):
+		direction = 1
+	elif Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
+		direction = -1
+	elif Input.is_action_pressed("move_right") and not Input.is_action_pressed("move_left"):
+		direction = 1
+	elif not Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
+		direction = 0
 	
 	# movement
 	if direction != 0:
