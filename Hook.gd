@@ -40,6 +40,7 @@ func _physics_process(dt):
 			hook()
 	if isHooked:
 		var rope = position - Player.position
-		if rope.length() > ropeLength:
+		if rope.length() >= ropeLength:
 			var ropeDir = rope.normalized()
 			Player.position += ropeDir * (rope.length() - ropeLength)
+			Player.velocity -= ropeDir * Player.velocity.dot(ropeDir)
