@@ -13,6 +13,8 @@ const AIR_FRICTION = 0.05
 
 var GRAVITY = 980
 
+const MAX_CLIP = 10
+
 var moveVel = Vector2()
 var momentumVel = Vector2()
 
@@ -108,7 +110,6 @@ func _physics_process(delta):
 	elif velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
 
-const MAX_CLIP = 50
 func _on_area_2d_body_entered(body):
 	var pos = position
 	var clip = 5
