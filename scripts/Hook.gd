@@ -1,7 +1,8 @@
 extends RigidBody2D
 
 const SPEED = 2000
-const MIN_LENGTH = 10
+const MIN_LENGTH = 50
+const MAX_LENGTH = 500
 
 var direction = Vector2()
 
@@ -25,6 +26,13 @@ func hook():
 	var rope = position - Player.position
 	ropeLength = rope.length()
 
+var oldPlayerPos = Vector2()
+func shootHook(): # called from Player.gd
+	direction = (get_global_mouse_position() - Player.position).normalized()
+	position = Player.position + direction # to fix rotation setting in physics
+	oldPlayerPos = Player.position
+	show()
+
 func apply(vel): # apply grapple physics to velocity
 	if isHooked:
 		var rope = position - Player.position
@@ -33,11 +41,21 @@ func apply(vel): # apply grapple physics to velocity
 			vel -= ropeDir * vel.dot(ropeDir)
 	return vel
 
+func _process(dt):
+	rotation = (position - Player.position).angle()
+
 func _physics_process(dt):
 	if is_visible() && !isHooked:
+		if (position - Player.position).length() > MAX_LENGTH:
+			destroy()
+		
 		var collision = move_and_collide(direction * SPEED * dt)
 		if collision:
-			hook()
+			if (position - Player.position).length() >= MIN_LENGTH:
+				hook()
+			else:
+				destroy()
+		
 	if isHooked:
 		var rope = position - Player.position
 		if rope.length() >= ropeLength:

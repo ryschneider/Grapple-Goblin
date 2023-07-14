@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhsjfpa1k5plq"]
+
+[ext_resource type="PackedScene" uid="uid://cdrym56evtx8a" path="res://objects/Player.tscn" id="2_sh5py"]
+
+[sub_resource type="TileSet" id="TileSet_af05n"]
+
+[node name="Screen1" type="Node2D"]
+
+[node name="PlayerNode" parent="." instance=ExtResource("2_sh5py")]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_af05n")
+format = 2

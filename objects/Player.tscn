@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_xdg55"]
 [ext_resource type="Texture2D" uid="uid://contfojraosrl" path="res://assets/Kings and Pigs/Sprites/01-King Human/Idle (78x58).png" id="2_qiqul"]
 [ext_resource type="Script" path="res://scripts/Hook.gd" id="3_esycl"]
-[ext_resource type="Texture2D" uid="uid://bx0jktpxsql2" path="res://assets/hook.png" id="4_tkh7p"]
+[ext_resource type="Texture2D" uid="uid://bvm52vl45446i" path="res://assets/Level/Goblin/hook.png" id="4_4c58g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cy1of"]
 size = Vector2(37, 26)
@@ -11,7 +11,7 @@ size = Vector2(37, 26)
 [sub_resource type="CircleShape2D" id="CircleShape2D_kfyvr"]
 radius = 3.0
 
-[node name="Node2D" type="Node2D"]
+[node name="PlayerNode" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("1_xdg55")
@@ -37,9 +37,12 @@ script = ExtResource("3_esycl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Hook"]
 texture_filter = 1
-position = Vector2(2, -1)
+position = Vector2(0.5, 1)
+rotation = 0.820305
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_tkh7p")
+texture = ExtResource("4_4c58g")
+region_enabled = true
+region_rect = Rect2(-0.709, 6.325, 25, 25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hook"]
 shape = SubResource("CircleShape2D_kfyvr")
