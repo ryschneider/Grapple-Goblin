@@ -18,7 +18,7 @@ var momentumVel = Vector2()
 
 @onready var Hook = get_node("../Hook")
 
-const CROUCH_FRAMES = 2
+const CROUCH_FRAMES = 6
 var crouchFrame = 0
 var jumping = false
 func _physics_process(delta):
@@ -41,27 +41,6 @@ func _physics_process(delta):
 			Hook.destroy()
 
 	var direction = Input.get_axis("move_left", "move_right")
-	
-	print(jumping)
-	print(crouchFrame)
-	print()
-	
-	# animation stuff
-	if jumping:
-		$AnimatedSprite2D.play("Jump")
-		if crouchFrame == CROUCH_FRAMES:
-			momentumVel.y += FLOOR_JUMP
-			jumping = false
-		else:
-			$AnimatedSprite2D.frame = 0
-			crouchFrame += 1
-	
-	if not is_on_floor():
-		$AnimatedSprite2D.play("Jump")
-	elif direction != 0:
-		$AnimatedSprite2D.play("Run")
-	else:
-		$AnimatedSprite2D.play("Idle")
 	
 #	if direction != 0:
 #		if is_on_floor() and (not Input.is_action_just_pressed("jump")):
@@ -113,23 +92,39 @@ func _physics_process(delta):
 		moveVel.y = 0
 		momentumVel.y = 0
 	
+	# animation stuff
+	if jumping:
+		$AnimatedSprite2D.play("Jump")
+		if crouchFrame >= CROUCH_FRAMES:
+			momentumVel.y += FLOOR_JUMP
+			$AnimatedSprite2D.frame = 1
+			jumping = false
+		else:
+			$AnimatedSprite2D.frame = 0
+			crouchFrame += 1
+	else:
+		if not is_on_floor():
+			$AnimatedSprite2D.play("Jump")
+		elif direction != 0:
+			$AnimatedSprite2D.play("Run")
+		else:
+			$AnimatedSprite2D.play("Idle")
+	
+	# combine velocities
 	var moveDir = moveVel.normalized()
 	var momentumDir = momentumVel.normalized()
 	
 	velocity = moveVel + momentumVel
 	move_and_slide()
 	
-	# flips sprite
-	if velocity.x < 0:
-		$AnimatedSprite2D.flip_h = true
-	elif velocity.x > 0:
-		$AnimatedSprite2D.flip_h = false
-	
+	# seperate velocities
 	if moveVel.length() > velocity.length():
 		moveVel *= velocity.length() / moveVel.length()
 #	moveVel = moveDir * min(TOP_SPEED, velocity.dot(moveDir))
 	momentumDir = velocity - moveVel
 	
-#	print(moveVel)
-#	print(momentumDir)
-#	print()
+	# flips sprite
+	if velocity.x < 0:
+		$AnimatedSprite2D.flip_h = true
+	elif velocity.x > 0:
+		$AnimatedSprite2D.flip_h = false

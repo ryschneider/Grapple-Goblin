@@ -70,10 +70,11 @@ position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_cy1of")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_18tvg")
 animation = &"Jump"
 autoplay = "Jump"
-frame_progress = 0.167443
+frame_progress = 0.630887
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
