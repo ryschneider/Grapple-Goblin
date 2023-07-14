@@ -18,6 +18,10 @@ var momentumVel = Vector2()
 
 @onready var Hook = get_node("../Hook")
 
+func die():
+#	position = Vector2()
+	get_tree().reload_current_scene()
+
 func _physics_process(delta):
 	if not is_on_floor():
 		momentumVel.y += GRAVITY * delta
@@ -69,7 +73,10 @@ func _physics_process(delta):
 	
 	moveVel = Hook.apply(moveVel)
 	momentumVel = Hook.apply(momentumVel)
-	if is_on_ceiling() or (is_on_floor() and not Input.is_action_just_pressed("jump")):
+	if is_on_ceiling() and moveVel.y + momentumVel.y < 0:
+		moveVel.y = 0
+		momentumVel.y = 0
+	if is_on_floor() and moveVel.y + momentumVel.y > 0:
 		moveVel.y = 0
 		momentumVel.y = 0
 	
@@ -100,3 +107,25 @@ func _physics_process(delta):
 		$AnimatedSprite2D.flip_h = true
 	elif velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
+
+const MAX_CLIP = 50
+func _on_area_2d_body_entered(body):
+	var pos = position
+	var clip = 5
+	
+	var c = 0
+	while clip <= MAX_CLIP:
+		position = pos - Vector2(0, clip)
+		if not move_and_collide(Vector2(), true): # try clipping up
+			print(c)
+			return
+		
+		position = pos + Vector2(0, clip)
+		if not move_and_collide(Vector2(), true): # try clipping down
+			print(c)
+			return
+		
+		clip *= 1.5
+		c += 1
+	
+	die() # failed to clip out
