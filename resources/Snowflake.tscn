@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8ofc0447f6i7"]
+
+[ext_resource type="Texture2D" uid="uid://cskjqts53jd05" path="res://assets/Level/Other/snowparticle.png" id="1_7ig2t"]
+[ext_resource type="Material" uid="uid://iftqnhg2f1f4" path="res://resources/TileParticleShader.tres" id="1_dgda1"]
+[ext_resource type="Script" path="res://scripts/Snowflake.gd" id="2_ni6cf"]
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+emitting = false
+amount = 2
+process_material = ExtResource("1_dgda1")
+texture = ExtResource("1_7ig2t")
+lifetime = 0.7
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 60
+visibility_rect = Rect2(-5000, -5000, 10000, 10000)
+script = ExtResource("2_ni6cf")

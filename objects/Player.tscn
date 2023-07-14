@@ -64,7 +64,7 @@ animations = [{
 [node name="PlayerNode" type="Node2D"]
 
 [node name="HookLine" type="Line2D" parent="."]
-width = 0.3
+width = 2.0
 default_color = Color(0.383138, 0.277932, 0.12305, 1)
 script = ExtResource("1_c28j3")
 
@@ -76,7 +76,7 @@ script = ExtResource("3_esycl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Hook"]
 texture_filter = 1
-position = Vector2(0.5, 1)
+position = Vector2(0, 0.27)
 rotation = 0.820305
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_4c58g")

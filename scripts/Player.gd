@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const FLOOR_JUMP = -400
+const FLOOR_JUMP = -420
 const GRAPPLE_JUMP = -300
 
 const TOP_SPEED = 300
