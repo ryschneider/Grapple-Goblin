@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://bhsjfpa1k5plq"]
+
+[ext_resource type="PackedScene" uid="uid://cdrym56evtx8a" path="res://objects/Player.tscn" id="2_sh5py"]
+[ext_resource type="Texture2D" uid="uid://d2iuqqdqpdrau" path="res://assets/Level/Tiles/icetilesv1-Sheet.png" id="3_dl7yr"]
+[ext_resource type="Texture2D" uid="uid://c6qc57nmp1muj" path="res://assets/Level/Tiles/firetilesv2.png" id="3_ujrih"]
+[ext_resource type="Script" path="res://scripts/SwitchMap.gd" id="4_g66pe"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8b0a"]
+resource_name = "Fire"
+texture = ExtResource("3_ujrih")
+0:0/next_alternative_id = 5
+0:0/0 = 0
+1:0/next_alternative_id = 2
+1:0/0 = 0
+2:0/next_alternative_id = 2
+2:0/0 = 0
+0:1/next_alternative_id = 2
+0:1/0 = 0
+1:1/next_alternative_id = 2
+1:1/0 = 0
+2:1/next_alternative_id = 2
+2:1/0 = 0
+0:2/next_alternative_id = 2
+0:2/0 = 0
+1:2/next_alternative_id = 2
+1:2/0 = 0
+2:2/next_alternative_id = 2
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58n8x"]
+resource_name = "Ice"
+texture = ExtResource("3_dl7yr")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_f5kap"]
+sources/0 = SubResource("TileSetAtlasSource_w8b0a")
+sources/1 = SubResource("TileSetAtlasSource_58n8x")
+
+[node name="Screen1" type="Node2D"]
+
+[node name="PlayerNode" parent="." instance=ExtResource("2_sh5py")]
+
+[node name="SwitchMap" type="TileMap" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_f5kap")
+format = 2
+layer_0/tile_data = PackedInt32Array(131070, 65537, 0, 131071, 65537, 0, 65536, 65537, 0, 65537, 65537, 0)
+script = ExtResource("4_g66pe")

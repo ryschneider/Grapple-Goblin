@@ -75,7 +75,8 @@ func _physics_process(delta):
 	
 	# animation stuff
 	if not is_on_floor():
-		$AnimatedSprite2D.play("Jump")
+		if $AnimatedSprite2D.animation != "Jump":
+			$AnimatedSprite2D.play("Jump")
 	elif direction != 0:
 		$AnimatedSprite2D.play("Run")
 	else:

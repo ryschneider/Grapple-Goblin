@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://cdrym56evtx8a"]
+[gd_scene load_steps=13 format=3 uid="uid://cdrym56evtx8a"]
 
+[ext_resource type="Script" path="res://scripts/HookLine.gd" id="1_c28j3"]
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_xdg55"]
 [ext_resource type="Texture2D" uid="uid://gi4lvs8nagil" path="res://assets/Level/Goblin/Goblin-idle-right.png" id="2_hog5s"]
 [ext_resource type="Texture2D" uid="uid://domjlqbha65q3" path="res://assets/Level/Goblin/Goblin-crouch.png" id="3_dhs8w"]
@@ -8,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bl4ofskdlqj3e" path="res://assets/Level/Goblin/Goblin-jump.png" id="4_77o05"]
 [ext_resource type="Texture2D" uid="uid://cii2o1pmagk4h" path="res://assets/Level/Goblin/Goblin-run-leftarm.png" id="4_pvpct"]
 [ext_resource type="Texture2D" uid="uid://btj00v2hjiigj" path="res://assets/Level/Goblin/Goblin-run-rightarm.png" id="5_q8sxy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kfyvr"]
+radius = 3.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cy1of"]
 size = Vector2(37, 57)
@@ -38,7 +42,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_77o05")
 }],
-"loop": true,
+"loop": false,
 "name": &"Jump",
 "speed": 5.0
 }, {
@@ -57,27 +61,12 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_kfyvr"]
-radius = 3.0
-
 [node name="PlayerNode" type="Node2D"]
 
-[node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("1_xdg55")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-1.5, -1.5)
-shape = SubResource("RectangleShape2D_cy1of")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_18tvg")
-animation = &"Jump"
-autoplay = "Jump"
-frame_progress = 0.649549
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2, 2)
+[node name="HookLine" type="Line2D" parent="."]
+width = 0.3
+default_color = Color(0.383138, 0.277932, 0.12305, 1)
+script = ExtResource("1_c28j3")
 
 [node name="Hook" type="RigidBody2D" parent="."]
 collision_layer = 2
@@ -96,3 +85,18 @@ region_rect = Rect2(-0.709, 6.325, 25, 25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hook"]
 shape = SubResource("CircleShape2D_kfyvr")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_xdg55")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-1.5, -1.5)
+shape = SubResource("RectangleShape2D_cy1of")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_18tvg")
+animation = &"Jump"
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
