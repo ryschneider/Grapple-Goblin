@@ -38,8 +38,10 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
+			$AudioStreamPlayer2D.play()
 			momentumVel.y += FLOOR_JUMP
 		elif Hook.isHooked:
+			$AudioStreamPlayer2D.play()
 			momentumVel.y += GRAPPLE_JUMP
 			Hook.destroy()
 

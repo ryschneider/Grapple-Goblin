@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cdrym56evtx8a"]
+[gd_scene load_steps=14 format=3 uid="uid://cdrym56evtx8a"]
 
 [ext_resource type="Script" path="res://scripts/HookLine.gd" id="1_c28j3"]
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_xdg55"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bl4ofskdlqj3e" path="res://assets/Level/Goblin/Goblin-jump.png" id="4_77o05"]
 [ext_resource type="Texture2D" uid="uid://cii2o1pmagk4h" path="res://assets/Level/Goblin/Goblin-run-leftarm.png" id="4_pvpct"]
 [ext_resource type="Texture2D" uid="uid://btj00v2hjiigj" path="res://assets/Level/Goblin/Goblin-run-rightarm.png" id="5_q8sxy"]
+[ext_resource type="AudioStream" uid="uid://cb2ol5n4fc13v" path="res://assets/SFX/jump.wav" id="10_w7btw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kfyvr"]
 radius = 3.0
@@ -107,5 +108,8 @@ collision_layer = 0
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/Area2D"]
 position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_cy1of")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("10_w7btw")
 
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]
