@@ -1,12 +1,61 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdrym56evtx8a"]
+[gd_scene load_steps=12 format=3 uid="uid://cdrym56evtx8a"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_xdg55"]
-[ext_resource type="Texture2D" uid="uid://contfojraosrl" path="res://assets/Kings and Pigs/Sprites/01-King Human/Idle (78x58).png" id="2_qiqul"]
+[ext_resource type="Texture2D" uid="uid://gi4lvs8nagil" path="res://assets/Level/Goblin/Goblin-idle-right.png" id="2_hog5s"]
+[ext_resource type="Texture2D" uid="uid://domjlqbha65q3" path="res://assets/Level/Goblin/Goblin-crouch.png" id="3_dhs8w"]
 [ext_resource type="Script" path="res://scripts/Hook.gd" id="3_esycl"]
 [ext_resource type="Texture2D" uid="uid://bvm52vl45446i" path="res://assets/Level/Goblin/hook.png" id="4_4c58g"]
+[ext_resource type="Texture2D" uid="uid://bl4ofskdlqj3e" path="res://assets/Level/Goblin/Goblin-jump.png" id="4_77o05"]
+[ext_resource type="Texture2D" uid="uid://cii2o1pmagk4h" path="res://assets/Level/Goblin/Goblin-run-leftarm.png" id="4_pvpct"]
+[ext_resource type="Texture2D" uid="uid://btj00v2hjiigj" path="res://assets/Level/Goblin/Goblin-run-rightarm.png" id="5_q8sxy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cy1of"]
-size = Vector2(37, 26)
+size = Vector2(37, 57)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_18tvg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hog5s")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dhs8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_77o05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_77o05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_77o05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_77o05")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_pvpct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hog5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q8sxy")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kfyvr"]
 radius = 3.0
@@ -17,14 +66,14 @@ radius = 3.0
 script = ExtResource("1_xdg55")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-1.5, 2)
+position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_cy1of")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture_filter = 1
-texture = ExtResource("2_qiqul")
-region_enabled = true
-region_rect = Rect2(0, 0, 58, 58)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_18tvg")
+animation = &"Jump"
+autoplay = "Jump"
+frame_progress = 0.167443
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)

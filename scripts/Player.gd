@@ -18,6 +18,9 @@ var momentumVel = Vector2()
 
 @onready var Hook = get_node("../Hook")
 
+const CROUCH_FRAMES = 2
+var crouchFrame = 0
+var jumping = false
 func _physics_process(delta):
 	if not is_on_floor():
 		momentumVel.y += GRAVITY * delta
@@ -29,19 +32,47 @@ func _physics_process(delta):
 	elif Input.is_action_just_released("grapple"):
 		Hook.destroy()
 
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and not jumping:
 		if is_on_floor():
-			momentumVel.y += FLOOR_JUMP
+			jumping = true
+			crouchFrame = 0
 		elif Hook.isHooked:
 			momentumVel.y += GRAPPLE_JUMP
 			Hook.destroy()
-		else:
-			print("NOT ON FLOOR")
-			print(moveVel)
-			print(momentumVel)
-			print()
 
 	var direction = Input.get_axis("move_left", "move_right")
+	
+	print(jumping)
+	print(crouchFrame)
+	print()
+	
+	# animation stuff
+	if jumping:
+		$AnimatedSprite2D.play("Jump")
+		if crouchFrame == CROUCH_FRAMES:
+			momentumVel.y += FLOOR_JUMP
+			jumping = false
+		else:
+			$AnimatedSprite2D.frame = 0
+			crouchFrame += 1
+	
+	if not is_on_floor():
+		$AnimatedSprite2D.play("Jump")
+	elif direction != 0:
+		$AnimatedSprite2D.play("Run")
+	else:
+		$AnimatedSprite2D.play("Idle")
+	
+#	if direction != 0:
+#		if is_on_floor() and (not Input.is_action_just_pressed("jump")):
+#			$AnimatedSprite2D.play("Run")
+#	else:
+#		if is_on_floor():
+#			$AnimatedSprite2D.play("Idle")
+#	if Input.is_action_just_pressed("jump"):
+#		$AnimatedSprite2D.frame = 0
+	
+	# movement
 	if direction != 0:
 		# approach direction TOP_SPEED
 		moveVel = lerp(moveVel, direction * Vector2(TOP_SPEED, 0), FLOOR_ACC)
@@ -69,7 +100,7 @@ func _physics_process(delta):
 			momentumVel.x = 0
 		else:
 			momentumVel.x += dx
-		
+	
 #		var velChange = momentumVel.x
 #		momentumVel.x = lerp(momentumVel.x, 0.0, friction)
 #		velChange = momentumVel.x - velChange
@@ -87,6 +118,13 @@ func _physics_process(delta):
 	
 	velocity = moveVel + momentumVel
 	move_and_slide()
+	
+	# flips sprite
+	if velocity.x < 0:
+		$AnimatedSprite2D.flip_h = true
+	elif velocity.x > 0:
+		$AnimatedSprite2D.flip_h = false
+	
 	if moveVel.length() > velocity.length():
 		moveVel *= velocity.length() / moveVel.length()
 #	moveVel = moveDir * min(TOP_SPEED, velocity.dot(moveDir))
