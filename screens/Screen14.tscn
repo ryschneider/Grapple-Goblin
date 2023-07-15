@@ -1,24 +1,43 @@
-[gd_scene load_steps=7 format=3 uid="uid://d6ia5j5qw0u1"]
+[gd_scene load_steps=8 format=3 uid="uid://bshp6on5hf41j"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_17em7"]
 [ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_oixnv"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="3_08k4x"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="4_utw8l"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="5_ge8xp"]
-[ext_resource type="PackedScene" uid="uid://cuo6od7gdkxxs" path="res://objects/Snowball.tscn" id="6_k21uo"]
+[ext_resource type="PackedScene" uid="uid://ddv6mb6emo23k" path="res://objects/Snowball.tscn" id="6_k21uo"]
 
-[node name="Screen14" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1rj5v"]
+size = Vector2(64.5, 440.5)
+
+[node name="Screen" type="Node2D"]
 script = ExtResource("1_17em7")
-staticCamera = true
 playerStart = Vector2(0, 550)
 
 [node name="Camera2D" parent="." instance=ExtResource("2_oixnv")]
-offset = Vector2(0, 300)
-limit_left = -150
-limit_bottom = 350
+limit_left = -140
+limit_bottom = 750
 
 [node name="Background" parent="." instance=ExtResource("3_08k4x")]
-position = Vector2(-481, -125)
+
+[node name="PreviousScreen" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
+position = Vector2(-102.5, 137.5)
+shape = SubResource("RectangleShape2D_1rj5v")
+
+[node name="NextScreen" type="Area2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(4, 4)
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
+position = Vector2(901, 30)
+shape = SubResource("RectangleShape2D_1rj5v")
 
 [node name="ForegroundMap" type="TileMap" parent="."]
 position = Vector2(300, 350)

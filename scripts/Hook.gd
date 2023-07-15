@@ -42,7 +42,7 @@ func apply(vel): # apply grapple physics to velocity
 			vel -= ropeDir * vel.dot(ropeDir)
 	return vel
 
-func _process(dt):
+func _process(_dt):
 	if not isHooked:
 		rotation = (position - Player.position).angle()
 
