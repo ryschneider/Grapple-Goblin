@@ -24,7 +24,7 @@ var momentumVel = Vector2()
 
 @onready var Hook = get_node("../Hook")
 
-const DEATH_TIME = 2
+const DEATH_TIME = 1
 var dead = false
 var deadTime = 0
 func die():
@@ -176,12 +176,10 @@ func _on_area_2d_body_entered(body):
 	while clip <= MAX_CLIP:
 		position = pos - Vector2(0, clip)
 		if not move_and_collide(Vector2(), true): # try clipping up
-			print(c)
 			return
 		
 		position = pos + Vector2(0, clip)
 		if not move_and_collide(Vector2(), true): # try clipping down
-			print(c)
 			return
 		
 		clip *= 1.5
