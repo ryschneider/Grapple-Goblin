@@ -12,10 +12,12 @@ size = Vector2(64.5, 301)
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_pyepu")
 staticCamera = true
+playerStart = Vector2(-140, 0)
 
 [node name="Camera2D" parent="." instance=ExtResource("2_028xp")]
 offset = Vector2(0, -50)
 limit_left = -150
+limit_right = 1450
 
 [node name="Background" parent="." instance=ExtResource("2_d7ms7")]
 position = Vector2(-481, -125)
@@ -40,7 +42,7 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
-position = Vector2(-108, -71)
+position = Vector2(-107.5, -71)
 shape = SubResource("RectangleShape2D_rbl4h")
 
 [node name="NextScreen" type="Area2D" parent="."]
@@ -50,5 +52,5 @@ collision_layer = 32
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
-position = Vector2(394.5, -36)
+position = Vector2(394.75, -36)
 shape = SubResource("RectangleShape2D_rbl4h")
