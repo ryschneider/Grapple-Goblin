@@ -17,8 +17,10 @@ const MAX_CLIP = 10
 
 const JUMP_QUEUE_TIME = 6.0 / 60.0
 
-const HAZARD_LAYER =  0b0100
-const RESTART_LAYER = 0b1000
+const HAZARD_LAYER = 1 << (3 - 1)
+const RESTART_LAYER = 1 << (4 - 1)
+const PREV_LAYER = 1 << (5 - 1)
+const NEXT_LAYER = 1 << (6 - 1)
 
 var moveVel = Vector2()
 var momentumVel = Vector2()
@@ -166,10 +168,19 @@ func _physics_process(delta):
 		$AnimatedSprite2D.flip_h = false
 
 func _on_area_2d_area_entered(area):
+	print(area.collision_layer)
+	print(HAZARD_LAYER)
 	if area.collision_layer & HAZARD_LAYER:
 		die()
 	elif area.collision_layer & RESTART_LAYER:
 		restart()
+	elif area.collision_layer & PREV_LAYER:
+		get_parent().prevScreen()
+	elif area.collision_layer & NEXT_LAYER:
+		get_parent().nextScreen()
+
+func _on_area_2d_body_entered(body):
+	clipUp()
 
 func clipUp():
 	var pos = position
@@ -189,6 +200,3 @@ func clipUp():
 		c += 1
 	
 	die() # failed to clip out
-
-func _on_area_2d_body_entered(body):
-	clipUp()
