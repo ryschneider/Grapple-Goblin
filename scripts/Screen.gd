@@ -3,7 +3,7 @@ extends Node2D
 @onready var player = get_node("../Player")
 @onready var screenNode = get_node(".")
 
-@export var fireScene = false
+@export var fireScene = true
 @export var forceDimension = false
 @export var staticCamera = false
 @export var playerStart = Vector2()
@@ -77,8 +77,10 @@ func switch(poof=true):
 			i.switch(fireScene, poof)
 
 func _ready():
-	if forceDimension:
+	if forceDimension or not Global.isFireScene is bool:
 		fireScene = not fireScene
+	else:
+		fireScene = not Global.isFireScene
 	
 	switch(false)
 	
