@@ -35,7 +35,7 @@ func saveGame():
 	print("Saving")
 
 func newGame():
-	loadScreen(12) # eg. 7 for Screen7.tscn
+	loadScreen(1) # eg. 7 for Screen7.tscn
 
 
 func restartScreen():
@@ -46,7 +46,7 @@ func restartScreen():
 	add_child(sc)
 
 func loadScreen(id):
-#	id -= 1
+	id += 1
 	if currentScreen == id: return
 	
 	currentScreen = id
