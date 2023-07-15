@@ -1,9 +1,9 @@
 extends Node2D
 
-var fireScene = false
 @onready var player = get_node("../Player")
 @onready var screenNode = get_node(".")
 
+@export var fireScene = false
 @export var staticCamera = false
 @export var playerStart = Vector2()
 
@@ -17,6 +17,9 @@ func switch(poof=true):
 func _ready():
 	switch(false)
 	player.position = playerStart
+	for i in player.get_children():
+		if i is Camera2D:
+			i.queue_free()
 	$Camera2D.reparent(player, false)
 
 

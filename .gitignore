@@ -1,3 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
 tools/spright.json
+screens/Screen11.tscn
+screens/Screen11.tscn

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://prtiw533dacy"]
+[gd_scene load_steps=7 format=3 uid="uid://ciq6i07ob46iy"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_aiv15"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="2_drxg3"]
@@ -11,8 +11,6 @@
 script = ExtResource("1_aiv15")
 
 [node name="Camera2D" parent="." instance=ExtResource("2_jaqyf")]
-limit_left = 520
-limit_right = 3777
 
 [node name="Background" parent="." instance=ExtResource("2_drxg3")]
 

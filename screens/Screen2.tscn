@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cl7oeooehx761"]
+[gd_scene load_steps=6 format=3 uid="uid://cvif42ghaytam"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_uyce1"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="2_2mcj0"]
@@ -6,7 +6,7 @@
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="4_3uphl"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="5_4ksvu"]
 
-[node name="Screen2" type="Node2D"]
+[node name="Screen" type="Node2D"]
 script = ExtResource("1_uyce1")
 playerStart = Vector2(-675, -150)
 
