@@ -149,7 +149,7 @@
 			"sources": [
 				{
 					"index": 16,
-					"spriteIndices": [29,30,31,32,33,34]
+					"spriteIndices": [29,30,31,32,33,34,35]
 				}
 			]
 		},
@@ -158,7 +158,7 @@
 			"sources": [
 				{
 					"index": 17,
-					"spriteIndices": [35]
+					"spriteIndices": [36]
 				}
 			]
 		},
@@ -167,7 +167,7 @@
 			"sources": [
 				{
 					"index": 18,
-					"spriteIndices": [36]
+					"spriteIndices": [37]
 				}
 			]
 		},
@@ -176,7 +176,7 @@
 			"sources": [
 				{
 					"index": 19,
-					"spriteIndices": [37]
+					"spriteIndices": [38]
 				}
 			]
 		},
@@ -185,7 +185,7 @@
 			"sources": [
 				{
 					"index": 20,
-					"spriteIndices": [38]
+					"spriteIndices": [39]
 				}
 			]
 		},
@@ -194,7 +194,7 @@
 			"sources": [
 				{
 					"index": 21,
-					"spriteIndices": [39]
+					"spriteIndices": [40]
 				}
 			]
 		},
@@ -203,21 +203,21 @@
 			"sources": [
 				{
 					"index": 22,
-					"spriteIndices": [40]
+					"spriteIndices": [41]
 				}
 			]
 		},
 		{
-			"filename": "../assets/Level/Tiles/icehazards.png",
+			"filename": "../assets/Level/Tiles/hazards.png",
 			"sources": [
 				{
 					"index": 23,
-					"spriteIndices": [41,42,43]
+					"spriteIndices": [42,43]
 				}
 			]
 		},
 		{
-			"filename": "../assets/Level/Tiles/Hazards/icefire/icespikes.png",
+			"filename": "../assets/Level/Tiles/Hazards/other/geyser.png",
 			"sources": [
 				{
 					"index": 24,
@@ -226,11 +226,38 @@
 			]
 		},
 		{
-			"filename": "../assets/Level/Tiles/firehazards.png",
+			"filename": "../assets/Level/Tiles/Hazards/other/wind.png",
 			"sources": [
 				{
 					"index": 25,
-					"spriteIndices": [45,46,47]
+					"spriteIndices": [45]
+				}
+			]
+		},
+		{
+			"filename": "../assets/Level/Tiles/icehazards.png",
+			"sources": [
+				{
+					"index": 26,
+					"spriteIndices": [46,47,48,49,50,51]
+				}
+			]
+		},
+		{
+			"filename": "../assets/Level/Tiles/Hazards/icefire/icespikes.png",
+			"sources": [
+				{
+					"index": 27,
+					"spriteIndices": [52]
+				}
+			]
+		},
+		{
+			"filename": "../assets/Level/Tiles/firehazards.png",
+			"sources": [
+				{
+					"index": 28,
+					"spriteIndices": [53,54,55,56,57,58]
 				}
 			]
 		},
@@ -238,8 +265,8 @@
 			"filename": "../assets/Level/Tiles/Hazards/icefire/firespikes.png",
 			"sources": [
 				{
-					"index": 26,
-					"spriteIndices": [48]
+					"index": 29,
+					"spriteIndices": [59]
 				}
 			]
 		}
@@ -252,13 +279,16 @@
 			"spriteIndices": [16,17,18,19,20,21,22,23,24,25,26,27,28]
 		},
 		{
-			"spriteIndices": [29,30,31,32,33,34,35,36,37,38,39,40]
+			"spriteIndices": [29,30,31,32,33,34,35,36,37,38,39,40,41]
 		},
 		{
-			"spriteIndices": [41,42,43,44]
+			"spriteIndices": [42,43,44,45]
 		},
 		{
-			"spriteIndices": [45,46,47,48]
+			"spriteIndices": [46,47,48,49,50,51,52]
+		},
+		{
+			"spriteIndices": [53,54,55,56,57,58,59]
 		}
 	],
 	"sources": [
@@ -266,7 +296,7 @@
 			"filename": "../assets/Level/Tiles/decorations.png",
 			"height": 48,
 			"path": "",
-			"width": 480
+			"width": 544
 		},
 		{
 			"filename": "../assets/Level/Tiles/Decorations/other/crystalfloorspikes.png",
@@ -362,7 +392,7 @@
 			"filename": "../assets/Level/Tiles/firedecorations.png",
 			"height": 48,
 			"path": "",
-			"width": 224
+			"width": 272
 		},
 		{
 			"filename": "../assets/Level/Tiles/Decorations/icefire/firebg.png",
@@ -401,10 +431,28 @@
 			"width": 16
 		},
 		{
-			"filename": "../assets/Level/Tiles/icehazards.png",
+			"filename": "../assets/Level/Tiles/hazards.png",
+			"height": 32,
+			"path": "",
+			"width": 144
+		},
+		{
+			"filename": "../assets/Level/Tiles/Hazards/other/geyser.png",
+			"height": 32,
+			"path": "",
+			"width": 128
+		},
+		{
+			"filename": "../assets/Level/Tiles/Hazards/other/wind.png",
 			"height": 16,
 			"path": "",
 			"width": 16
+		},
+		{
+			"filename": "../assets/Level/Tiles/icehazards.png",
+			"height": 16,
+			"path": "",
+			"width": 64
 		},
 		{
 			"filename": "../assets/Level/Tiles/Hazards/icefire/icespikes.png",
@@ -416,7 +464,7 @@
 			"filename": "../assets/Level/Tiles/firehazards.png",
 			"height": 16,
 			"path": "",
-			"width": 16
+			"width": 64
 		},
 		{
 			"filename": "../assets/Level/Tiles/Hazards/icefire/firespikes.png",
@@ -474,12 +522,12 @@
 			"inputIndex": 0,
 			"inputSpriteIndex": 1,
 			"pivot": {
-				"x": 48.0,
+				"x": 80.0,
 				"y": 8.0
 			},
 			"rect": {
 				"h": 16,
-				"w": 96,
+				"w": 160,
 				"x": 16,
 				"y": 0
 			},
@@ -489,24 +537,24 @@
 			"sourceIndex": 0,
 			"sourceRect": {
 				"h": 16,
-				"w": 96,
+				"w": 160,
 				"x": 16,
 				"y": 0
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 16,
-				"w": 96,
+				"w": 160,
 				"x": 16,
 				"y": 0
 			},
 			"trimmedSourceRect": {
 				"h": 16,
-				"w": 96,
+				"w": 160,
 				"x": 16,
 				"y": 0
 			},
-			"vertices": [0.0,0.0,96.0,0.0,96.0,16.0,0.0,16.0]
+			"vertices": [0.0,0.0,160.0,0.0,160.0,16.0,0.0,16.0]
 		},
 		{
 			"data": {},
@@ -521,7 +569,7 @@
 			"rect": {
 				"h": 16,
 				"w": 32,
-				"x": 112,
+				"x": 176,
 				"y": 0
 			},
 			"rotated": false,
@@ -531,20 +579,20 @@
 			"sourceRect": {
 				"h": 16,
 				"w": 32,
-				"x": 448,
+				"x": 512,
 				"y": 0
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 16,
 				"w": 32,
-				"x": 112,
+				"x": 176,
 				"y": 0
 			},
 			"trimmedSourceRect": {
 				"h": 16,
 				"w": 32,
-				"x": 448,
+				"x": 512,
 				"y": 0
 			},
 			"vertices": [0.0,0.0,32.0,0.0,32.0,16.0,0.0,16.0]
@@ -562,7 +610,7 @@
 			"rect": {
 				"h": 21,
 				"w": 31,
-				"x": 144,
+				"x": 208,
 				"y": 11
 			},
 			"rotated": false,
@@ -572,20 +620,20 @@
 			"sourceRect": {
 				"h": 21,
 				"w": 31,
-				"x": 112,
+				"x": 176,
 				"y": 11
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 21,
 				"w": 31,
-				"x": 144,
+				"x": 208,
 				"y": 11
 			},
 			"trimmedSourceRect": {
 				"h": 21,
 				"w": 31,
-				"x": 112,
+				"x": 176,
 				"y": 11
 			},
 			"vertices": [0.0,0.0,31.0,0.0,31.0,21.0,0.0,21.0]
@@ -603,7 +651,7 @@
 			"rect": {
 				"h": 32,
 				"w": 63,
-				"x": 176,
+				"x": 240,
 				"y": 0
 			},
 			"rotated": false,
@@ -613,20 +661,20 @@
 			"sourceRect": {
 				"h": 32,
 				"w": 63,
-				"x": 144,
+				"x": 208,
 				"y": 0
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 32,
 				"w": 63,
-				"x": 176,
+				"x": 240,
 				"y": 0
 			},
 			"trimmedSourceRect": {
 				"h": 32,
 				"w": 63,
-				"x": 144,
+				"x": 208,
 				"y": 0
 			},
 			"vertices": [0.0,0.0,63.0,0.0,63.0,32.0,0.0,32.0]
@@ -644,7 +692,7 @@
 			"rect": {
 				"h": 32,
 				"w": 15,
-				"x": 240,
+				"x": 304,
 				"y": 0
 			},
 			"rotated": false,
@@ -654,20 +702,20 @@
 			"sourceRect": {
 				"h": 32,
 				"w": 15,
-				"x": 208,
+				"x": 272,
 				"y": 0
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 32,
 				"w": 15,
-				"x": 240,
+				"x": 304,
 				"y": 0
 			},
 			"trimmedSourceRect": {
 				"h": 32,
 				"w": 15,
-				"x": 208,
+				"x": 272,
 				"y": 0
 			},
 			"vertices": [0.0,0.0,15.0,0.0,15.0,32.0,0.0,32.0]
@@ -685,7 +733,7 @@
 			"rect": {
 				"h": 48,
 				"w": 111,
-				"x": 256,
+				"x": 320,
 				"y": 0
 			},
 			"rotated": false,
@@ -695,20 +743,20 @@
 			"sourceRect": {
 				"h": 48,
 				"w": 111,
-				"x": 224,
+				"x": 288,
 				"y": 0
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 48,
 				"w": 111,
-				"x": 256,
+				"x": 320,
 				"y": 0
 			},
 			"trimmedSourceRect": {
 				"h": 48,
 				"w": 111,
-				"x": 224,
+				"x": 288,
 				"y": 0
 			},
 			"vertices": [0.0,0.0,111.0,0.0,111.0,48.0,0.0,48.0]
@@ -726,7 +774,7 @@
 			"rect": {
 				"h": 48,
 				"w": 111,
-				"x": 256,
+				"x": 320,
 				"y": 0
 			},
 			"rotated": false,
@@ -736,20 +784,20 @@
 			"sourceRect": {
 				"h": 48,
 				"w": 111,
-				"x": 336,
+				"x": 400,
 				"y": 0
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 48,
 				"w": 111,
-				"x": 256,
+				"x": 320,
 				"y": 0
 			},
 			"trimmedSourceRect": {
 				"h": 48,
 				"w": 111,
-				"x": 336,
+				"x": 400,
 				"y": 0
 			},
 			"vertices": [0.0,0.0,111.0,0.0,111.0,48.0,0.0,48.0]
@@ -767,7 +815,7 @@
 			"rect": {
 				"h": 48,
 				"w": 48,
-				"x": 368,
+				"x": 432,
 				"y": 0
 			},
 			"rotated": false,
@@ -784,7 +832,7 @@
 			"trimmedRect": {
 				"h": 35,
 				"w": 48,
-				"x": 368,
+				"x": 432,
 				"y": 13
 			},
 			"trimmedSourceRect": {
@@ -808,7 +856,7 @@
 			"rect": {
 				"h": 32,
 				"w": 32,
-				"x": 143,
+				"x": 207,
 				"y": 0
 			},
 			"rotated": false,
@@ -825,7 +873,7 @@
 			"trimmedRect": {
 				"h": 21,
 				"w": 31,
-				"x": 144,
+				"x": 208,
 				"y": 11
 			},
 			"trimmedSourceRect": {
@@ -849,7 +897,7 @@
 			"rect": {
 				"h": 32,
 				"w": 32,
-				"x": 416,
+				"x": 480,
 				"y": 0
 			},
 			"rotated": false,
@@ -866,7 +914,7 @@
 			"trimmedRect": {
 				"h": 32,
 				"w": 32,
-				"x": 416,
+				"x": 480,
 				"y": 0
 			},
 			"trimmedSourceRect": {
@@ -890,7 +938,7 @@
 			"rect": {
 				"h": 32,
 				"w": 32,
-				"x": 448,
+				"x": 512,
 				"y": 0
 			},
 			"rotated": false,
@@ -907,7 +955,7 @@
 			"trimmedRect": {
 				"h": 31,
 				"w": 31,
-				"x": 448,
+				"x": 512,
 				"y": 1
 			},
 			"trimmedSourceRect": {
@@ -931,7 +979,7 @@
 			"rect": {
 				"h": 16,
 				"w": 16,
-				"x": 480,
+				"x": 544,
 				"y": 0
 			},
 			"rotated": false,
@@ -948,7 +996,7 @@
 			"trimmedRect": {
 				"h": 16,
 				"w": 16,
-				"x": 480,
+				"x": 544,
 				"y": 0
 			},
 			"trimmedSourceRect": {
@@ -972,7 +1020,7 @@
 			"rect": {
 				"h": 32,
 				"w": 16,
-				"x": 240,
+				"x": 304,
 				"y": 0
 			},
 			"rotated": false,
@@ -989,7 +1037,7 @@
 			"trimmedRect": {
 				"h": 32,
 				"w": 15,
-				"x": 240,
+				"x": 304,
 				"y": 0
 			},
 			"trimmedSourceRect": {
@@ -1054,7 +1102,7 @@
 			"rect": {
 				"h": 16,
 				"w": 16,
-				"x": 496,
+				"x": 560,
 				"y": 0
 			},
 			"rotated": false,
@@ -1071,7 +1119,7 @@
 			"trimmedRect": {
 				"h": 16,
 				"w": 16,
-				"x": 496,
+				"x": 560,
 				"y": 0
 			},
 			"trimmedSourceRect": {
@@ -1827,44 +1875,85 @@
 			"inputIndex": 16,
 			"inputSpriteIndex": 5,
 			"pivot": {
-				"x": 24.0,
-				"y": 17.5
+				"x": 21.5,
+				"y": 16.0
 			},
 			"rect": {
-				"h": 35,
-				"w": 48,
-				"x": 176,
-				"y": 13
+				"h": 32,
+				"w": 43,
+				"x": 128,
+				"y": 0
 			},
 			"rotated": false,
 			"sliceIndex": 2,
 			"sliceSpriteIndex": 5,
 			"sourceIndex": 16,
 			"sourceRect": {
+				"h": 32,
+				"w": 43,
+				"x": 176,
+				"y": 0
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 32,
+				"w": 43,
+				"x": 128,
+				"y": 0
+			},
+			"trimmedSourceRect": {
+				"h": 32,
+				"w": 43,
+				"x": 176,
+				"y": 0
+			},
+			"vertices": [0.0,0.0,43.0,0.0,43.0,32.0,0.0,32.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_35",
+			"index": 35,
+			"inputIndex": 16,
+			"inputSpriteIndex": 6,
+			"pivot": {
+				"x": 24.0,
+				"y": 17.5
+			},
+			"rect": {
 				"h": 35,
 				"w": 48,
-				"x": 176,
+				"x": 224,
+				"y": 13
+			},
+			"rotated": false,
+			"sliceIndex": 2,
+			"sliceSpriteIndex": 6,
+			"sourceIndex": 16,
+			"sourceRect": {
+				"h": 35,
+				"w": 48,
+				"x": 224,
 				"y": 13
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 35,
 				"w": 48,
-				"x": 176,
+				"x": 224,
 				"y": 13
 			},
 			"trimmedSourceRect": {
 				"h": 35,
 				"w": 48,
-				"x": 176,
+				"x": 224,
 				"y": 13
 			},
 			"vertices": [0.0,0.0,48.0,0.0,48.0,35.0,0.0,35.0]
 		},
 		{
 			"data": {},
-			"id": "sprite_35",
-			"index": 35,
+			"id": "sprite_36",
+			"index": 36,
 			"inputIndex": 17,
 			"inputSpriteIndex": 0,
 			"pivot": {
@@ -1874,12 +1963,12 @@
 			"rect": {
 				"h": 16,
 				"w": 16,
-				"x": 224,
+				"x": 176,
 				"y": 0
 			},
 			"rotated": false,
 			"sliceIndex": 2,
-			"sliceSpriteIndex": 6,
+			"sliceSpriteIndex": 7,
 			"sourceIndex": 17,
 			"sourceRect": {
 				"h": 16,
@@ -1891,7 +1980,7 @@
 			"trimmedRect": {
 				"h": 16,
 				"w": 16,
-				"x": 224,
+				"x": 176,
 				"y": 0
 			},
 			"trimmedSourceRect": {
@@ -1904,8 +1993,8 @@
 		},
 		{
 			"data": {},
-			"id": "sprite_36",
-			"index": 36,
+			"id": "sprite_37",
+			"index": 37,
 			"inputIndex": 18,
 			"inputSpriteIndex": 0,
 			"pivot": {
@@ -1920,7 +2009,7 @@
 			},
 			"rotated": false,
 			"sliceIndex": 2,
-			"sliceSpriteIndex": 7,
+			"sliceSpriteIndex": 8,
 			"sourceIndex": 18,
 			"sourceRect": {
 				"h": 32,
@@ -1945,8 +2034,8 @@
 		},
 		{
 			"data": {},
-			"id": "sprite_37",
-			"index": 37,
+			"id": "sprite_38",
+			"index": 38,
 			"inputIndex": 19,
 			"inputSpriteIndex": 0,
 			"pivot": {
@@ -1956,12 +2045,12 @@
 			"rect": {
 				"h": 32,
 				"w": 16,
-				"x": 240,
+				"x": 192,
 				"y": 0
 			},
 			"rotated": false,
 			"sliceIndex": 2,
-			"sliceSpriteIndex": 8,
+			"sliceSpriteIndex": 9,
 			"sourceIndex": 19,
 			"sourceRect": {
 				"h": 32,
@@ -1973,7 +2062,7 @@
 			"trimmedRect": {
 				"h": 30,
 				"w": 16,
-				"x": 240,
+				"x": 192,
 				"y": 2
 			},
 			"trimmedSourceRect": {
@@ -1986,8 +2075,8 @@
 		},
 		{
 			"data": {},
-			"id": "sprite_38",
-			"index": 38,
+			"id": "sprite_39",
+			"index": 39,
 			"inputIndex": 20,
 			"inputSpriteIndex": 0,
 			"pivot": {
@@ -1997,12 +2086,12 @@
 			"rect": {
 				"h": 32,
 				"w": 16,
-				"x": 256,
+				"x": 208,
 				"y": 0
 			},
 			"rotated": false,
 			"sliceIndex": 2,
-			"sliceSpriteIndex": 9,
+			"sliceSpriteIndex": 10,
 			"sourceIndex": 20,
 			"sourceRect": {
 				"h": 32,
@@ -2014,7 +2103,7 @@
 			"trimmedRect": {
 				"h": 30,
 				"w": 11,
-				"x": 256,
+				"x": 208,
 				"y": 2
 			},
 			"trimmedSourceRect": {
@@ -2027,8 +2116,8 @@
 		},
 		{
 			"data": {},
-			"id": "sprite_39",
-			"index": 39,
+			"id": "sprite_40",
+			"index": 40,
 			"inputIndex": 21,
 			"inputSpriteIndex": 0,
 			"pivot": {
@@ -2038,12 +2127,12 @@
 			"rect": {
 				"h": 48,
 				"w": 48,
-				"x": 176,
+				"x": 224,
 				"y": 0
 			},
 			"rotated": false,
 			"sliceIndex": 2,
-			"sliceSpriteIndex": 10,
+			"sliceSpriteIndex": 11,
 			"sourceIndex": 21,
 			"sourceRect": {
 				"h": 48,
@@ -2055,7 +2144,7 @@
 			"trimmedRect": {
 				"h": 35,
 				"w": 48,
-				"x": 176,
+				"x": 224,
 				"y": 13
 			},
 			"trimmedSourceRect": {
@@ -2068,8 +2157,8 @@
 		},
 		{
 			"data": {},
-			"id": "sprite_40",
-			"index": 40,
+			"id": "sprite_41",
+			"index": 41,
 			"inputIndex": 22,
 			"inputSpriteIndex": 0,
 			"pivot": {
@@ -2084,7 +2173,7 @@
 			},
 			"rotated": false,
 			"sliceIndex": 2,
-			"sliceSpriteIndex": 11,
+			"sliceSpriteIndex": 12,
 			"sourceIndex": 22,
 			"sourceRect": {
 				"h": 32,
@@ -2109,9 +2198,173 @@
 		},
 		{
 			"data": {},
-			"id": "sprite_41",
-			"index": 41,
+			"id": "sprite_42",
+			"index": 42,
 			"inputIndex": 23,
+			"inputSpriteIndex": 0,
+			"pivot": {
+				"x": 1.0,
+				"y": 5.5
+			},
+			"rect": {
+				"h": 11,
+				"w": 2,
+				"x": 0,
+				"y": 5
+			},
+			"rotated": false,
+			"sliceIndex": 3,
+			"sliceSpriteIndex": 0,
+			"sourceIndex": 23,
+			"sourceRect": {
+				"h": 11,
+				"w": 2,
+				"x": 0,
+				"y": 5
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 11,
+				"w": 2,
+				"x": 0,
+				"y": 5
+			},
+			"trimmedSourceRect": {
+				"h": 11,
+				"w": 2,
+				"x": 0,
+				"y": 5
+			},
+			"vertices": [0.0,0.0,2.0,0.0,2.0,11.0,0.0,11.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_43",
+			"index": 43,
+			"inputIndex": 23,
+			"inputSpriteIndex": 1,
+			"pivot": {
+				"x": 64.0,
+				"y": 16.0
+			},
+			"rect": {
+				"h": 32,
+				"w": 128,
+				"x": 16,
+				"y": 0
+			},
+			"rotated": false,
+			"sliceIndex": 3,
+			"sliceSpriteIndex": 1,
+			"sourceIndex": 23,
+			"sourceRect": {
+				"h": 32,
+				"w": 128,
+				"x": 16,
+				"y": 0
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 32,
+				"w": 128,
+				"x": 16,
+				"y": 0
+			},
+			"trimmedSourceRect": {
+				"h": 32,
+				"w": 128,
+				"x": 16,
+				"y": 0
+			},
+			"vertices": [0.0,0.0,128.0,0.0,128.0,32.0,0.0,32.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_44",
+			"index": 44,
+			"inputIndex": 24,
+			"inputSpriteIndex": 0,
+			"pivot": {
+				"x": 64.0,
+				"y": 16.0
+			},
+			"rect": {
+				"h": 32,
+				"w": 128,
+				"x": 16,
+				"y": 0
+			},
+			"rotated": false,
+			"sliceIndex": 3,
+			"sliceSpriteIndex": 2,
+			"sourceIndex": 24,
+			"sourceRect": {
+				"h": 32,
+				"w": 128,
+				"x": 0,
+				"y": 0
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 32,
+				"w": 128,
+				"x": 16,
+				"y": 0
+			},
+			"trimmedSourceRect": {
+				"h": 32,
+				"w": 128,
+				"x": 0,
+				"y": 0
+			},
+			"vertices": [0.0,0.0,128.0,0.0,128.0,32.0,0.0,32.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_45",
+			"index": 45,
+			"inputIndex": 25,
+			"inputSpriteIndex": 0,
+			"pivot": {
+				"x": 8.0,
+				"y": 8.0
+			},
+			"rect": {
+				"h": 16,
+				"w": 16,
+				"x": -7,
+				"y": 2
+			},
+			"rotated": false,
+			"sliceIndex": 3,
+			"sliceSpriteIndex": 3,
+			"sourceIndex": 25,
+			"sourceRect": {
+				"h": 16,
+				"w": 16,
+				"x": 0,
+				"y": 0
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 11,
+				"w": 2,
+				"x": 0,
+				"y": 5
+			},
+			"trimmedSourceRect": {
+				"h": 11,
+				"w": 2,
+				"x": 7,
+				"y": 3
+			},
+			"vertices": [0.0,0.0,2.0,0.0,2.0,11.0,0.0,11.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_46",
+			"index": 46,
+			"inputIndex": 26,
 			"inputSpriteIndex": 0,
 			"pivot": {
 				"x": 1.5,
@@ -2124,9 +2377,9 @@
 				"y": 5
 			},
 			"rotated": false,
-			"sliceIndex": 3,
+			"sliceIndex": 4,
 			"sliceSpriteIndex": 0,
-			"sourceIndex": 23,
+			"sourceIndex": 26,
 			"sourceRect": {
 				"h": 11,
 				"w": 3,
@@ -2150,9 +2403,9 @@
 		},
 		{
 			"data": {},
-			"id": "sprite_42",
-			"index": 42,
-			"inputIndex": 23,
+			"id": "sprite_47",
+			"index": 47,
+			"inputIndex": 26,
 			"inputSpriteIndex": 1,
 			"pivot": {
 				"x": 2.5,
@@ -2165,13 +2418,13 @@
 				"y": 2
 			},
 			"rotated": false,
-			"sliceIndex": 3,
+			"sliceIndex": 4,
 			"sliceSpriteIndex": 1,
-			"sourceIndex": 23,
+			"sourceIndex": 26,
 			"sourceRect": {
 				"h": 14,
 				"w": 5,
-				"x": 4,
+				"x": 16,
 				"y": 2
 			},
 			"tags": {},
@@ -2184,17 +2437,99 @@
 			"trimmedSourceRect": {
 				"h": 14,
 				"w": 5,
-				"x": 4,
+				"x": 16,
 				"y": 2
 			},
 			"vertices": [0.0,0.0,5.0,0.0,5.0,14.0,0.0,14.0]
 		},
 		{
 			"data": {},
-			"id": "sprite_43",
-			"index": 43,
-			"inputIndex": 23,
+			"id": "sprite_48",
+			"index": 48,
+			"inputIndex": 26,
 			"inputSpriteIndex": 2,
+			"pivot": {
+				"x": 1.5,
+				"y": 5.5
+			},
+			"rect": {
+				"h": 11,
+				"w": 3,
+				"x": 0,
+				"y": 5
+			},
+			"rotated": false,
+			"sliceIndex": 4,
+			"sliceSpriteIndex": 2,
+			"sourceIndex": 26,
+			"sourceRect": {
+				"h": 11,
+				"w": 3,
+				"x": 48,
+				"y": 5
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 11,
+				"w": 3,
+				"x": 0,
+				"y": 5
+			},
+			"trimmedSourceRect": {
+				"h": 11,
+				"w": 3,
+				"x": 48,
+				"y": 5
+			},
+			"vertices": [0.0,0.0,3.0,0.0,3.0,11.0,0.0,11.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_49",
+			"index": 49,
+			"inputIndex": 26,
+			"inputSpriteIndex": 3,
+			"pivot": {
+				"x": 2.5,
+				"y": 7.0
+			},
+			"rect": {
+				"h": 14,
+				"w": 5,
+				"x": 16,
+				"y": 2
+			},
+			"rotated": false,
+			"sliceIndex": 4,
+			"sliceSpriteIndex": 3,
+			"sourceIndex": 26,
+			"sourceRect": {
+				"h": 14,
+				"w": 5,
+				"x": 52,
+				"y": 2
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 14,
+				"w": 5,
+				"x": 16,
+				"y": 2
+			},
+			"trimmedSourceRect": {
+				"h": 14,
+				"w": 5,
+				"x": 52,
+				"y": 2
+			},
+			"vertices": [0.0,0.0,5.0,0.0,5.0,14.0,0.0,14.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_50",
+			"index": 50,
+			"inputIndex": 26,
+			"inputSpriteIndex": 4,
 			"pivot": {
 				"x": 1.5,
 				"y": 3.5
@@ -2206,13 +2541,13 @@
 				"y": 9
 			},
 			"rotated": false,
-			"sliceIndex": 3,
-			"sliceSpriteIndex": 2,
-			"sourceIndex": 23,
+			"sliceIndex": 4,
+			"sliceSpriteIndex": 4,
+			"sourceIndex": 26,
 			"sourceRect": {
 				"h": 7,
 				"w": 3,
-				"x": 10,
+				"x": 32,
 				"y": 9
 			},
 			"tags": {},
@@ -2225,16 +2560,57 @@
 			"trimmedSourceRect": {
 				"h": 7,
 				"w": 3,
-				"x": 10,
+				"x": 32,
 				"y": 9
 			},
 			"vertices": [0.0,0.0,3.0,0.0,3.0,7.0,0.0,7.0]
 		},
 		{
 			"data": {},
-			"id": "sprite_44",
-			"index": 44,
-			"inputIndex": 24,
+			"id": "sprite_51",
+			"index": 51,
+			"inputIndex": 26,
+			"inputSpriteIndex": 5,
+			"pivot": {
+				"x": 1.5,
+				"y": 3.5
+			},
+			"rect": {
+				"h": 7,
+				"w": 3,
+				"x": 32,
+				"y": 9
+			},
+			"rotated": false,
+			"sliceIndex": 4,
+			"sliceSpriteIndex": 5,
+			"sourceIndex": 26,
+			"sourceRect": {
+				"h": 7,
+				"w": 3,
+				"x": 58,
+				"y": 9
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 7,
+				"w": 3,
+				"x": 32,
+				"y": 9
+			},
+			"trimmedSourceRect": {
+				"h": 7,
+				"w": 3,
+				"x": 58,
+				"y": 9
+			},
+			"vertices": [0.0,0.0,3.0,0.0,3.0,7.0,0.0,7.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_52",
+			"index": 52,
+			"inputIndex": 27,
 			"inputSpriteIndex": 0,
 			"pivot": {
 				"x": 8.0,
@@ -2247,9 +2623,9 @@
 				"y": 0
 			},
 			"rotated": false,
-			"sliceIndex": 3,
-			"sliceSpriteIndex": 3,
-			"sourceIndex": 24,
+			"sliceIndex": 4,
+			"sliceSpriteIndex": 6,
+			"sourceIndex": 27,
 			"sourceRect": {
 				"h": 16,
 				"w": 16,
@@ -2273,9 +2649,9 @@
 		},
 		{
 			"data": {},
-			"id": "sprite_45",
-			"index": 45,
-			"inputIndex": 25,
+			"id": "sprite_53",
+			"index": 53,
+			"inputIndex": 28,
 			"inputSpriteIndex": 0,
 			"pivot": {
 				"x": 1.5,
@@ -2288,9 +2664,9 @@
 				"y": 5
 			},
 			"rotated": false,
-			"sliceIndex": 4,
+			"sliceIndex": 5,
 			"sliceSpriteIndex": 0,
-			"sourceIndex": 25,
+			"sourceIndex": 28,
 			"sourceRect": {
 				"h": 11,
 				"w": 3,
@@ -2314,9 +2690,9 @@
 		},
 		{
 			"data": {},
-			"id": "sprite_46",
-			"index": 46,
-			"inputIndex": 25,
+			"id": "sprite_54",
+			"index": 54,
+			"inputIndex": 28,
 			"inputSpriteIndex": 1,
 			"pivot": {
 				"x": 2.5,
@@ -2329,13 +2705,13 @@
 				"y": 2
 			},
 			"rotated": false,
-			"sliceIndex": 4,
+			"sliceIndex": 5,
 			"sliceSpriteIndex": 1,
-			"sourceIndex": 25,
+			"sourceIndex": 28,
 			"sourceRect": {
 				"h": 14,
 				"w": 5,
-				"x": 4,
+				"x": 16,
 				"y": 2
 			},
 			"tags": {},
@@ -2348,17 +2724,99 @@
 			"trimmedSourceRect": {
 				"h": 14,
 				"w": 5,
-				"x": 4,
+				"x": 16,
 				"y": 2
 			},
 			"vertices": [0.0,0.0,5.0,0.0,5.0,14.0,0.0,14.0]
 		},
 		{
 			"data": {},
-			"id": "sprite_47",
-			"index": 47,
-			"inputIndex": 25,
+			"id": "sprite_55",
+			"index": 55,
+			"inputIndex": 28,
 			"inputSpriteIndex": 2,
+			"pivot": {
+				"x": 1.5,
+				"y": 5.5
+			},
+			"rect": {
+				"h": 11,
+				"w": 3,
+				"x": 0,
+				"y": 5
+			},
+			"rotated": false,
+			"sliceIndex": 5,
+			"sliceSpriteIndex": 2,
+			"sourceIndex": 28,
+			"sourceRect": {
+				"h": 11,
+				"w": 3,
+				"x": 48,
+				"y": 5
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 11,
+				"w": 3,
+				"x": 0,
+				"y": 5
+			},
+			"trimmedSourceRect": {
+				"h": 11,
+				"w": 3,
+				"x": 48,
+				"y": 5
+			},
+			"vertices": [0.0,0.0,3.0,0.0,3.0,11.0,0.0,11.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_56",
+			"index": 56,
+			"inputIndex": 28,
+			"inputSpriteIndex": 3,
+			"pivot": {
+				"x": 2.5,
+				"y": 7.0
+			},
+			"rect": {
+				"h": 14,
+				"w": 5,
+				"x": 16,
+				"y": 2
+			},
+			"rotated": false,
+			"sliceIndex": 5,
+			"sliceSpriteIndex": 3,
+			"sourceIndex": 28,
+			"sourceRect": {
+				"h": 14,
+				"w": 5,
+				"x": 52,
+				"y": 2
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 14,
+				"w": 5,
+				"x": 16,
+				"y": 2
+			},
+			"trimmedSourceRect": {
+				"h": 14,
+				"w": 5,
+				"x": 52,
+				"y": 2
+			},
+			"vertices": [0.0,0.0,5.0,0.0,5.0,14.0,0.0,14.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_57",
+			"index": 57,
+			"inputIndex": 28,
+			"inputSpriteIndex": 4,
 			"pivot": {
 				"x": 1.5,
 				"y": 3.5
@@ -2370,13 +2828,13 @@
 				"y": 9
 			},
 			"rotated": false,
-			"sliceIndex": 4,
-			"sliceSpriteIndex": 2,
-			"sourceIndex": 25,
+			"sliceIndex": 5,
+			"sliceSpriteIndex": 4,
+			"sourceIndex": 28,
 			"sourceRect": {
 				"h": 7,
 				"w": 3,
-				"x": 10,
+				"x": 32,
 				"y": 9
 			},
 			"tags": {},
@@ -2389,16 +2847,57 @@
 			"trimmedSourceRect": {
 				"h": 7,
 				"w": 3,
-				"x": 10,
+				"x": 32,
 				"y": 9
 			},
 			"vertices": [0.0,0.0,3.0,0.0,3.0,7.0,0.0,7.0]
 		},
 		{
 			"data": {},
-			"id": "sprite_48",
-			"index": 48,
-			"inputIndex": 26,
+			"id": "sprite_58",
+			"index": 58,
+			"inputIndex": 28,
+			"inputSpriteIndex": 5,
+			"pivot": {
+				"x": 1.5,
+				"y": 3.5
+			},
+			"rect": {
+				"h": 7,
+				"w": 3,
+				"x": 32,
+				"y": 9
+			},
+			"rotated": false,
+			"sliceIndex": 5,
+			"sliceSpriteIndex": 5,
+			"sourceIndex": 28,
+			"sourceRect": {
+				"h": 7,
+				"w": 3,
+				"x": 58,
+				"y": 9
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 7,
+				"w": 3,
+				"x": 32,
+				"y": 9
+			},
+			"trimmedSourceRect": {
+				"h": 7,
+				"w": 3,
+				"x": 58,
+				"y": 9
+			},
+			"vertices": [0.0,0.0,3.0,0.0,3.0,7.0,0.0,7.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_59",
+			"index": 59,
+			"inputIndex": 29,
 			"inputSpriteIndex": 0,
 			"pivot": {
 				"x": 8.0,
@@ -2411,9 +2910,9 @@
 				"y": 0
 			},
 			"rotated": false,
-			"sliceIndex": 4,
-			"sliceSpriteIndex": 3,
-			"sourceIndex": 26,
+			"sliceIndex": 5,
+			"sliceSpriteIndex": 6,
+			"sourceIndex": 29,
 			"sourceRect": {
 				"h": 16,
 				"w": 16,
@@ -2445,7 +2944,7 @@
 			"scale": 1.0,
 			"sliceIndex": 0,
 			"spriteIndices": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
-			"width": 512
+			"width": 576
 		},
 		{
 			"filename": "../assets/Level/Tiles/icedecorations.png",
@@ -2462,16 +2961,25 @@
 			"map": "",
 			"scale": 1.0,
 			"sliceIndex": 2,
-			"spriteIndices": [29,30,31,32,33,34,35,36,37,38,39,40],
+			"spriteIndices": [29,30,31,32,33,34,35,36,37,38,39,40,41],
 			"width": 272
+		},
+		{
+			"filename": "../assets/Level/Tiles/hazards.png",
+			"height": 32,
+			"map": "",
+			"scale": 1.0,
+			"sliceIndex": 3,
+			"spriteIndices": [42,43,44,45],
+			"width": 144
 		},
 		{
 			"filename": "../assets/Level/Tiles/icehazards.png",
 			"height": 16,
 			"map": "",
 			"scale": 1.0,
-			"sliceIndex": 3,
-			"spriteIndices": [41,42,43,44],
+			"sliceIndex": 4,
+			"spriteIndices": [46,47,48,49,50,51,52],
 			"width": 64
 		},
 		{
@@ -2479,8 +2987,8 @@
 			"height": 16,
 			"map": "",
 			"scale": 1.0,
-			"sliceIndex": 4,
-			"spriteIndices": [45,46,47,48],
+			"sliceIndex": 5,
+			"spriteIndices": [53,54,55,56,57,58,59],
 			"width": 64
 		}
 	]

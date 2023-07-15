@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl7oeooehx761"]
+[gd_scene load_steps=6 format=3 uid="uid://cl7oeooehx761"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_uyce1"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="2_2mcj0"]
+[ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_8u4u0"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="4_3uphl"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="5_4ksvu"]
 
@@ -9,10 +10,12 @@
 script = ExtResource("1_uyce1")
 playerStart = Vector2(-550, 250)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-12, -14)
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
+[node name="Camera2D" parent="." instance=ExtResource("2_8u4u0")]
+enabled = false
+limit_left = -1000
+limit_top = -500
+limit_right = 5000
+limit_bottom = 500
 
 [node name="Background" parent="." instance=ExtResource("2_2mcj0")]
 
