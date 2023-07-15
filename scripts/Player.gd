@@ -31,6 +31,8 @@ const DEATH_TIME = 1
 var dead = false
 var deadTime = 0
 func die():
+	if dead: return
+	
 	dead = true
 	deadTime = 0
 	if $AnimatedSprite2D.animation != "Dead":
@@ -41,6 +43,8 @@ func die():
 
 func restart():
 	get_tree().reload_current_scene()
+
+const LIMIT_GRACE = 30
 
 var direction = 0
 var jumpQueued = false
@@ -166,6 +170,12 @@ func _physics_process(delta):
 		$AnimatedSprite2D.flip_h = true
 	elif velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
+	
+	# kill if off camera
+#	if position.x+LIMIT_GRACE < $Camera2D.limit_left or position.x-LIMIT_GRACE > $Camera2D.limit_right\
+#		or position.y+LIMIT_GRACE < $Camera2D.limit_top or position.y-LIMIT_GRACE > $Camera2D.limit_bottom:
+	if position.y < $Camera2D.limit_top or position.y > $Camera2D.limit_bottom:
+		restart()
 
 func _on_area_2d_area_entered(area):
 	print(area.collision_layer)

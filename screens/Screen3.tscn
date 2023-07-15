@@ -11,8 +11,6 @@
 script = ExtResource("1_aiv15")
 
 [node name="Camera2D" parent="." instance=ExtResource("2_jaqyf")]
-limit_left = 520
-limit_right = 3777
 
 [node name="Background" parent="." instance=ExtResource("2_drxg3")]
 
