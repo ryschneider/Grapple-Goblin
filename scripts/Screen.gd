@@ -20,6 +20,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("switch_dimension"):
 		switch()
+<<<<<<< HEAD
 	cameraController(0)
 
 func cameraController(followLineX):
@@ -28,4 +29,10 @@ func cameraController(followLineX):
 	else:
 		$Camera2D.reparent(screenNode,false)
 		$Camera2D.position = Vector2(0, 0)
+=======
+	if staticCamera == true:
+		print(get_children())
+		#$Camera2D.position
+#	cameraController(0)
+>>>>>>> d783519a93f63369a9c7f84646f018c0f6d365eb
 
