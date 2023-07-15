@@ -6,7 +6,7 @@ func _ready():
 	for i in range(NUM_SCREENS):
 		screens.push_back("res://screens/Screen" + str(i+1) + ".tscn")
 	
-	loadScreen(8) # eg. 7 for Screen7.tscn	
+	loadScreen(8) # eg. 7 for Screen7.tscn
 
 var currentScreen
 
@@ -15,7 +15,6 @@ func loadScreen(id):
 	if currentScreen == id: return
 	
 	currentScreen = id
-	print(screens[id])
 	var screenLoad = load(screens[id])
 	for c in get_children():
 		if c != $Player and c != $Hook and c != $HookLine:
