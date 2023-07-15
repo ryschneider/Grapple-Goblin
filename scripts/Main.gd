@@ -22,8 +22,9 @@ func loadScreen(id):
 	add_child(screenLoad.instantiate())
 
 func prevScreen():
-	print("prev")
+	if currentScreen > 1:
+		loadScreen(currentScreen - 1)
 
 func nextScreen():
-	print("next")
-
+	if currentScreen < NUM_SCREENS:
+		loadScreen(currentScreen + 1)

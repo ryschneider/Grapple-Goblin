@@ -171,7 +171,6 @@ func _on_area_2d_area_entered(area):
 	print(area.collision_layer)
 	print(HAZARD_LAYER)
 	if area.collision_layer & HAZARD_LAYER:
-		print("die")
 		die()
 	elif area.collision_layer & RESTART_LAYER:
 		restart()

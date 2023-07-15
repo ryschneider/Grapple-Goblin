@@ -24,6 +24,15 @@ texture_filter = 1
 position = Vector2(145, -131)
 scale = Vector2(4, 4)
 
+[node name="PreviousScreen" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
+position = Vector2(-134.5, -64)
+shape = SubResource("RectangleShape2D_sb5xy")
+
 [node name="NextScreen" type="Area2D" parent="."]
 position = Vector2(0, 1)
 scale = Vector2(4, 4)
@@ -32,15 +41,6 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
 position = Vector2(877.25, 35.75)
-shape = SubResource("RectangleShape2D_sb5xy")
-
-[node name="PreviousScreen" type="Area2D" parent="."]
-scale = Vector2(2, 2)
-collision_layer = 16
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
-position = Vector2(-134.5, -64)
 shape = SubResource("RectangleShape2D_sb5xy")
 
 [node name="ForegroundMap" type="TileMap" parent="."]
