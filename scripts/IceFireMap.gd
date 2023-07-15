@@ -11,7 +11,7 @@ const FLIP_PAIRS = [Vector2i(0, 1), Vector2i(4, 5), Vector2i(7, 8)]
 
 var hiddenTiles = []
 
-@onready var Player = get_node("../../PlayerNode")
+@onready var Player = get_node("../../Player")
 @onready var Snowflake = load("res://resources/Snowflake.tscn")
 @onready var Ember = load("res://resources/Ember.tscn")
 

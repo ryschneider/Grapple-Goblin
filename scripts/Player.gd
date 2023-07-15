@@ -17,14 +17,15 @@ const MAX_CLIP = 10
 
 const JUMP_QUEUE_TIME = 6.0 / 60.0
 
-const HAZARD_LAYER = 0b100
+const HAZARD_LAYER =  0b0100
+const RESTART_LAYER = 0b1000
 
 var moveVel = Vector2()
 var momentumVel = Vector2()
 
 @onready var Hook = get_node("../Hook")
 
-const DEATH_TIME = 2
+const DEATH_TIME = 1
 var dead = false
 var deadTime = 0
 func die():
@@ -44,7 +45,7 @@ var jumpQueued = false
 var jumpQueueTime = 0.0
 func _physics_process(delta):
 	if dead:
-		if deadTime < DEATH_TIME:
+		if deadTime < DEATH_TIME and not Input.is_action_just_pressed("grapple"):
 			deadTime += delta
 		else:
 			dead = false
@@ -167,6 +168,8 @@ func _physics_process(delta):
 func _on_area_2d_area_entered(area):
 	if area.collision_layer & HAZARD_LAYER:
 		die()
+	elif area.collision_layer & RESTART_LAYER:
+		restart()
 
 func _on_area_2d_body_entered(body):
 	var pos = position
@@ -176,12 +179,10 @@ func _on_area_2d_body_entered(body):
 	while clip <= MAX_CLIP:
 		position = pos - Vector2(0, clip)
 		if not move_and_collide(Vector2(), true): # try clipping up
-			print(c)
 			return
 		
 		position = pos + Vector2(0, clip)
 		if not move_and_collide(Vector2(), true): # try clipping down
-			print(c)
 			return
 		
 		clip *= 1.5

@@ -1,6 +1,6 @@
 extends Node2D
 
-const screens = ["res://screens/Screen1.tscn", "res://screens/Screen3.tscn", "res://screens/Screen4.tscn"]
+const screens = ["res://screens/Screen1.tscn", "res://screens/Screen2.tscn", "res://screens/Screen3.tscn", "res://screens/Screen4.tscn"]
 
 var currentScreen
 
@@ -10,7 +10,7 @@ func loadScreen(id):
 	currentScreen = id
 	var screenLoad = load(screens[id])
 	for c in get_children():
-		if c != $PlayerNode:
+		if c != $Player and c != $Hook and c != $HookLine:
 			c.queue_free()
 	add_child(screenLoad.instantiate())
 
