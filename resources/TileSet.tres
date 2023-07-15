@@ -1101,7 +1101,7 @@ texture = ExtResource("5_f1xbe")
 13:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
 13:0/0/physics_layer_1/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2j855"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_defde"]
 resource_name = "fire hazards"
 texture = ExtResource("8_hqgne")
 0:0/0 = 0
@@ -1111,7 +1111,7 @@ texture = ExtResource("8_hqgne")
 0:0/0/physics_layer_1/angular_velocity = 0.0
 0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_84tfr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qjsuw"]
 resource_name = "ice hazards"
 texture = ExtResource("9_i54l5")
 0:0/0 = 0
@@ -1215,7 +1215,7 @@ texture = ExtResource("10_encak")
 physics_layer_0/collision_layer = 3
 physics_layer_0/collision_mask = 0
 physics_layer_1/collision_layer = 4
-physics_layer_1/collision_mask = 4
+physics_layer_1/collision_mask = 0
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Fire Platform"
 terrain_set_0/terrain_0/color = Color(1, 0, 0, 1)
@@ -1232,6 +1232,6 @@ sources/3 = SubResource("TileSetAtlasSource_jm0ia")
 sources/4 = SubResource("TileSetAtlasSource_bu3rc")
 sources/5 = SubResource("TileSetAtlasSource_t0fbe")
 sources/6 = SubResource("TileSetAtlasSource_4ixrw")
-sources/7 = SubResource("TileSetAtlasSource_2j855")
-sources/8 = SubResource("TileSetAtlasSource_84tfr")
 sources/9 = SubResource("TileSetAtlasSource_xmmug")
+sources/7 = SubResource("TileSetAtlasSource_defde")
+sources/8 = SubResource("TileSetAtlasSource_qjsuw")
