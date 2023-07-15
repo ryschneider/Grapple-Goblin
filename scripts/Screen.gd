@@ -77,6 +77,8 @@ func switch(poof=true):
 			i.switch(fireScene, poof)
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_PAUSABLE
+	
 	if forceDimension or not Global.isFireScene is bool:
 		fireScene = not fireScene
 	else:

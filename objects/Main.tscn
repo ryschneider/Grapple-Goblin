@@ -90,6 +90,7 @@ animations = [{
 size = Vector2(23.02, 57)
 
 [node name="Main" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_cuiim")
 
 [node name="HookLine" type="Line2D" parent="."]
