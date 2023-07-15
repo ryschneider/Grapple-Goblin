@@ -14,6 +14,8 @@ size = Vector2(64.5, 301)
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_4awp0")
 playerStart = Vector2(-435, 0)
+startTeleportBase = 31
+endTeleportBase = 768
 
 [node name="Camera2D" parent="." instance=ExtResource("2_v4n3k")]
 limit_left = -445

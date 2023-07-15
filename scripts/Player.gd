@@ -203,6 +203,8 @@ func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shap
 			clipUp()
 
 func clipUp():
+	if dead: return
+	
 	print("clip up")
 	var pos = position
 	var clip = 5
