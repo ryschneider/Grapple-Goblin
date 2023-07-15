@@ -11,6 +11,8 @@ decorations = [
 	"signpost.png",
 	"smallcrystal.png",
 	"smallcrystal2.png",
+	"rockpebble.png",
+	"smallrock.png",
 ]
 decorationsIceFire = [ # prefixed by ice or fire in assets
 	"bg.png",
@@ -19,6 +21,8 @@ decorationsIceFire = [ # prefixed by ice or fire in assets
 	"fenceend.png",
 	"floorspikes.png",
 	"tree.png",
+	"pebble.png",
+	"shrub.png",
 ]
 
 hazards = [
