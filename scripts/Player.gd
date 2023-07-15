@@ -179,6 +179,7 @@ func _physics_process(delta):
 			restart()
 
 func _on_area_2d_area_entered(area):
+	print(area)
 	if area.collision_layer & HAZARD_LAYER:
 		die()
 	elif area.collision_layer & RESTART_LAYER:
