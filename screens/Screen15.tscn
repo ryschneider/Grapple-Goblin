@@ -12,7 +12,7 @@ size = Vector2(64.5, 251)
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_ho3ib")
 staticCamera = true
-playerStart = Vector2(-240, 0)
+playerStart = Vector2(-230, 0)
 
 [node name="Camera2D" parent="." instance=ExtResource("2_beo7m")]
 offset = Vector2(0, -80)
