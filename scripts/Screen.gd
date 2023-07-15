@@ -53,6 +53,7 @@ func teleport(edge, base, direction):
 		edge = cam.limit_down
 		player.position = Vector2(base + 100, edge + HEIGHT_OFFSET)
 		player.momentumVel += Vector2(0, -700) # big jump
+	print(player.position)
 	teleported = true
 
 func teleportToStart():
@@ -60,9 +61,9 @@ func teleportToStart():
 
 func teleportToEnd():
 	if endTeleportEnterDirection == DIRECTION.DOWN: endTeleportEnterDirection = DIRECTION.UP
-	if endTeleportEnterDirection == DIRECTION.UP: endTeleportEnterDirection = DIRECTION.DOWN
-	if endTeleportEnterDirection == DIRECTION.LEFT: endTeleportEnterDirection = DIRECTION.RIGHT
-	if endTeleportEnterDirection == DIRECTION.RIGHT: endTeleportEnterDirection = DIRECTION.LEFT
+	elif endTeleportEnterDirection == DIRECTION.UP: endTeleportEnterDirection = DIRECTION.DOWN
+	elif endTeleportEnterDirection == DIRECTION.LEFT: endTeleportEnterDirection = DIRECTION.RIGHT
+	elif endTeleportEnterDirection == DIRECTION.RIGHT: endTeleportEnterDirection = DIRECTION.LEFT
 	teleport(0, endTeleportBase, endTeleportEnterDirection)
 
 func switch(poof=true):
