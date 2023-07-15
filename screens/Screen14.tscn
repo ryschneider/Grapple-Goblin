@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bshp6on5hf41j"]
+[gd_scene load_steps=8 format=3 uid="uid://d6ia5j5qw0u1"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_17em7"]
 [ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_oixnv"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="3_08k4x"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="4_utw8l"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="5_ge8xp"]
-[ext_resource type="PackedScene" uid="uid://ddv6mb6emo23k" path="res://objects/Snowball.tscn" id="6_k21uo"]
+[ext_resource type="PackedScene" uid="uid://cuo6od7gdkxxs" path="res://objects/Snowball.tscn" id="6_k21uo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1rj5v"]
 size = Vector2(64.5, 440.5)
