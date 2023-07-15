@@ -1,3 +1,3 @@
 extends Node
 
-var canGrapple = false
+var canGrapple = true
