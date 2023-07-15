@@ -1,18 +1,23 @@
 extends Node2D
 
-const screens = ["res://screens/Screen1.tscn", "res://screens/Screen2.tscn", "res://screens/Screen3.tscn", "res://screens/Screen4.tscn", "res://screens/Screen5.tscn", "res://screens/Screen6.tscn", "res://screens/Screen7.tscn", "res://screens/Screen10.tscn"]
+const NUM_SCREENS = 21
+var screens = []
+func _ready():
+	for i in range(NUM_SCREENS):
+		screens.push_back("res://screens/Screen" + str(i+1) + ".tscn")
+	
+	loadScreen(8) # eg. 7 for Screen7.tscn	
 
 var currentScreen
 
 func loadScreen(id):
+	id -= 1
 	if currentScreen == id: return
 	
 	currentScreen = id
+	print(screens[id])
 	var screenLoad = load(screens[id])
 	for c in get_children():
 		if c != $Player and c != $Hook and c != $HookLine:
 			c.queue_free()
 	add_child(screenLoad.instantiate())
-
-func _ready():
-	loadScreen(7)
