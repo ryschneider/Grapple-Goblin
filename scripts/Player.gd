@@ -17,6 +17,7 @@ const MAX_CLIP = 10
 
 const JUMP_QUEUE_TIME = 6.0 / 60.0
 
+const TERRAIN_LAYER = 1 << (1 - 1)
 const HAZARD_LAYER = 1 << (3 - 1)
 const RESTART_LAYER = 1 << (4 - 1)
 const PREV_LAYER = 1 << (5 - 1)
@@ -179,7 +180,6 @@ func _physics_process(delta):
 			restart()
 
 func _on_area_2d_area_entered(area):
-	print(area)
 	if area.collision_layer & HAZARD_LAYER:
 		die()
 	elif area.collision_layer & RESTART_LAYER:
@@ -191,10 +191,15 @@ func _on_area_2d_area_entered(area):
 		if not dead:
 			get_parent().nextScreen()
 
-func _on_area_2d_body_entered(body):
-	clipUp()
+func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	if body is TileMap:
+		if PhysicsServer2D.body_get_collision_layer(body_rid) & HAZARD_LAYER:
+			die()
+		elif PhysicsServer2D.body_get_collision_layer(body_rid) & TERRAIN_LAYER:
+			clipUp()
 
 func clipUp():
+	print("clip up")
 	var pos = position
 	var clip = 5
 	
@@ -210,3 +215,4 @@ func clipUp():
 		clip *= 1.5
 	
 	die() # failed to clip out
+

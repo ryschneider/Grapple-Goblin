@@ -119,7 +119,7 @@ shape = SubResource("CircleShape2D_nf3rq")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 collision_layer = 0
-collision_mask = 61
+collision_mask = 121
 script = ExtResource("5_uastf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
@@ -137,7 +137,7 @@ shape = SubResource("RectangleShape2D_1hfgo")
 [node name="Area2D" type="Area2D" parent="Player/CollisionShape2D"]
 position = Vector2(1.5, 1.5)
 collision_layer = 0
-collision_mask = 60
+collision_mask = 125
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/CollisionShape2D/Area2D"]
 position = Vector2(-1.5, -1.5)
@@ -145,3 +145,4 @@ shape = SubResource("RectangleShape2D_1hfgo")
 
 [connection signal="area_entered" from="Player/CollisionShape2D/Area2D" to="Player" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Player/CollisionShape2D/Area2D" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_shape_entered" from="Player/CollisionShape2D/Area2D" to="Player" method="_on_area_2d_body_shape_entered"]
