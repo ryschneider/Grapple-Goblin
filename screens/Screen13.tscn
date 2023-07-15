@@ -20,11 +20,6 @@ startTeleportBase = -160
 startTeleportExitDirection = 3
 endTeleportBase = 1920
 
-[node name="Camera2D" parent="." instance=ExtResource("2_f871q")]
-limit_left = -250
-limit_top = -550
-limit_right = 2800
-
 [node name="Background" parent="." instance=ExtResource("3_afkhe")]
 
 [node name="Saw" parent="." instance=ExtResource("4_av81i")]
@@ -65,3 +60,8 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
 position = Vector2(-32.5, -304)
 shape = SubResource("RectangleShape2D_8octg")
+
+[node name="Camera2D" parent="." instance=ExtResource("2_f871q")]
+limit_left = -250
+limit_top = -550
+limit_right = 2800

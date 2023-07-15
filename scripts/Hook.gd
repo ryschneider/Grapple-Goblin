@@ -7,6 +7,7 @@ const MAX_LENGTH = 500
 var direction = Vector2()
 
 var isHooked = false
+var isTaut = false
 var ropeLength = 0
 
 @onready var Player = get_node("../Player")
@@ -18,6 +19,7 @@ func _ready():
 func destroy():
 	isHooked = false
 	ropeLength = 0
+	isTaut = false
 	hide()
 
 func hook():
@@ -69,3 +71,6 @@ func _physics_process(dt):
 			var ropeDir = rope.normalized()
 			Player.position += ropeDir * (rope.length() - ropeLength)
 			Player.velocity -= ropeDir * Player.velocity.dot(ropeDir)
+			isTaut = true
+		else:
+			isTaut = false

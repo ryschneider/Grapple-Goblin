@@ -4,6 +4,7 @@ extends Node2D
 @onready var screenNode = get_node(".")
 
 @export var fireScene = false
+@export var forceDimension = false
 @export var staticCamera = false
 @export var playerStart = Vector2()
 
@@ -47,24 +48,26 @@ func teleport(edge, base, direction):
 		edge = cam.limit_right
 		player.position = Vector2(edge - WIDTH_OFFSET, base - HEIGHT_OFFSET)
 	elif direction == DIRECTION.DOWN:
-		edge = cam.limit_up
+		edge = cam.limit_bottom
 		player.position = Vector2(base + 100, edge - HEIGHT_OFFSET)
 	elif direction == DIRECTION.UP:
-		edge = cam.limit_down
+		edge = cam.limit_top
 		player.position = Vector2(base + 100, edge + HEIGHT_OFFSET)
 		player.momentumVel += Vector2(0, -700) # big jump
-	print(player.position)
+
 	teleported = true
 
 func teleportToStart():
 	teleport(0, startTeleportBase, startTeleportExitDirection)
 
+var atEnd = false
 func teleportToEnd():
 	if endTeleportEnterDirection == DIRECTION.DOWN: endTeleportEnterDirection = DIRECTION.UP
 	elif endTeleportEnterDirection == DIRECTION.UP: endTeleportEnterDirection = DIRECTION.DOWN
 	elif endTeleportEnterDirection == DIRECTION.LEFT: endTeleportEnterDirection = DIRECTION.RIGHT
 	elif endTeleportEnterDirection == DIRECTION.RIGHT: endTeleportEnterDirection = DIRECTION.LEFT
 	teleport(0, endTeleportBase, endTeleportEnterDirection)
+	atEnd = true
 
 func switch(poof=true):
 	fireScene = not fireScene
@@ -74,11 +77,17 @@ func switch(poof=true):
 			i.switch(fireScene, poof)
 
 func _ready():
-	fireScene = not fireScene
+	if forceDimension:
+		fireScene = not fireScene
 	
 	switch(false)
 	
-	if not teleported: player.position = playerStart
+	if not teleported:
+		if atEnd:
+			teleportToEnd()
+		else:
+			player.position = playerStart
+	
 	for i in player.get_children():
 		if i is Camera2D:
 			i.queue_free()

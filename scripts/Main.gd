@@ -12,8 +12,11 @@ var currentScreen
 var currentScreenLoad
 
 func restartScreen():
+	var atEnd = get_children()[get_child_count() - 1].atEnd
 	get_children()[get_child_count() - 1].queue_free()
-	add_child(currentScreenLoad.instantiate())
+	var sc = currentScreenLoad.instantiate()
+	sc.atEnd = atEnd
+	add_child(sc)
 
 func loadScreen(id):
 #	id -= 1

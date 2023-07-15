@@ -55,12 +55,16 @@ var direction = 0
 var jumpQueued = false
 var jumpQueueTime = 0.0
 func _physics_process(delta):
+	if Input.is_action_just_pressed("restart"):
+		restart()
+	
 	if dead:
-		if deadTime < DEATH_TIME and not Input.is_action_just_pressed("grapple"):
-			deadTime += delta
-		else:
+		if deadTime >= DEATH_TIME or Input.is_action_just_pressed("grapple") or Input.is_action_just_pressed("jump"):
 			dead = false
 			restart()
+			return
+		else:
+			deadTime += delta
 	
 	if not is_on_floor():
 		momentumVel.y += GRAVITY * delta
@@ -84,7 +88,7 @@ func _physics_process(delta):
 				if jumpQueued: jumpQueued = false
 				
 				momentumVel.y += FLOOR_JUMP
-			elif Hook.isHooked:
+			elif Hook.isHooked and Hook.isTaut:
 				$AudioStreamPlayer2D.play(0.05)
 				if jumpQueued: jumpQueued = false
 				

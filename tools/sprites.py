@@ -27,6 +27,7 @@ decorationsIceFire = [ # prefixed by ice or fire in assets
 
 hazards = [
 	"geyser.png",
+	"spikes.png",
 ]
 hazardsIceFire = [
 	"spikes.png",
