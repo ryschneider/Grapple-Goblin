@@ -7,7 +7,7 @@
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="4_mlugc"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="5_wfxla"]
 
-[node name="Screen4" type="Node2D"]
+[node name="Screen" type="Node2D"]
 script = ExtResource("1_7a0xx")
 
 [node name="Camera2D" parent="." instance=ExtResource("2_m8af2")]
