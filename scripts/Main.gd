@@ -31,7 +31,7 @@ func saveGame():
 	print("Saving")
 
 func newGame():
-	loadScreen(1) # eg. 7 for Screen7.tscn
+	loadScreen(9) # eg. 7 for Screen7.tscn
 
 
 func restartScreen():
