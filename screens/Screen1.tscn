@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bhsjfpa1k5plq"]
+[gd_scene load_steps=10 format=3 uid="uid://bhsjfpa1k5plq"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_d36fw"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="1_ftkki"]
@@ -11,13 +11,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6d6wj"]
 size = Vector2(35.2727, 63.6364)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bb3j"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aduq8"]
 size = Vector2(64.5, 301)
 
-[node name="Screen" type="Node2D"]
+[node name="Screen3" type="Node2D"]
 script = ExtResource("1_d36fw")
+teleportEnd = Vector2(2180, 210)
 
 [node name="Camera2D" parent="." instance=ExtResource("2_tt207")]
 limit_left = -550
@@ -58,15 +57,6 @@ shape = SubResource("RectangleShape2D_6d6wj")
 position = Vector2(-256, 73)
 scale = Vector2(2.54688, 2.54688)
 texture = ExtResource("7_srbws")
-
-[node name="WorldBorder" type="Area2D" parent="."]
-position = Vector2(0, 1500)
-collision_layer = 8
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorder"]
-scale = Vector2(10, 10)
-shape = SubResource("WorldBoundaryShape2D_1bb3j")
 
 [node name="NextScreen" type="Area2D" parent="."]
 position = Vector2(0, 1)
