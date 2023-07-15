@@ -43,7 +43,11 @@ func die():
 	direction = 0
 
 func restart():
-	get_tree().reload_current_scene()
+#	get_tree().reload_current_scene()
+	get_parent().restartScreen()
+	velocity = Vector2()
+	moveVel = Vector2()
+	momentumVel = Vector2()
 
 const LIMIT_GRACE = 30
 
