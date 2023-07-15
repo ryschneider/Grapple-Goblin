@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvif42ghaytam"]
+[gd_scene load_steps=5 format=3 uid="uid://cl7oeooehx761"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_uyce1"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="2_2mcj0"]
@@ -7,6 +7,7 @@
 
 [node name="Screen2" type="Node2D"]
 script = ExtResource("1_uyce1")
+playerStart = Vector2(-550, 250)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-12, -14)
