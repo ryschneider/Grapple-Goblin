@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://dvoeaxt7pbbo"]
+[gd_scene load_steps=18 format=3 uid="uid://dvoeaxt7pbbo"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_cuiim"]
 [ext_resource type="Script" path="res://scripts/HookLine.gd" id="2_i3aqy"]
 [ext_resource type="Script" path="res://scripts/Hook.gd" id="3_qj75v"]
 [ext_resource type="Texture2D" uid="uid://bvm52vl45446i" path="res://assets/Level/Goblin/hook.png" id="4_5mgo8"]
 [ext_resource type="Script" path="res://scripts/Player.gd" id="5_uastf"]
+[ext_resource type="Texture2D" uid="uid://btnxtngo5jdhh" path="res://assets/Level/Goblin/Goblin-dead-noblood.png" id="6_agtsa"]
 [ext_resource type="Texture2D" uid="uid://gi4lvs8nagil" path="res://assets/Level/Goblin/Goblin-idle-right.png" id="6_w73ud"]
 [ext_resource type="Texture2D" uid="uid://0xmoj35mt7vo" path="res://assets/Level/Goblin/Goblin-jumpstart.png" id="7_2k4q8"]
 [ext_resource type="Texture2D" uid="uid://bl4ofskdlqj3e" path="res://assets/Level/Goblin/Goblin-jump.png" id="8_gqpk4"]
@@ -22,6 +23,14 @@ size = Vector2(37, 57)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nkno8"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_agtsa")
+}],
+"loop": true,
+"name": &"Dead",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("6_w73ud")
@@ -80,12 +89,13 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
 script = ExtResource("1_cuiim")
 
 [node name="PlayerNode" type="Node2D" parent="."]
 
 [node name="HookLine" type="Line2D" parent="PlayerNode"]
+points = PackedVector2Array(11, 0)
 width = 2.0
 default_color = Color(0.383138, 0.277932, 0.12305, 1)
 script = ExtResource("2_i3aqy")
@@ -98,7 +108,7 @@ script = ExtResource("3_qj75v")
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerNode/Hook"]
 texture_filter = 1
-position = Vector2(0, 0.27)
+position = Vector2(7.29, 0.27)
 rotation = 0.820305
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_5mgo8")
@@ -106,20 +116,23 @@ region_enabled = true
 region_rect = Rect2(-0.709, 6.325, 25, 25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Hook"]
+position = Vector2(3, 0)
 shape = SubResource("CircleShape2D_nf3rq")
 
 [node name="Player" type="CharacterBody2D" parent="PlayerNode"]
-collision_layer = 8
+collision_layer = 9
+collision_mask = 9
 script = ExtResource("5_uastf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player"]
+visible = false
 position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_1hfgo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerNode/Player"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_nkno8")
-animation = &"Jump"
+animation = &"Dead"
 
 [node name="Camera2D" type="Camera2D" parent="PlayerNode/Player"]
 zoom = Vector2(0.8, 0.8)
@@ -127,13 +140,17 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="Area2D" type="Area2D" parent="PlayerNode/Player"]
-collision_layer = 0
+collision_layer = 9
+collision_mask = 9
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="PlayerNode/Player/Area2D"]
+visible = false
 position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_1hfgo")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="PlayerNode/Player"]
 stream = ExtResource("13_5m1e0")
 
+[connection signal="area_entered" from="PlayerNode/Player/Area2D" to="PlayerNode/Player" method="_on_platform_area_area_entered"]
+[connection signal="area_entered" from="PlayerNode/Player/Area2D" to="PlayerNode/Player" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="PlayerNode/Player/Area2D" to="PlayerNode/Player" method="_on_area_2d_body_entered"]

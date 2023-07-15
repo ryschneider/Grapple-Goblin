@@ -9,13 +9,15 @@ const FLOOR_ACC = 0.3
 const FLOOR_FRICTION = 0.1
 
 const AIR_ACC = 0.1
-const AIR_FRICTION = 0.05
+const AIR_FRICTION = 0.02
 
-var GRAVITY = 980
+const GRAVITY = 980
 
 const MAX_CLIP = 10
 
 const JUMP_QUEUE_TIME = 6.0 / 60.0
+
+const HAZARD_LAYER = 0b100
 
 var moveVel = Vector2()
 var momentumVel = Vector2()
@@ -23,65 +25,77 @@ var momentumVel = Vector2()
 @onready var Hook = get_node("../Hook")
 
 const DEATH_TIME = 2
-var died = false
-var diedTime = 0
+var dead = false
+var deadTime = 0
 func die():
-	died = true
-	diedTime = 0
+	dead = true
+	deadTime = 0
 	if $AnimatedSprite2D.animation != "Dead":
 		$AnimatedSprite2D.play("Dead")
+	
+	Hook.destroy()
+	direction = 0
+
+func restart():
+	get_tree().reload_current_scene()
 
 var direction = 0
 var jumpQueued = false
 var jumpQueueTime = 0.0
 func _physics_process(delta):
-	if died: return
+	if dead:
+		if deadTime < DEATH_TIME:
+			deadTime += delta
+		else:
+			dead = false
+			restart()
 	
 	if not is_on_floor():
 		momentumVel.y += GRAVITY * delta
 	else:
 		momentumVel.y = 0
 
-	if Input.is_action_just_pressed("grapple"):
-		Hook.shootHook()
-	elif Input.is_action_just_released("grapple"):
-		Hook.destroy()
-
-	if jumpQueued:
-		jumpQueueTime += delta
-		if jumpQueueTime > JUMP_QUEUE_TIME:
-			jumpQueued = false
-	
-	if Input.is_action_just_pressed("jump") or jumpQueued:
-		if is_on_floor():
-			$AudioStreamPlayer2D.play(0.05)
-			if jumpQueued: jumpQueued = false
-			
-			momentumVel.y += FLOOR_JUMP
-		elif Hook.isHooked:
-			$AudioStreamPlayer2D.play(0.05)
-			if jumpQueued: jumpQueued = false
-			
-			momentumVel.y += GRAPPLE_JUMP
+	if not dead:
+		if Input.is_action_just_pressed("grapple"):
+			Hook.shootHook()
+		elif Input.is_action_just_released("grapple"):
 			Hook.destroy()
-		elif not jumpQueued:
-			jumpQueued = true
-			jumpQueueTime = 0
 
-#	var direction = Input.get_axis("move_left", "move_right")
-	# handle inputs with priority for movement direction just pressed
-	if Input.is_action_just_pressed("move_left") and Input.is_action_just_pressed("move_right"):
-		direction = 0
-	elif Input.is_action_just_pressed("move_left"):
-		direction = -1
-	elif Input.is_action_just_pressed("move_right"):
-		direction = 1
-	elif Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
-		direction = -1
-	elif Input.is_action_pressed("move_right") and not Input.is_action_pressed("move_left"):
-		direction = 1
-	elif not Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
-		direction = 0
+		if jumpQueued:
+			jumpQueueTime += delta
+			if jumpQueueTime > JUMP_QUEUE_TIME:
+				jumpQueued = false
+		
+		if Input.is_action_just_pressed("jump") or jumpQueued:
+			if is_on_floor():
+				$AudioStreamPlayer2D.play(0.05)
+				if jumpQueued: jumpQueued = false
+				
+				momentumVel.y += FLOOR_JUMP
+			elif Hook.isHooked:
+				$AudioStreamPlayer2D.play(0.05)
+				if jumpQueued: jumpQueued = false
+				
+				momentumVel.y += GRAPPLE_JUMP
+				Hook.destroy()
+			elif not jumpQueued:
+				jumpQueued = true
+				jumpQueueTime = 0
+
+	#	var direction = Input.get_axis("move_left", "move_right")
+		# handle inputs with priority for movement direction just pressed
+		if Input.is_action_just_pressed("move_left") and Input.is_action_just_pressed("move_right"):
+			direction = 0
+		elif Input.is_action_just_pressed("move_left"):
+			direction = -1
+		elif Input.is_action_just_pressed("move_right"):
+			direction = 1
+		elif Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
+			direction = -1
+		elif Input.is_action_pressed("move_right") and not Input.is_action_pressed("move_left"):
+			direction = 1
+		elif not Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
+			direction = 0
 	
 	# movement
 	if direction != 0:
@@ -122,13 +136,14 @@ func _physics_process(delta):
 		momentumVel.y = 0
 	
 	# animation stuff
-	if not is_on_floor():
-		if $AnimatedSprite2D.animation != "Jump":
-			$AnimatedSprite2D.play("Jump")
-	elif direction != 0:
-		$AnimatedSprite2D.play("Run")
-	else:
-		$AnimatedSprite2D.play("Idle")
+	if not dead:
+		if not is_on_floor():
+			if $AnimatedSprite2D.animation != "Jump":
+				$AnimatedSprite2D.play("Jump")
+		elif direction != 0:
+			$AnimatedSprite2D.play("Run")
+		else:
+			$AnimatedSprite2D.play("Idle")
 	
 	# combine velocities
 	var moveDir = moveVel.normalized()
@@ -148,6 +163,10 @@ func _physics_process(delta):
 		$AnimatedSprite2D.flip_h = true
 	elif velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
+
+func _on_area_2d_area_entered(area):
+	if area.collision_layer & HAZARD_LAYER:
+		die()
 
 func _on_area_2d_body_entered(body):
 	var pos = position
