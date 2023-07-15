@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dffc2hnl7drrk"]
+[gd_scene load_steps=8 format=3 uid="uid://dffc2hnl7drrk"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_i38su"]
 [ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_d2k8b"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="3_dqpke"]
 [ext_resource type="PackedScene" uid="uid://b555e1bxlwhv8" path="res://objects/Saw.tscn" id="4_ua8xe"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="5_dy6bf"]
-[ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="6_dqk2m"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bb3j"]
 

@@ -8,6 +8,7 @@ func _ready():
 		screens.push_back("res://screens/Screen" + str(i+1) + ".tscn")
 	
 	loadSave()
+#	loadScreen(4)
 
 var currentScreen
 var currentScreenLoad
