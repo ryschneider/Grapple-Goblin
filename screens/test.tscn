@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://ukqvl0xsvsjs"]
+
+[ext_resource type="Script" path="res://scripts/Screen.gd" id="1_g2dwc"]
+[ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_pko87"]
+[ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="3_5bef5"]
+[ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="5_anvub"]
+[ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="6_p3vws"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sb5xy"]
+size = Vector2(64.5, 301)
+
+[node name="Screen" type="Node2D"]
+script = ExtResource("1_g2dwc")
+
+[node name="Camera2D" parent="." instance=ExtResource("2_pko87")]
+limit_left = -330
+limit_right = 3475
+limit_bottom = 350
+
+[node name="Background" parent="." instance=ExtResource("3_5bef5")]
+
+[node name="PreviousScreen" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
+position = Vector2(-182.25, -70.5)
+shape = SubResource("RectangleShape2D_sb5xy")
+
+[node name="NextScreen" type="Area2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(4, 4)
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
+position = Vector2(901, 30)
+shape = SubResource("RectangleShape2D_sb5xy")
+
+[node name="ForegroundMap" type="TileMap" parent="."]
+scale = Vector2(2, 2)
+tile_set = ExtResource("5_anvub")
+format = 2
+layer_0/name = "toggle"
+layer_0/tile_data = PackedInt32Array(131075, 7, 0, 131076, 8, 0)
+layer_1/name = "flip"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(327684, 131075, 2, 262148, 131075, 1, 196612, 131075, 0, 327683, 65539, 2, 262147, 65539, 1, 196611, 65539, 0, 327682, 65539, 2, 262146, 65539, 1, 196610, 65539, 0, 327681, 65539, 2, 262145, 65539, 1, 196609, 65539, 0, 327680, 65539, 2, 262144, 65539, 1, 196608, 65539, 0, 393215, 65539, 2, 327679, 65539, 1, 262143, 65539, 0, 393214, 65539, 2, 327678, 65539, 1, 262142, 65539, 0, 393213, 65539, 2, 327677, 65539, 1, 262141, 65539, 0, 393212, 65539, 2, 327676, 65539, 1, 262140, 65539, 0, 393211, 3, 2, 327675, 3, 1, 262139, 3, 0, 196603, 7, 0)
+script = ExtResource("6_p3vws")

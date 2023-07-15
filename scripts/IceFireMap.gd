@@ -3,8 +3,8 @@ extends TileMap
 const FIRE_TERRAIN = 0
 const ICE_TERRAIN = 1
 
-const FIRE_SOURCES = [0, 4, 5]
-const ICE_SOURCES = [1, 7, 8]
+const FIRE_SOURCES = [0, 4, 7]
+const ICE_SOURCES = [1, 5, 8]
 
 # 4,5 decorations, 7,8 hazards
 const FLIP_PAIRS = [Vector2i(0, 1), Vector2i(4, 5), Vector2i(7, 8)]
@@ -40,6 +40,7 @@ func switch(fireScene, poof = true):
 		set_cell(0, cell.xy, cell.source, cell.atlasXY, cell.alt)
 	hiddenTiles = []
 	for source in hideSources:
+		print("hiding tiles with source " + str(source))
 		for xy in get_used_cells_by_id(0, source):
 			var cell = Cell.new()
 			cell.xy = xy
@@ -57,7 +58,7 @@ func switch(fireScene, poof = true):
 					particle = Ember.instantiate()
 				particle.position = cell.xy * 16
 				add_child(particle)
-
+	print()
 	# flip layer 1 tiles
 	for i in FLIP_PAIRS:
 		var from
