@@ -12,7 +12,7 @@ size = Vector2(64.5, 301)
 
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_aiv15")
-playerStart = Vector2(-400, 0)
+playerStart = Vector2(-490, 0)
 
 [node name="Camera2D" parent="." instance=ExtResource("2_jaqyf")]
 limit_left = -500
@@ -48,7 +48,7 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
-position = Vector2(-288, -61.5)
+position = Vector2(-282.5, -61)
 shape = SubResource("RectangleShape2D_pqvwe")
 
 [node name="NextScreen" type="Area2D" parent="."]

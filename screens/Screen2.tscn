@@ -15,7 +15,7 @@ playerStart = Vector2(-800, -150)
 
 [node name="Camera2D" parent="." instance=ExtResource("2_8u4u0")]
 limit_left = -875
-limit_right = 954
+limit_right = 800
 limit_bottom = 350
 
 [node name="Background" parent="." instance=ExtResource("2_2mcj0")]
@@ -52,5 +52,5 @@ collision_layer = 32
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
-position = Vector2(229.25, -24.25)
+position = Vector2(232.25, -24.25)
 shape = SubResource("RectangleShape2D_18pgo")
