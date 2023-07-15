@@ -171,7 +171,7 @@ func _on_area_2d_area_entered(area):
 	elif area.collision_layer & RESTART_LAYER:
 		restart()
 
-func _on_area_2d_body_entered(body):
+func clipUp():
 	var pos = position
 	var clip = 5
 	
@@ -189,3 +189,6 @@ func _on_area_2d_body_entered(body):
 		c += 1
 	
 	die() # failed to clip out
+
+func _on_area_2d_body_entered(body):
+	clipUp()

@@ -1,3 +1,3 @@
-spright.exe
+python sprites.py
 spright.exe
 pause

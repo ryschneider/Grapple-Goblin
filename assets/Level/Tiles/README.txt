@@ -1,3 +1,8 @@
+OUTDATED
+ASK RYAN ABT IT
+
+
+
 all the images under Tiles/ are generated using a script
 
 put all images under the appropriate subfolder

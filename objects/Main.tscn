@@ -18,9 +18,6 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_nf3rq"]
 radius = 3.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hfgo"]
-size = Vector2(37, 57)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_nkno8"]
 animations = [{
 "frames": [{
@@ -89,6 +86,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hfgo"]
+size = Vector2(23.02, 57)
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cuiim")
 
@@ -122,25 +122,26 @@ collision_layer = 0
 collision_mask = 13
 script = ExtResource("5_uastf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-1.5, -1.5)
-shape = SubResource("RectangleShape2D_1hfgo")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_nkno8")
-animation = &"Dead"
-
-[node name="Area2D" type="Area2D" parent="Player"]
-collision_layer = 0
-collision_mask = 13
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/Area2D"]
-position = Vector2(-1.5, -1.5)
-shape = SubResource("RectangleShape2D_1hfgo")
+animation = &"Run"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("13_5m1e0")
 
-[connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_area_2d_area_entered"]
-[connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-1.5, -2.5)
+shape = SubResource("RectangleShape2D_1hfgo")
+
+[node name="Area2D" type="Area2D" parent="Player/CollisionShape2D"]
+position = Vector2(1.5, 1.5)
+collision_layer = 0
+collision_mask = 13
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/CollisionShape2D/Area2D"]
+position = Vector2(-1.5, -1.5)
+shape = SubResource("RectangleShape2D_1hfgo")
+
+[connection signal="area_entered" from="Player/CollisionShape2D/Area2D" to="Player" method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Player/CollisionShape2D/Area2D" to="Player" method="_on_area_2d_body_entered"]

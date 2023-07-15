@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1cs5caenk628"]
+[gd_scene load_steps=7 format=3 uid="uid://vx6yborph6ej"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_dpl35"]
-[ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_d8pow"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="2_dexbs"]
 [ext_resource type="PackedScene" uid="uid://b555e1bxlwhv8" path="res://objects/Saw.tscn" id="3_53i2u"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="4_ptdx4"]
@@ -9,10 +8,8 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bb3j"]
 
-[node name="Screen1" type="Node2D"]
+[node name="Screen5" type="Node2D"]
 script = ExtResource("1_dpl35")
-
-[node name="Camera2D" parent="." instance=ExtResource("2_d8pow")]
 
 [node name="Background" parent="." instance=ExtResource("2_dexbs")]
 
