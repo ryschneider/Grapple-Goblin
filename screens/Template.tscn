@@ -12,8 +12,6 @@ size = Vector2(64.5, 301)
 
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_krrsg")
-fireScene = false
-forceDimension = true
 
 [node name="Camera2D" parent="." instance=ExtResource("2_bhyb6")]
 limit_left = -330
