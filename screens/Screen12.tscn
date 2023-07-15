@@ -44,11 +44,9 @@ position = Vector2(737, -296)
 
 [node name="Saw3" parent="." instance=ExtResource("6_q18id")]
 position = Vector2(603, -296)
-scale = Vector2(7, 7)
 
 [node name="Saw4" parent="." instance=ExtResource("6_q18id")]
 position = Vector2(3380, -195)
-scale = Vector2(7, 7)
 
 [node name="PreviousScreen" type="Area2D" parent="."]
 scale = Vector2(2, 2)

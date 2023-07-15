@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhsjfpa1k5plq"]
+[gd_scene load_steps=11 format=3 uid="uid://bhsjfpa1k5plq"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_d36fw"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="1_ftkki"]
@@ -7,6 +7,9 @@
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="3_x6yug"]
 [ext_resource type="Texture2D" uid="uid://ckh5o7jtrv0pk" path="res://assets/Level/Other/knight.png" id="6_cme6w"]
 [ext_resource type="Texture2D" uid="uid://cwqfgdjejvsmk" path="res://assets/Level/Other/cliffrope.png" id="7_srbws"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6d6wj"]
+size = Vector2(35.2727, 63.6364)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bb3j"]
 
@@ -28,6 +31,7 @@ scale = Vector2(2, 2)
 tile_set = ExtResource("1_ftkki")
 format = 2
 layer_0/name = "toggle"
+layer_0/tile_data = PackedInt32Array(-1245107, 131075, 0, -1179571, 131075, 2, -1114035, 131075, 2, -1048499, 131075, 2, -982963, 131075, 2, -917427, 131075, 2, -851891, 131075, 2, -786355, 131075, 2, -720819, 131075, 2, -655283, 131075, 2, -589747, 131075, 2, -524211, 131075, 2, -458675, 131075, 2, -393139, 131075, 2, -327603, 131075, 2, -262067, 131075, 2, -196531, 131075, 2, -130995, 131075, 2, -65459, 131075, 2, 77, 131075, 2, 65613, 131075, 2, 131149, 131075, 2, 196685, 131075, 2, 262221, 131075, 2, 327757, 131075, 2, 393293, 131075, 2, 458829, 131075, 2, 524365, 131075, 2, 589901, 131075, 2, 655437, 131075, 2, 720973, 131075, 2, 786509, 131075, 2, 852045, 131075, 2, 917581, 131075, 2, 983117, 131075, 2, 1048653, 131075, 2, 1114189, 131075, 2, 1179725, 131075, 2, 1245261, 131075, 2, 1310797, 131075, 2, 1376333, 131075, 2, 1441869, 131075, 2)
 layer_1/name = "flip"
 layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
@@ -41,6 +45,15 @@ script = ExtResource("3_x6yug")
 position = Vector2(-465, 137)
 scale = Vector2(2.75, 2.75)
 texture = ExtResource("6_cme6w")
+
+[node name="Area2D" type="Area2D" parent="Knight"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Knight/Area2D"]
+position = Vector2(3.45454, -0.18182)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_6d6wj")
 
 [node name="Cliffrope" type="Sprite2D" parent="."]
 position = Vector2(-256, 73)
