@@ -28,5 +28,5 @@ func _ready():
 
 
 func _process(delta):
-	if Input.is_action_just_pressed("switch_dimension"):
+	if Input.is_action_just_pressed("switch_dimension") and not player.dead:
 		switch()
