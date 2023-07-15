@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="6_8ogee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sb5xy"]
-size = Vector2(72.5, 301)
+size = Vector2(64.5, 301)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bb3j"]
 
@@ -16,6 +16,8 @@ size = Vector2(72.5, 301)
 script = ExtResource("1_krrsg")
 
 [node name="Camera2D" parent="." instance=ExtResource("2_bhyb6")]
+limit_left = -330
+limit_right = 3475
 
 [node name="Background" parent="." instance=ExtResource("3_g6jtw")]
 
@@ -30,7 +32,7 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
-position = Vector2(-134.5, -64)
+position = Vector2(-182.25, -70.5)
 shape = SubResource("RectangleShape2D_sb5xy")
 
 [node name="NextScreen" type="Area2D" parent="."]
@@ -40,7 +42,7 @@ collision_layer = 32
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
-position = Vector2(877.25, 35.75)
+position = Vector2(901, 30)
 shape = SubResource("RectangleShape2D_sb5xy")
 
 [node name="ForegroundMap" type="TileMap" parent="."]
