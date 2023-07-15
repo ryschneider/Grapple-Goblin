@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cii2o1pmagk4h"
-path="res://.godot/imported/Goblin-run-leftarm.png-fb0b63b9a9bcd3ce4262f086bf9e99f9.ctex"
+uid="uid://de51reotmp4ta"
+path="res://.godot/imported/Goblin-runfull-leftarm.png-1fb7c650358d578548cddd4edd1f6787.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Level/Goblin/Goblin-run-leftarm.png"
-dest_files=["res://.godot/imported/Goblin-run-leftarm.png-fb0b63b9a9bcd3ce4262f086bf9e99f9.ctex"]
+source_file="res://assets/Level/Goblin/Goblin-runfull-leftarm.png"
+dest_files=["res://.godot/imported/Goblin-runfull-leftarm.png-1fb7c650358d578548cddd4edd1f6787.ctex"]
 
 [params]
 
