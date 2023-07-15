@@ -179,9 +179,11 @@ func _physics_process(delta):
 	# kill if off camera
 #	if position.x+LIMIT_GRACE < $Camera2D.limit_left or position.x-LIMIT_GRACE > $Camera2D.limit_right\
 #		or position.y+LIMIT_GRACE < $Camera2D.limit_top or position.y-LIMIT_GRACE > $Camera2D.limit_bottom:
-	if has_node("Camera2D"):
-		if position.y < $Camera2D.limit_top or position.y > $Camera2D.limit_bottom:
-			restart()
+	for i in get_children():
+		if i is Camera2D:
+			if position.y < i.limit_top or position.y > i.limit_bottom:
+				restart()
+			break
 
 func _on_area_2d_area_entered(area):
 	if area.collision_layer & HAZARD_LAYER:
@@ -205,7 +207,6 @@ func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shap
 func clipUp():
 	if dead: return
 	
-	print("clip up")
 	var pos = position
 	var clip = 5
 	
