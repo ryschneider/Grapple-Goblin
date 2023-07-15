@@ -119,8 +119,6 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_18tvg")
 animation = &"Jump"
 
-[node name="Camera2D" type="Camera2D" parent="PlayerNode/Player"]
-
 [node name="Area2D" type="Area2D" parent="PlayerNode/Player"]
 collision_layer = 0
 

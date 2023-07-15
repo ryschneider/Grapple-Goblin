@@ -1,6 +1,6 @@
 extends Node2D
 
-const screens = ["res://screens/Screen1.tscn"]
+const screens = ["res://screens/Screen1.tscn", "res://screens/Screen2.tscn"]
 
 var currentScreen
 
@@ -15,7 +15,7 @@ func loadScreen(id):
 	add_child(screenLoad.instantiate())
 
 func _ready():
-	loadScreen(0)
+	loadScreen(1)
 
 func _process(delta):
 	pass

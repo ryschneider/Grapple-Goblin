@@ -135,6 +135,7 @@ sprite_frames = SubResource("SpriteFrames_nkno8")
 animation = &"Dead"
 
 [node name="Camera2D" type="Camera2D" parent="PlayerNode/Player"]
+enabled = false
 zoom = Vector2(0.8, 0.8)
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
