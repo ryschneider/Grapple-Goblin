@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byv3q7iudh40x"
-path="res://.godot/imported/zzz.png-faa48d25effaddda262a862bb5fb1166.ctex"
+uid="uid://c64vomtfgm4t"
+path="res://.godot/imported/wind.png-16880a2e8993dad504d75fc20280b111.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Level/Tiles/Decorations/other/zzz.png"
-dest_files=["res://.godot/imported/zzz.png-faa48d25effaddda262a862bb5fb1166.ctex"]
+source_file="res://assets/Level/Other/wind.png"
+dest_files=["res://.godot/imported/wind.png-16880a2e8993dad504d75fc20280b111.ctex"]
 
 [params]
 
