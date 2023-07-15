@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-const SPEED = 2000
+const SPEED = 4000
 const MIN_LENGTH = 50
 const MAX_LENGTH = 500
 
@@ -42,7 +42,8 @@ func apply(vel): # apply grapple physics to velocity
 	return vel
 
 func _process(dt):
-	rotation = (position - Player.position).angle()
+	if not isHooked:
+		rotation = (position - Player.position).angle()
 
 func _physics_process(dt):
 	if is_visible() && !isHooked:
@@ -57,7 +58,7 @@ func _physics_process(dt):
 				destroy()
 	
 	if isHooked:
-		if not move_and_collide(direction * dt * SPEED): # platform disappeared
+		if not move_and_collide(direction * dt * SPEED, true): # platform disappeared
 			destroy()
 			return
 		

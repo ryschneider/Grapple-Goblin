@@ -95,6 +95,7 @@ script = ExtResource("1_cuiim")
 [node name="PlayerNode" type="Node2D" parent="."]
 
 [node name="HookLine" type="Line2D" parent="PlayerNode"]
+points = PackedVector2Array(11, 0)
 width = 2.0
 default_color = Color(0.383138, 0.277932, 0.12305, 1)
 script = ExtResource("2_i3aqy")
@@ -107,7 +108,7 @@ script = ExtResource("3_qj75v")
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerNode/Hook"]
 texture_filter = 1
-position = Vector2(0, 0.27)
+position = Vector2(7.29, 0.27)
 rotation = 0.820305
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_5mgo8")
@@ -115,6 +116,7 @@ region_enabled = true
 region_rect = Rect2(-0.709, 6.325, 25, 25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Hook"]
+position = Vector2(3, 0)
 shape = SubResource("CircleShape2D_nf3rq")
 
 [node name="Player" type="CharacterBody2D" parent="PlayerNode"]
@@ -123,6 +125,7 @@ collision_mask = 9
 script = ExtResource("5_uastf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player"]
+visible = false
 position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_1hfgo")
 
@@ -141,6 +144,7 @@ collision_layer = 9
 collision_mask = 9
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="PlayerNode/Player/Area2D"]
+visible = false
 position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_1hfgo")
 
