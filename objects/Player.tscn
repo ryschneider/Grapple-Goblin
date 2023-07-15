@@ -105,7 +105,7 @@ region_rect = Rect2(-0.709, 6.325, 25, 25)
 shape = SubResource("CircleShape2D_kfyvr")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-collision_layer = 0
+collision_layer = 8
 script = ExtResource("1_xdg55")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]

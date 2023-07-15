@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://b555e1bxlwhv8"]
+
+[ext_resource type="Script" path="res://Saw.gd" id="1_61rix"]
+[ext_resource type="Texture2D" uid="uid://c332eh17pi6jr" path="res://assets/Level/Other/pixil-frame-0.png" id="1_s1qfl"]
+[ext_resource type="Texture2D" uid="uid://dxaj83kg4gk34" path="res://assets/Level/Other/pixil-frame-0 (4).png" id="2_aux0e"]
+
+[sub_resource type="Animation" id="Animation_41g8f"]
+resource_name = "rotate"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.14159, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_f04hp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pn0qk"]
+_data = {
+"RESET": SubResource("Animation_f04hp"),
+"rotate": SubResource("Animation_41g8f")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lyogd"]
+radius = 9.0
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 0
+collision_mask = 9
+script = ExtResource("1_61rix")
+
+[node name="Saw" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -0.5)
+scale = Vector2(1.00184, 1.0016)
+texture = ExtResource("1_s1qfl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Saw"]
+autoplay = "rotate"
+libraries = {
+"": SubResource("AnimationLibrary_pn0qk")
+}
+
+[node name="Chain" type="Sprite2D" parent="."]
+position = Vector2(1, -9)
+texture = ExtResource("2_aux0e")
+
+[node name="Chain2" type="Sprite2D" parent="."]
+position = Vector2(1, -24)
+texture = ExtResource("2_aux0e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_lyogd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
