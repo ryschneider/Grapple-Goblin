@@ -50,6 +50,7 @@ func _physics_process(dt):
 	if is_visible() && !isHooked:
 		if (position - Player.position).length() > MAX_LENGTH:
 			destroy()
+			return
 		
 		var collision = move_and_collide(direction * SPEED * dt)
 		if collision:
