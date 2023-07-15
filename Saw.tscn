@@ -4,6 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://c332eh17pi6jr" path="res://assets/Level/Other/pixil-frame-0.png" id="1_s1qfl"]
 [ext_resource type="Texture2D" uid="uid://dxaj83kg4gk34" path="res://assets/Level/Other/pixil-frame-0 (4).png" id="2_aux0e"]
 
+[sub_resource type="Animation" id="Animation_f04hp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_41g8f"]
 resource_name = "rotate"
 loop_mode = 1
@@ -20,21 +35,6 @@ tracks/0/keys = {
 "values": [0.0, 3.14159, 6.28319]
 }
 
-[sub_resource type="Animation" id="Animation_f04hp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pn0qk"]
 _data = {
 "RESET": SubResource("Animation_f04hp"),
@@ -49,6 +49,14 @@ collision_layer = 0
 collision_mask = 9
 script = ExtResource("1_61rix")
 
+[node name="Chain" type="Sprite2D" parent="."]
+position = Vector2(1, -9)
+texture = ExtResource("2_aux0e")
+
+[node name="Chain2" type="Sprite2D" parent="."]
+position = Vector2(1, -24)
+texture = ExtResource("2_aux0e")
+
 [node name="Saw" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -0.5)
@@ -60,14 +68,6 @@ autoplay = "rotate"
 libraries = {
 "": SubResource("AnimationLibrary_pn0qk")
 }
-
-[node name="Chain" type="Sprite2D" parent="."]
-position = Vector2(1, -9)
-texture = ExtResource("2_aux0e")
-
-[node name="Chain2" type="Sprite2D" parent="."]
-position = Vector2(1, -24)
-texture = ExtResource("2_aux0e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

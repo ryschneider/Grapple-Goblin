@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dvoeaxt7pbbo"]
+[gd_scene load_steps=17 format=3 uid="uid://dvoeaxt7pbbo"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_cuiim"]
 [ext_resource type="Script" path="res://scripts/HookLine.gd" id="2_i3aqy"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://dasef0456mmto" path="res://assets/Level/Goblin/Goblin-runhalf-rightarm.png" id="11_oqll3"]
 [ext_resource type="Texture2D" uid="uid://cdg70tkaxw82b" path="res://assets/Level/Goblin/Goblin-runfull-rightarm.png" id="12_1ir6f"]
 [ext_resource type="AudioStream" uid="uid://cb2ol5n4fc13v" path="res://assets/SFX/jump.wav" id="13_5m1e0"]
-[ext_resource type="PackedScene" uid="uid://bhsjfpa1k5plq" path="res://screens/Screen1.tscn" id="14_o1gn3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nf3rq"]
 radius = 3.0
@@ -84,8 +83,6 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cuiim")
 
-[node name="Screen1" parent="." instance=ExtResource("14_o1gn3")]
-
 [node name="PlayerNode" type="Node2D" parent="."]
 
 [node name="HookLine" type="Line2D" parent="PlayerNode"]
@@ -125,6 +122,9 @@ sprite_frames = SubResource("SpriteFrames_nkno8")
 animation = &"Jump"
 
 [node name="Camera2D" type="Camera2D" parent="PlayerNode/Player"]
+zoom = Vector2(0.8, 0.8)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="Area2D" type="Area2D" parent="PlayerNode/Player"]
 collision_layer = 0

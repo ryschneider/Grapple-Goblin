@@ -9,7 +9,6 @@ const ICE_SOURCES = [1, 7, 8]
 # 4,5 decorations, 7,8 hazards
 const FLIP_PAIRS = [Vector2i(0, 1), Vector2i(4, 5), Vector2i(7, 8)]
 
-var fireScene = false
 var hiddenTiles = []
 
 @onready var Player = get_node("../PlayerNode")
@@ -23,9 +22,7 @@ class Cell:
 	var source: int
 	var terrain: int
 
-func switch(poof = true):
-	fireScene = not fireScene
-	
+func switch(fireScene, poof = true):
 	# toggle layer 0 tiles
 	var showTerrain
 	var showSources
