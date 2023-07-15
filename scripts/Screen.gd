@@ -17,7 +17,7 @@ func switch(poof=true):
 func _ready():
 	switch(false)
 	player.position = playerStart
-	$Camera2D.reparent(player)
+	$Camera2D.reparent(player, false)
 
 func _process(delta):
 	if Input.is_action_just_pressed("switch_dimension"):
