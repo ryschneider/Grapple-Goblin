@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ciq6i07ob46iy"]
+[gd_scene load_steps=7 format=3 uid="uid://prtiw533dacy"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_aiv15"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="2_drxg3"]
@@ -7,7 +7,7 @@
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="4_imfx6"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="5_r72df"]
 
-[node name="Screen3" type="Node2D"]
+[node name="Screen" type="Node2D"]
 script = ExtResource("1_aiv15")
 staringPos = Vector2(-450, -50)
 

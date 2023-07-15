@@ -16,4 +16,3 @@ func loadScreen(id):
 
 func _ready():
 	loadScreen(7)
-
