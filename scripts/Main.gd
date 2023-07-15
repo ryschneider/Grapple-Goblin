@@ -2,18 +2,40 @@ extends Node2D
 
 const NUM_SCREENS = 21
 var screens = ["res://screens/test.tscn"]
+
 func _ready():
 	for i in range(NUM_SCREENS):
 		screens.push_back("res://screens/Screen" + str(i+1) + ".tscn")
 	
-	loadScreen(19) # eg. 7 for Screen7.tscn
-	
+	loadSave()
+
 var currentScreen
 var currentScreenLoad
 
+
+func loadSave():
+	if not FileAccess.file_exists("user://save.txt"):
+		newGame()
+		return
+	
+	var save = FileAccess.open("user://save.txt", FileAccess.READ)
+	loadScreen(int(save.get_as_text()))
+
+func saveGame():
+	var save = FileAccess.open("user://save.txt", FileAccess.WRITE)
+	save.store_string(str(currentScreen))
+	print("Saving")
+
+func newGame():
+	loadScreen(1) # eg. 7 for Screen7.tscn
+
+
 func restartScreen():
+	var atEnd = get_children()[get_child_count() - 1].atEnd
 	get_children()[get_child_count() - 1].queue_free()
-	add_child(currentScreenLoad.instantiate())
+	var sc = currentScreenLoad.instantiate()
+	sc.atEnd = atEnd
+	add_child(sc)
 
 func loadScreen(id):
 #	id -= 1
@@ -26,6 +48,8 @@ func loadScreen(id):
 			c.queue_free()
 #	add_child(currentScreenLoad.instantiate())
 	call_deferred("add_child", currentScreenLoad.instantiate())
+	
+	saveGame()
 
 func prevScreen():
 	if currentScreen > 1:

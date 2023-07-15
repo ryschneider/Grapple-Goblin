@@ -244,7 +244,7 @@
 			]
 		},
 		{
-			"filename": "../assets/Level/Tiles/Hazards/icefire/icespikes.png",
+			"filename": "../assets/Level/Tiles/Hazards/other/spikes.png",
 			"sources": [
 				{
 					"index": 27,
@@ -253,11 +253,20 @@
 			]
 		},
 		{
-			"filename": "../assets/Level/Tiles/Hazards/icefire/firespikes.png",
+			"filename": "../assets/Level/Tiles/Hazards/icefire/icespikes.png",
 			"sources": [
 				{
 					"index": 28,
 					"spriteIndices": [28]
+				}
+			]
+		},
+		{
+			"filename": "../assets/Level/Tiles/Hazards/icefire/firespikes.png",
+			"sources": [
+				{
+					"index": 29,
+					"spriteIndices": [29]
 				}
 			]
 		}
@@ -273,13 +282,13 @@
 			"spriteIndices": [18,19,20,21,22,23,24,25]
 		},
 		{
-			"spriteIndices": [26]
-		},
-		{
-			"spriteIndices": [27]
+			"spriteIndices": [26,27]
 		},
 		{
 			"spriteIndices": [28]
+		},
+		{
+			"spriteIndices": [29]
 		}
 	],
 	"sources": [
@@ -444,6 +453,12 @@
 			"height": 32,
 			"path": "",
 			"width": 128
+		},
+		{
+			"filename": "../assets/Level/Tiles/Hazards/other/spikes.png",
+			"height": 16,
+			"path": "",
+			"width": 16
 		},
 		{
 			"filename": "../assets/Level/Tiles/Hazards/icefire/icespikes.png",
@@ -1579,12 +1594,12 @@
 			"rect": {
 				"h": 16,
 				"w": 16,
-				"x": -1,
+				"x": 127,
 				"y": 0
 			},
 			"rotated": false,
-			"sliceIndex": 4,
-			"sliceSpriteIndex": 0,
+			"sliceIndex": 3,
+			"sliceSpriteIndex": 1,
 			"sourceIndex": 27,
 			"sourceRect": {
 				"h": 16,
@@ -1596,7 +1611,7 @@
 			"trimmedRect": {
 				"h": 14,
 				"w": 13,
-				"x": 0,
+				"x": 128,
 				"y": 2
 			},
 			"trimmedSourceRect": {
@@ -1624,9 +1639,50 @@
 				"y": 0
 			},
 			"rotated": false,
-			"sliceIndex": 5,
+			"sliceIndex": 4,
 			"sliceSpriteIndex": 0,
 			"sourceIndex": 28,
+			"sourceRect": {
+				"h": 16,
+				"w": 16,
+				"x": 0,
+				"y": 0
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 14,
+				"w": 13,
+				"x": 0,
+				"y": 2
+			},
+			"trimmedSourceRect": {
+				"h": 14,
+				"w": 13,
+				"x": 1,
+				"y": 2
+			},
+			"vertices": [0.0,0.0,13.0,0.0,13.0,14.0,0.0,14.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_29",
+			"index": 29,
+			"inputIndex": 29,
+			"inputSpriteIndex": 0,
+			"pivot": {
+				"x": 8.0,
+				"y": 8.0
+			},
+			"rect": {
+				"h": 16,
+				"w": 16,
+				"x": -1,
+				"y": 0
+			},
+			"rotated": false,
+			"sliceIndex": 5,
+			"sliceSpriteIndex": 0,
+			"sourceIndex": 29,
 			"sourceRect": {
 				"h": 16,
 				"w": 16,
@@ -1684,8 +1740,8 @@
 			"map": "",
 			"scale": 1.0,
 			"sliceIndex": 3,
-			"spriteIndices": [26],
-			"width": 128
+			"spriteIndices": [26,27],
+			"width": 144
 		},
 		{
 			"filename": "../assets/Level/Tiles/icehazards.png",
@@ -1693,7 +1749,7 @@
 			"map": "",
 			"scale": 1.0,
 			"sliceIndex": 4,
-			"spriteIndices": [27],
+			"spriteIndices": [28],
 			"width": 16
 		},
 		{
@@ -1702,7 +1758,7 @@
 			"map": "",
 			"scale": 1.0,
 			"sliceIndex": 5,
-			"spriteIndices": [28],
+			"spriteIndices": [29],
 			"width": 16
 		}
 	]
