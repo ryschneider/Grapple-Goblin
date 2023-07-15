@@ -6,7 +6,7 @@ func _ready():
 	for i in range(NUM_SCREENS):
 		screens.push_back("res://screens/Screen" + str(i+1) + ".tscn")
 	
-	loadScreen(4) # eg. 7 for Screen7.tscn
+	loadScreen(19) # eg. 7 for Screen7.tscn
 	
 var currentScreen
 var currentScreenLoad
