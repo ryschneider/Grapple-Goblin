@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdfcg20nyh2yc"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_8u1em"]
+[ext_resource type="Theme" uid="uid://qho5kbeok0m6" path="res://resources/play_button.tres" id="2_qtapx"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8u1em")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 535.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme = ExtResource("2_qtapx")
+text = "Play"
+
+[node name="Level Select" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme = ExtResource("2_qtapx")
+text = "Level Select"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_qtapx")
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Level Select" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
