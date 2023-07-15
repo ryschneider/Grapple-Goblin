@@ -1,6 +1,6 @@
 extends Node2D
 
-const screens = ["res://screens/Screen1.tscn", "res://screens/Screen2.tscn", "res://screens/Screen3.tscn", "res://screens/Screen4.tscn", "res://screens/Screen5.tscn", "res://screens/Screen6.tscn", "res://screens/Screen7.tscn", "res://screens/Screen10.tscn"]
+const screens = ["res://screens/Screen1.tscn", "res://screens/Screen2.tscn", "res://screens/Screen8.tscn", "res://screens/Screen4.tscn", "res://screens/Screen5.tscn", "res://screens/Screen6.tscn", "res://screens/Screen7.tscn", "res://screens/Screen10.tscn"]
 
 var currentScreen
 
