@@ -15,8 +15,4 @@ func loadScreen(id):
 	add_child(screenLoad.instantiate())
 
 func _ready():
-	loadScreen(6)
-
-func _process(delta):
-	pass
-
+	loadScreen(7)
