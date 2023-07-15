@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvif42ghaytam"]
+[gd_scene load_steps=7 format=3 uid="uid://cvif42ghaytam"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_uyce1"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="2_2mcj0"]
 [ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_8u4u0"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="4_3uphl"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="5_4ksvu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18pgo"]
+size = Vector2(64.5, 301)
 
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_uyce1")
@@ -32,3 +35,22 @@ layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array()
 script = ExtResource("5_4ksvu")
+
+[node name="PreviousScreen" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
+position = Vector2(-438.5, -106.5)
+shape = SubResource("RectangleShape2D_18pgo")
+
+[node name="NextScreen" type="Area2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(4, 4)
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
+position = Vector2(229.25, -24.25)
+shape = SubResource("RectangleShape2D_18pgo")

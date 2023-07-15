@@ -174,20 +174,21 @@ func _physics_process(delta):
 	# kill if off camera
 #	if position.x+LIMIT_GRACE < $Camera2D.limit_left or position.x-LIMIT_GRACE > $Camera2D.limit_right\
 #		or position.y+LIMIT_GRACE < $Camera2D.limit_top or position.y-LIMIT_GRACE > $Camera2D.limit_bottom:
-	if position.y < $Camera2D.limit_top or position.y > $Camera2D.limit_bottom:
-		restart()
+	if $Camera2D:
+		if position.y < $Camera2D.limit_top or position.y > $Camera2D.limit_bottom:
+			restart()
 
 func _on_area_2d_area_entered(area):
-	print(area.collision_layer)
-	print(HAZARD_LAYER)
 	if area.collision_layer & HAZARD_LAYER:
 		die()
 	elif area.collision_layer & RESTART_LAYER:
 		restart()
 	elif area.collision_layer & PREV_LAYER:
-		get_parent().prevScreen()
+		if not dead:
+			get_parent().prevScreen()
 	elif area.collision_layer & NEXT_LAYER:
-		get_parent().nextScreen()
+		if not dead:
+			get_parent().nextScreen()
 
 func _on_area_2d_body_entered(body):
 	clipUp()
@@ -196,7 +197,6 @@ func clipUp():
 	var pos = position
 	var clip = 5
 	
-	var c = 0
 	while clip <= MAX_CLIP:
 		position = pos - Vector2(0, clip)
 		if not move_and_collide(Vector2(), true): # try clipping up
@@ -207,6 +207,5 @@ func clipUp():
 			return
 		
 		clip *= 1.5
-		c += 1
 	
 	die() # failed to clip out

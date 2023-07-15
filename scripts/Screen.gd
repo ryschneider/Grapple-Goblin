@@ -15,6 +15,8 @@ func switch(poof=true):
 	$Background.switch(fireScene)
 
 func _ready():
+	fireScene = not fireScene
+	
 	switch(false)
 	player.position = playerStart
 	for i in player.get_children():
