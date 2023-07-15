@@ -11,11 +11,13 @@ const FLOOR_FRICTION = 0.1
 const AIR_ACC = 0.1
 const AIR_FRICTION = 0.05
 
-var GRAVITY = 980
+const GRAVITY = 980
 
 const MAX_CLIP = 10
 
 const JUMP_QUEUE_TIME = 6.0 / 60.0
+
+const HAZARD_LAYER = 0b100
 
 var moveVel = Vector2()
 var momentumVel = Vector2()
@@ -31,11 +33,20 @@ func die():
 	if $AnimatedSprite2D.animation != "Dead":
 		$AnimatedSprite2D.play("Dead")
 
+func restart():
+	get_tree().reload_current_scene()
+
 var direction = 0
 var jumpQueued = false
 var jumpQueueTime = 0.0
 func _physics_process(delta):
-	if died: return
+	if died:
+		if diedTime < DEATH_TIME:
+			diedTime += delta
+			return
+		else:
+			died = false
+			restart()
 	
 	if not is_on_floor():
 		momentumVel.y += GRAVITY * delta
@@ -148,6 +159,10 @@ func _physics_process(delta):
 		$AnimatedSprite2D.flip_h = true
 	elif velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
+
+func _on_area_2d_area_entered(area):
+	if area.collision_layer & HAZARD_LAYER:
+		die()
 
 func _on_area_2d_body_entered(body):
 	var pos = position
