@@ -17,6 +17,10 @@ size = Vector2(64.5, 301)
 script = ExtResource("1_pyepu")
 staticCamera = true
 playerStart = Vector2(-408, 0)
+startTeleportEdge = -418
+startTeleportBase = 31
+endTeleportEdge = 1750
+endTeleportBase = 31
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(136, 0)
