@@ -11,7 +11,6 @@ size = Vector2(64.5, 342.5)
 
 [node name="Screen3" type="Node2D"]
 script = ExtResource("1_donxm")
-playerStart = Vector2(-165, 0)
 startTeleportBase = 64
 endTeleportBase = -320
 

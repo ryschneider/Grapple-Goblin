@@ -12,7 +12,7 @@ size = Vector2(64.5, 251)
 
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_xefws")
-playerStart = Vector2(-405, 0)
+playerStart = Vector2(-100, 0)
 startTeleportBase = 33
 endTeleportBase = 608
 
@@ -41,7 +41,7 @@ script = ExtResource("5_weq3c")
 
 [node name="Camera2D" parent="." instance=ExtResource("6_lntm4")]
 position = Vector2(11, -10)
-limit_left = -415
+limit_left = -300
 limit_right = 1600
 
 [node name="PreviousScreen" type="Area2D" parent="."]
@@ -50,7 +50,7 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
-position = Vector2(-240, -72.5)
+position = Vector2(-182.5, -73.5)
 shape = SubResource("RectangleShape2D_kx2sp")
 
 [node name="NextScreen" type="Area2D" parent="."]
