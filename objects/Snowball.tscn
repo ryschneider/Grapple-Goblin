@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddv6mb6emo23k"]
+[gd_scene load_steps=5 format=3 uid="uid://ddv6mb6emo23k"]
 
 [ext_resource type="Texture2D" uid="uid://cirifw83h4ms7" path="res://assets/Level/New Assets not in game yet/pixil-frame-0 (9).png" id="1_0j6kg"]
+[ext_resource type="Script" path="res://objects/Snowball.gd" id="1_w61a5"]
+[ext_resource type="Texture2D" uid="uid://d260ftnm1acff" path="res://assets/Level/Other/Boulder.png" id="2_oeqij"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ya6ja"]
 radius = 8.0
@@ -9,8 +11,13 @@ radius = 8.0
 collision_layer = 4
 collision_mask = 5
 constant_force = Vector2(-300, 0)
+script = ExtResource("1_w61a5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="FireBg" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
+texture = ExtResource("2_oeqij")
+
+[node name="IceBg" type="Sprite2D" parent="."]
 scale = Vector2(10, 10)
 texture = ExtResource("1_0j6kg")
 
