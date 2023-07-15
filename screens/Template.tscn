@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbw62grswjtwe"]
+[gd_scene load_steps=8 format=3 uid="uid://cbkw2a72k5j5x"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_krrsg"]
 [ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_bhyb6"]
@@ -9,7 +9,7 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bb3j"]
 
-[node name="Screen1" type="Node2D"]
+[node name="Screen" type="Node2D"]
 script = ExtResource("1_krrsg")
 
 [node name="Camera2D" parent="." instance=ExtResource("2_bhyb6")]

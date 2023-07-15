@@ -19,17 +19,7 @@ func _ready():
 	player.position = playerStart
 	$Camera2D.reparent(player, false)
 
+
 func _process(delta):
 	if Input.is_action_just_pressed("switch_dimension"):
 		switch()
-
-		#$Camera2D.position
-#	cameraController(0)
-
-#func cameraController(followLineX):
-#	if $Camera2D.position.x > followLineX && staticCamera == false:
-#
-#	else:
-#		$Camera2D.reparent(screenNode,false)
-#		$Camera2D.position = Vector2(0, 0)
-#
