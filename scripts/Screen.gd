@@ -6,6 +6,8 @@ extends Node2D
 @export var fireScene = false
 @export var staticCamera = false
 @export var playerStart = Vector2()
+@export var teleportStart = Vector2()
+@export var teleportEnd = Vector2()
 
 func switch(poof=true):
 	fireScene = not fireScene
