@@ -14,6 +14,7 @@ var ropeLength = 0
 var PinJoint = null
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 	destroy()
 
 func destroy():

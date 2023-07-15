@@ -28,6 +28,9 @@ var momentumVel = Vector2()
 
 @onready var Hook = get_node("../Hook")
 
+func _ready():
+	process_mode = Node.PROCESS_MODE_PAUSABLE
+
 const DEATH_TIME = 1
 var dead = false
 var deadTime = 0
@@ -151,7 +154,8 @@ func _physics_process(delta):
 		moveVel.y = 0
 		momentumVel.y = 0
 	
-	print(is_on_floor())
+#	print(is_on_floor())
+	
 	# animation stuff
 	if not dead:
 		if not is_on_floor():
