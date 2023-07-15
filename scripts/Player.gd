@@ -192,9 +192,11 @@ func _on_area_2d_area_entered(area):
 			get_parent().nextScreen()
 
 func _on_area_2d_body_entered(body):
-	clipUp()
+	if body is TileMap:
+		clipUp()
 
 func clipUp():
+	print("clip up")
 	var pos = position
 	var clip = 5
 	
