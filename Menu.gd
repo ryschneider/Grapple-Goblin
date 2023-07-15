@@ -10,7 +10,7 @@ func _ready():
 		$MarginContainer/VBoxContainer/Continue.hide()
 
 func _on_play_pressed():
-	Global.continue = false
+	Global.continueSave = false
 	get_tree().change_scene_to_file("res://objects/Main.tscn")
 
 func _on_level_select_pressed():
@@ -20,5 +20,5 @@ func _on_exit_pressed():
 	get_tree().quit()
 
 func _on_continue_pressed():
-	Global.continue = true
+	Global.continueSave = true
 	get_tree().change_scene_to_file("res://objects/Main.tscn")
