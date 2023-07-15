@@ -206,6 +206,42 @@
 					"spriteIndices": [40]
 				}
 			]
+		},
+		{
+			"filename": "../assets/Level/Tiles/icehazards.png",
+			"sources": [
+				{
+					"index": 23,
+					"spriteIndices": [41,42,43]
+				}
+			]
+		},
+		{
+			"filename": "../assets/Level/Tiles/Hazards/icefire/icespikes.png",
+			"sources": [
+				{
+					"index": 24,
+					"spriteIndices": [44]
+				}
+			]
+		},
+		{
+			"filename": "../assets/Level/Tiles/firehazards.png",
+			"sources": [
+				{
+					"index": 25,
+					"spriteIndices": [45,46,47]
+				}
+			]
+		},
+		{
+			"filename": "../assets/Level/Tiles/Hazards/icefire/firespikes.png",
+			"sources": [
+				{
+					"index": 26,
+					"spriteIndices": [48]
+				}
+			]
 		}
 	],
 	"slices": [
@@ -217,6 +253,12 @@
 		},
 		{
 			"spriteIndices": [29,30,31,32,33,34,35,36,37,38,39,40]
+		},
+		{
+			"spriteIndices": [41,42,43,44]
+		},
+		{
+			"spriteIndices": [45,46,47,48]
 		}
 	],
 	"sources": [
@@ -224,7 +266,7 @@
 			"filename": "../assets/Level/Tiles/decorations.png",
 			"height": 48,
 			"path": "",
-			"width": 416
+			"width": 480
 		},
 		{
 			"filename": "../assets/Level/Tiles/Decorations/other/crystalfloorspikes.png",
@@ -357,6 +399,30 @@
 			"height": 32,
 			"path": "",
 			"width": 16
+		},
+		{
+			"filename": "../assets/Level/Tiles/icehazards.png",
+			"height": 16,
+			"path": "",
+			"width": 16
+		},
+		{
+			"filename": "../assets/Level/Tiles/Hazards/icefire/icespikes.png",
+			"height": 16,
+			"path": "",
+			"width": 16
+		},
+		{
+			"filename": "../assets/Level/Tiles/firehazards.png",
+			"height": 16,
+			"path": "",
+			"width": 16
+		},
+		{
+			"filename": "../assets/Level/Tiles/Hazards/icefire/firespikes.png",
+			"height": 16,
+			"path": "",
+			"width": 16
 		}
 	],
 	"sprites": [
@@ -408,12 +474,12 @@
 			"inputIndex": 0,
 			"inputSpriteIndex": 1,
 			"pivot": {
-				"x": 16.0,
+				"x": 48.0,
 				"y": 8.0
 			},
 			"rect": {
 				"h": 16,
-				"w": 32,
+				"w": 96,
 				"x": 16,
 				"y": 0
 			},
@@ -423,24 +489,24 @@
 			"sourceIndex": 0,
 			"sourceRect": {
 				"h": 16,
-				"w": 32,
+				"w": 96,
 				"x": 16,
 				"y": 0
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 16,
-				"w": 32,
+				"w": 96,
 				"x": 16,
 				"y": 0
 			},
 			"trimmedSourceRect": {
 				"h": 16,
-				"w": 32,
+				"w": 96,
 				"x": 16,
 				"y": 0
 			},
-			"vertices": [0.0,0.0,32.0,0.0,32.0,16.0,0.0,16.0]
+			"vertices": [0.0,0.0,96.0,0.0,96.0,16.0,0.0,16.0]
 		},
 		{
 			"data": {},
@@ -455,7 +521,7 @@
 			"rect": {
 				"h": 16,
 				"w": 32,
-				"x": 48,
+				"x": 112,
 				"y": 0
 			},
 			"rotated": false,
@@ -465,20 +531,20 @@
 			"sourceRect": {
 				"h": 16,
 				"w": 32,
-				"x": 384,
+				"x": 448,
 				"y": 0
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 16,
 				"w": 32,
-				"x": 48,
+				"x": 112,
 				"y": 0
 			},
 			"trimmedSourceRect": {
 				"h": 16,
 				"w": 32,
-				"x": 384,
+				"x": 448,
 				"y": 0
 			},
 			"vertices": [0.0,0.0,32.0,0.0,32.0,16.0,0.0,16.0]
@@ -496,7 +562,7 @@
 			"rect": {
 				"h": 21,
 				"w": 31,
-				"x": 80,
+				"x": 144,
 				"y": 11
 			},
 			"rotated": false,
@@ -506,20 +572,20 @@
 			"sourceRect": {
 				"h": 21,
 				"w": 31,
-				"x": 48,
+				"x": 112,
 				"y": 11
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 21,
 				"w": 31,
-				"x": 80,
+				"x": 144,
 				"y": 11
 			},
 			"trimmedSourceRect": {
 				"h": 21,
 				"w": 31,
-				"x": 48,
+				"x": 112,
 				"y": 11
 			},
 			"vertices": [0.0,0.0,31.0,0.0,31.0,21.0,0.0,21.0]
@@ -537,7 +603,7 @@
 			"rect": {
 				"h": 32,
 				"w": 63,
-				"x": 112,
+				"x": 176,
 				"y": 0
 			},
 			"rotated": false,
@@ -547,20 +613,20 @@
 			"sourceRect": {
 				"h": 32,
 				"w": 63,
-				"x": 80,
+				"x": 144,
 				"y": 0
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 32,
 				"w": 63,
-				"x": 112,
+				"x": 176,
 				"y": 0
 			},
 			"trimmedSourceRect": {
 				"h": 32,
 				"w": 63,
-				"x": 80,
+				"x": 144,
 				"y": 0
 			},
 			"vertices": [0.0,0.0,63.0,0.0,63.0,32.0,0.0,32.0]
@@ -578,7 +644,7 @@
 			"rect": {
 				"h": 32,
 				"w": 15,
-				"x": 176,
+				"x": 240,
 				"y": 0
 			},
 			"rotated": false,
@@ -588,20 +654,20 @@
 			"sourceRect": {
 				"h": 32,
 				"w": 15,
-				"x": 144,
+				"x": 208,
 				"y": 0
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 32,
 				"w": 15,
-				"x": 176,
+				"x": 240,
 				"y": 0
 			},
 			"trimmedSourceRect": {
 				"h": 32,
 				"w": 15,
-				"x": 144,
+				"x": 208,
 				"y": 0
 			},
 			"vertices": [0.0,0.0,15.0,0.0,15.0,32.0,0.0,32.0]
@@ -619,7 +685,7 @@
 			"rect": {
 				"h": 48,
 				"w": 111,
-				"x": 192,
+				"x": 256,
 				"y": 0
 			},
 			"rotated": false,
@@ -629,20 +695,20 @@
 			"sourceRect": {
 				"h": 48,
 				"w": 111,
-				"x": 160,
+				"x": 224,
 				"y": 0
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 48,
 				"w": 111,
-				"x": 192,
+				"x": 256,
 				"y": 0
 			},
 			"trimmedSourceRect": {
 				"h": 48,
 				"w": 111,
-				"x": 160,
+				"x": 224,
 				"y": 0
 			},
 			"vertices": [0.0,0.0,111.0,0.0,111.0,48.0,0.0,48.0]
@@ -660,7 +726,7 @@
 			"rect": {
 				"h": 48,
 				"w": 111,
-				"x": 192,
+				"x": 256,
 				"y": 0
 			},
 			"rotated": false,
@@ -670,20 +736,20 @@
 			"sourceRect": {
 				"h": 48,
 				"w": 111,
-				"x": 272,
+				"x": 336,
 				"y": 0
 			},
 			"tags": {},
 			"trimmedRect": {
 				"h": 48,
 				"w": 111,
-				"x": 192,
+				"x": 256,
 				"y": 0
 			},
 			"trimmedSourceRect": {
 				"h": 48,
 				"w": 111,
-				"x": 272,
+				"x": 336,
 				"y": 0
 			},
 			"vertices": [0.0,0.0,111.0,0.0,111.0,48.0,0.0,48.0]
@@ -701,7 +767,7 @@
 			"rect": {
 				"h": 48,
 				"w": 48,
-				"x": 304,
+				"x": 368,
 				"y": 0
 			},
 			"rotated": false,
@@ -718,7 +784,7 @@
 			"trimmedRect": {
 				"h": 35,
 				"w": 48,
-				"x": 304,
+				"x": 368,
 				"y": 13
 			},
 			"trimmedSourceRect": {
@@ -742,7 +808,7 @@
 			"rect": {
 				"h": 32,
 				"w": 32,
-				"x": 79,
+				"x": 143,
 				"y": 0
 			},
 			"rotated": false,
@@ -759,7 +825,7 @@
 			"trimmedRect": {
 				"h": 21,
 				"w": 31,
-				"x": 80,
+				"x": 144,
 				"y": 11
 			},
 			"trimmedSourceRect": {
@@ -783,7 +849,7 @@
 			"rect": {
 				"h": 32,
 				"w": 32,
-				"x": 352,
+				"x": 416,
 				"y": 0
 			},
 			"rotated": false,
@@ -800,7 +866,7 @@
 			"trimmedRect": {
 				"h": 32,
 				"w": 32,
-				"x": 352,
+				"x": 416,
 				"y": 0
 			},
 			"trimmedSourceRect": {
@@ -824,7 +890,7 @@
 			"rect": {
 				"h": 32,
 				"w": 32,
-				"x": 384,
+				"x": 448,
 				"y": 0
 			},
 			"rotated": false,
@@ -841,7 +907,7 @@
 			"trimmedRect": {
 				"h": 31,
 				"w": 31,
-				"x": 384,
+				"x": 448,
 				"y": 1
 			},
 			"trimmedSourceRect": {
@@ -865,7 +931,7 @@
 			"rect": {
 				"h": 16,
 				"w": 16,
-				"x": 416,
+				"x": 480,
 				"y": 0
 			},
 			"rotated": false,
@@ -882,7 +948,7 @@
 			"trimmedRect": {
 				"h": 16,
 				"w": 16,
-				"x": 416,
+				"x": 480,
 				"y": 0
 			},
 			"trimmedSourceRect": {
@@ -906,7 +972,7 @@
 			"rect": {
 				"h": 32,
 				"w": 16,
-				"x": 176,
+				"x": 240,
 				"y": 0
 			},
 			"rotated": false,
@@ -923,7 +989,7 @@
 			"trimmedRect": {
 				"h": 32,
 				"w": 15,
-				"x": 176,
+				"x": 240,
 				"y": 0
 			},
 			"trimmedSourceRect": {
@@ -988,7 +1054,7 @@
 			"rect": {
 				"h": 16,
 				"w": 16,
-				"x": 432,
+				"x": 496,
 				"y": 0
 			},
 			"rotated": false,
@@ -1005,7 +1071,7 @@
 			"trimmedRect": {
 				"h": 16,
 				"w": 16,
-				"x": 432,
+				"x": 496,
 				"y": 0
 			},
 			"trimmedSourceRect": {
@@ -1726,7 +1792,7 @@
 			"rect": {
 				"h": 32,
 				"w": 43,
-				"x": 80,
+				"x": 128,
 				"y": 0
 			},
 			"rotated": false,
@@ -1743,7 +1809,7 @@
 			"trimmedRect": {
 				"h": 32,
 				"w": 43,
-				"x": 80,
+				"x": 128,
 				"y": 0
 			},
 			"trimmedSourceRect": {
@@ -1808,7 +1874,7 @@
 			"rect": {
 				"h": 16,
 				"w": 16,
-				"x": 128,
+				"x": 224,
 				"y": 0
 			},
 			"rotated": false,
@@ -1825,7 +1891,7 @@
 			"trimmedRect": {
 				"h": 16,
 				"w": 16,
-				"x": 128,
+				"x": 224,
 				"y": 0
 			},
 			"trimmedSourceRect": {
@@ -1890,7 +1956,7 @@
 			"rect": {
 				"h": 32,
 				"w": 16,
-				"x": 144,
+				"x": 240,
 				"y": 0
 			},
 			"rotated": false,
@@ -1907,7 +1973,7 @@
 			"trimmedRect": {
 				"h": 30,
 				"w": 16,
-				"x": 144,
+				"x": 240,
 				"y": 2
 			},
 			"trimmedSourceRect": {
@@ -1931,7 +1997,7 @@
 			"rect": {
 				"h": 32,
 				"w": 16,
-				"x": 160,
+				"x": 256,
 				"y": 0
 			},
 			"rotated": false,
@@ -1948,7 +2014,7 @@
 			"trimmedRect": {
 				"h": 30,
 				"w": 11,
-				"x": 160,
+				"x": 256,
 				"y": 2
 			},
 			"trimmedSourceRect": {
@@ -2040,6 +2106,334 @@
 				"y": 5
 			},
 			"vertices": [0.0,0.0,12.0,0.0,12.0,27.0,0.0,27.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_41",
+			"index": 41,
+			"inputIndex": 23,
+			"inputSpriteIndex": 0,
+			"pivot": {
+				"x": 1.5,
+				"y": 5.5
+			},
+			"rect": {
+				"h": 11,
+				"w": 3,
+				"x": 0,
+				"y": 5
+			},
+			"rotated": false,
+			"sliceIndex": 3,
+			"sliceSpriteIndex": 0,
+			"sourceIndex": 23,
+			"sourceRect": {
+				"h": 11,
+				"w": 3,
+				"x": 0,
+				"y": 5
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 11,
+				"w": 3,
+				"x": 0,
+				"y": 5
+			},
+			"trimmedSourceRect": {
+				"h": 11,
+				"w": 3,
+				"x": 0,
+				"y": 5
+			},
+			"vertices": [0.0,0.0,3.0,0.0,3.0,11.0,0.0,11.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_42",
+			"index": 42,
+			"inputIndex": 23,
+			"inputSpriteIndex": 1,
+			"pivot": {
+				"x": 2.5,
+				"y": 7.0
+			},
+			"rect": {
+				"h": 14,
+				"w": 5,
+				"x": 16,
+				"y": 2
+			},
+			"rotated": false,
+			"sliceIndex": 3,
+			"sliceSpriteIndex": 1,
+			"sourceIndex": 23,
+			"sourceRect": {
+				"h": 14,
+				"w": 5,
+				"x": 4,
+				"y": 2
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 14,
+				"w": 5,
+				"x": 16,
+				"y": 2
+			},
+			"trimmedSourceRect": {
+				"h": 14,
+				"w": 5,
+				"x": 4,
+				"y": 2
+			},
+			"vertices": [0.0,0.0,5.0,0.0,5.0,14.0,0.0,14.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_43",
+			"index": 43,
+			"inputIndex": 23,
+			"inputSpriteIndex": 2,
+			"pivot": {
+				"x": 1.5,
+				"y": 3.5
+			},
+			"rect": {
+				"h": 7,
+				"w": 3,
+				"x": 32,
+				"y": 9
+			},
+			"rotated": false,
+			"sliceIndex": 3,
+			"sliceSpriteIndex": 2,
+			"sourceIndex": 23,
+			"sourceRect": {
+				"h": 7,
+				"w": 3,
+				"x": 10,
+				"y": 9
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 7,
+				"w": 3,
+				"x": 32,
+				"y": 9
+			},
+			"trimmedSourceRect": {
+				"h": 7,
+				"w": 3,
+				"x": 10,
+				"y": 9
+			},
+			"vertices": [0.0,0.0,3.0,0.0,3.0,7.0,0.0,7.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_44",
+			"index": 44,
+			"inputIndex": 24,
+			"inputSpriteIndex": 0,
+			"pivot": {
+				"x": 8.0,
+				"y": 8.0
+			},
+			"rect": {
+				"h": 16,
+				"w": 16,
+				"x": 47,
+				"y": 0
+			},
+			"rotated": false,
+			"sliceIndex": 3,
+			"sliceSpriteIndex": 3,
+			"sourceIndex": 24,
+			"sourceRect": {
+				"h": 16,
+				"w": 16,
+				"x": 0,
+				"y": 0
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 14,
+				"w": 13,
+				"x": 48,
+				"y": 2
+			},
+			"trimmedSourceRect": {
+				"h": 14,
+				"w": 13,
+				"x": 1,
+				"y": 2
+			},
+			"vertices": [0.0,0.0,13.0,0.0,13.0,14.0,0.0,14.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_45",
+			"index": 45,
+			"inputIndex": 25,
+			"inputSpriteIndex": 0,
+			"pivot": {
+				"x": 1.5,
+				"y": 5.5
+			},
+			"rect": {
+				"h": 11,
+				"w": 3,
+				"x": 0,
+				"y": 5
+			},
+			"rotated": false,
+			"sliceIndex": 4,
+			"sliceSpriteIndex": 0,
+			"sourceIndex": 25,
+			"sourceRect": {
+				"h": 11,
+				"w": 3,
+				"x": 0,
+				"y": 5
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 11,
+				"w": 3,
+				"x": 0,
+				"y": 5
+			},
+			"trimmedSourceRect": {
+				"h": 11,
+				"w": 3,
+				"x": 0,
+				"y": 5
+			},
+			"vertices": [0.0,0.0,3.0,0.0,3.0,11.0,0.0,11.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_46",
+			"index": 46,
+			"inputIndex": 25,
+			"inputSpriteIndex": 1,
+			"pivot": {
+				"x": 2.5,
+				"y": 7.0
+			},
+			"rect": {
+				"h": 14,
+				"w": 5,
+				"x": 16,
+				"y": 2
+			},
+			"rotated": false,
+			"sliceIndex": 4,
+			"sliceSpriteIndex": 1,
+			"sourceIndex": 25,
+			"sourceRect": {
+				"h": 14,
+				"w": 5,
+				"x": 4,
+				"y": 2
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 14,
+				"w": 5,
+				"x": 16,
+				"y": 2
+			},
+			"trimmedSourceRect": {
+				"h": 14,
+				"w": 5,
+				"x": 4,
+				"y": 2
+			},
+			"vertices": [0.0,0.0,5.0,0.0,5.0,14.0,0.0,14.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_47",
+			"index": 47,
+			"inputIndex": 25,
+			"inputSpriteIndex": 2,
+			"pivot": {
+				"x": 1.5,
+				"y": 3.5
+			},
+			"rect": {
+				"h": 7,
+				"w": 3,
+				"x": 32,
+				"y": 9
+			},
+			"rotated": false,
+			"sliceIndex": 4,
+			"sliceSpriteIndex": 2,
+			"sourceIndex": 25,
+			"sourceRect": {
+				"h": 7,
+				"w": 3,
+				"x": 10,
+				"y": 9
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 7,
+				"w": 3,
+				"x": 32,
+				"y": 9
+			},
+			"trimmedSourceRect": {
+				"h": 7,
+				"w": 3,
+				"x": 10,
+				"y": 9
+			},
+			"vertices": [0.0,0.0,3.0,0.0,3.0,7.0,0.0,7.0]
+		},
+		{
+			"data": {},
+			"id": "sprite_48",
+			"index": 48,
+			"inputIndex": 26,
+			"inputSpriteIndex": 0,
+			"pivot": {
+				"x": 8.0,
+				"y": 8.0
+			},
+			"rect": {
+				"h": 16,
+				"w": 16,
+				"x": 47,
+				"y": 0
+			},
+			"rotated": false,
+			"sliceIndex": 4,
+			"sliceSpriteIndex": 3,
+			"sourceIndex": 26,
+			"sourceRect": {
+				"h": 16,
+				"w": 16,
+				"x": 0,
+				"y": 0
+			},
+			"tags": {},
+			"trimmedRect": {
+				"h": 14,
+				"w": 13,
+				"x": 48,
+				"y": 2
+			},
+			"trimmedSourceRect": {
+				"h": 14,
+				"w": 13,
+				"x": 1,
+				"y": 2
+			},
+			"vertices": [0.0,0.0,13.0,0.0,13.0,14.0,0.0,14.0]
 		}
 	],
 	"tags": {},
@@ -2051,7 +2445,7 @@
 			"scale": 1.0,
 			"sliceIndex": 0,
 			"spriteIndices": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
-			"width": 448
+			"width": 512
 		},
 		{
 			"filename": "../assets/Level/Tiles/icedecorations.png",
@@ -2069,7 +2463,25 @@
 			"scale": 1.0,
 			"sliceIndex": 2,
 			"spriteIndices": [29,30,31,32,33,34,35,36,37,38,39,40],
-			"width": 224
+			"width": 272
+		},
+		{
+			"filename": "../assets/Level/Tiles/icehazards.png",
+			"height": 16,
+			"map": "",
+			"scale": 1.0,
+			"sliceIndex": 3,
+			"spriteIndices": [41,42,43,44],
+			"width": 64
+		},
+		{
+			"filename": "../assets/Level/Tiles/firehazards.png",
+			"height": 16,
+			"map": "",
+			"scale": 1.0,
+			"sliceIndex": 4,
+			"spriteIndices": [45,46,47,48],
+			"width": 64
 		}
 	]
 }
