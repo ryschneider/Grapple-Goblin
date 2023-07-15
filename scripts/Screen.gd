@@ -1,10 +1,9 @@
 extends Node2D
 
 var fireScene = false
-@onready var player = get_node("../Player")
+@onready var player = get_node("../PlayerNode")
 @onready var screenNode = get_node(".")
 @export var staticCamera = false
-@export var playerStart = Vector2()
 
 func switch(poof=true):
 	fireScene = not fireScene
@@ -15,7 +14,7 @@ func switch(poof=true):
 
 func _ready():
 	switch(false)
-	player.position = playerStart
+	player.position = Vector2(-550, 250)
 
 
 func _process(delta):
@@ -24,9 +23,9 @@ func _process(delta):
 	cameraController(0)
 
 func cameraController(followLineX):
-	if player.position.x > followLineX && staticCamera == false:
-		$Camera2D.position = player.position
-		$Camera2D.position.y = $Camera2D.position.y - 200
+	if $Camera2D.position.x > followLineX && staticCamera == false:
+		$Camera2D.reparent(player,false)
 	else:
+		$Camera2D.reparent(screenNode,false)
 		$Camera2D.position = Vector2(0, 0)
 
