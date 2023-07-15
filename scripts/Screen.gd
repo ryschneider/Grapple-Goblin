@@ -4,7 +4,6 @@ var fireScene = false
 @onready var player = get_node("../PlayerNode")
 @onready var screenNode = get_node(".")
 @export var staticCamera = false
-@export var playerStart = Vector2()
 
 func switch(poof=true):
 	fireScene = not fireScene
@@ -15,7 +14,7 @@ func switch(poof=true):
 
 func _ready():
 	switch(false)
-	player.position = playerStart
+	player.position = Vector2(-550, 250)
 
 
 func _process(delta):
