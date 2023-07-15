@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl4i1801lf8rl"
-path="res://.godot/imported/icefloorspikes.png-a54af33b713b4c650822616ee14ee1d4.ctex"
+uid="uid://bflscv0lhjmft"
+path="res://.godot/imported/icebg.png-961c31a53b773bec38399158fac4d21b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Level/Tiles/Background/icefire/icefloorspikes.png"
-dest_files=["res://.godot/imported/icefloorspikes.png-a54af33b713b4c650822616ee14ee1d4.ctex"]
+source_file="res://assets/Level/Tiles/Decorations/icefire/icebg.png"
+dest_files=["res://.godot/imported/icebg.png-961c31a53b773bec38399158fac4d21b.ctex"]
 
 [params]
 

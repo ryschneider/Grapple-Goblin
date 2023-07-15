@@ -55,8 +55,12 @@ func _physics_process(dt):
 				hook()
 			else:
 				destroy()
-		
+	
 	if isHooked:
+		if not move_and_collide(direction * dt * SPEED): # platform disappeared
+			destroy()
+			return
+		
 		var rope = position - Player.position
 		if rope.length() >= ropeLength:
 			var ropeDir = rope.normalized()

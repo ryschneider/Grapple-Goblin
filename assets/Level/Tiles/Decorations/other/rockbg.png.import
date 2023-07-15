@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj206ue3xqikh"
-path="res://.godot/imported/crystalfloorspikes.png-b62e244d27cb90f7b05083d87198557e.ctex"
+uid="uid://1hslhuyy2d6e"
+path="res://.godot/imported/rockbg.png-bf826b8e8a061f253dd6e0ac6dabf972.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Level/Tiles/Background/other/crystalfloorspikes.png"
-dest_files=["res://.godot/imported/crystalfloorspikes.png-b62e244d27cb90f7b05083d87198557e.ctex"]
+source_file="res://assets/Level/Tiles/Decorations/other/rockbg.png"
+dest_files=["res://.godot/imported/rockbg.png-bf826b8e8a061f253dd6e0ac6dabf972.ctex"]
 
 [params]
 

@@ -1,15 +1,12 @@
-[gd_resource type="TileSet" load_steps=21 format=3 uid="uid://bqamqd2q5hb2w"]
+[gd_resource type="TileSet" load_steps=18 format=3 uid="uid://bqamqd2q5hb2w"]
 
 [ext_resource type="Texture2D" uid="uid://irm7a6w17umj" path="res://assets/Level/Tiles/Platforms/firetilesv2-full.png" id="1_y4mxx"]
 [ext_resource type="Texture2D" uid="uid://4ea6esgio77e" path="res://assets/Level/Tiles/Platforms/icetilesv1-full.png" id="2_8xh87"]
 [ext_resource type="Texture2D" uid="uid://cc5kn1g3vqeom" path="res://assets/Level/Tiles/Platforms/crystaltilesv1-full.png" id="3_kvklv"]
-[ext_resource type="Texture2D" uid="uid://cflj8remrljl2" path="res://assets/Level/Tiles/background.png" id="3_tkdvo"]
 [ext_resource type="Texture2D" uid="uid://chh4tca4vv2kj" path="res://assets/Level/Tiles/Platforms/rocktilesv1-full.png" id="4_qnlym"]
 [ext_resource type="Texture2D" uid="uid://wn5vncvhgtu" path="res://assets/Level/Tiles/decorations.png" id="5_f1xbe"]
 [ext_resource type="Texture2D" uid="uid://b33vmh1buv3mt" path="res://assets/Level/Tiles/firedecorations.png" id="6_j4yqa"]
-[ext_resource type="Texture2D" uid="uid://fw3rdmc1cra2" path="res://assets/Level/Tiles/firebackground.png" id="6_smuc5"]
 [ext_resource type="Texture2D" uid="uid://bxatjm10deccc" path="res://assets/Level/Tiles/icedecorations.png" id="7_ynv3c"]
-[ext_resource type="Texture2D" uid="uid://bdr8kurylidm1" path="res://assets/Level/Tiles/icebackground.png" id="10_l2unj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hg8w7"]
 resource_name = "fire platform"
@@ -310,40 +307,6 @@ texture = ExtResource("2_8xh87")
 2:2/0/terrains_peering_bit/left_side = 1
 2:2/0/terrains_peering_bit/top_left_corner = 1
 2:2/0/terrains_peering_bit/top_side = 1
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7vnv"]
-resource_name = "other bg"
-texture = ExtResource("3_tkdvo")
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-3:0/0 = 0
-3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:0/0/physics_layer_0/angular_velocity = 0.0
-1:1/0 = 0
-1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:1/0/physics_layer_0/angular_velocity = 0.0
-2:1/0 = 0
-2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:1/0/physics_layer_0/angular_velocity = 0.0
-3:1/0 = 0
-3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:1/0/physics_layer_0/angular_velocity = 0.0
-1:2/0 = 0
-1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:2/0/physics_layer_0/angular_velocity = 0.0
-2:2/0 = 0
-2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:2/0/physics_layer_0/angular_velocity = 0.0
-3:2/0 = 0
-3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:2/0/physics_layer_0/angular_velocity = 0.0
-2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bbh3d"]
 resource_name = "crystal platform"
@@ -850,73 +813,14 @@ texture = ExtResource("5_f1xbe")
 12:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 12:1/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wafes"]
-resource_name = "fire bg"
-texture = ExtResource("6_smuc5")
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-3:0/0 = 0
-3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:0/0/physics_layer_0/angular_velocity = 0.0
-1:1/0 = 0
-1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:1/0/physics_layer_0/angular_velocity = 0.0
-2:1/0 = 0
-2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:1/0/physics_layer_0/angular_velocity = 0.0
-3:1/0 = 0
-3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:1/0/physics_layer_0/angular_velocity = 0.0
-1:2/0 = 0
-1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:2/0/physics_layer_0/angular_velocity = 0.0
-2:2/0 = 0
-2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:2/0/physics_layer_0/angular_velocity = 0.0
-3:2/0 = 0
-3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:2/0/physics_layer_0/angular_velocity = 0.0
-2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2j855"]
+resource_name = "fire hazards"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_55rmu"]
-resource_name = "ice bg"
-texture = ExtResource("10_l2unj")
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-3:0/0 = 0
-3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:0/0/physics_layer_0/angular_velocity = 0.0
-1:1/0 = 0
-1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:1/0/physics_layer_0/angular_velocity = 0.0
-2:1/0 = 0
-2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:1/0/physics_layer_0/angular_velocity = 0.0
-3:1/0 = 0
-3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:1/0/physics_layer_0/angular_velocity = 0.0
-1:2/0 = 0
-1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:2/0/physics_layer_0/angular_velocity = 0.0
-2:2/0 = 0
-2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:2/0/physics_layer_0/angular_velocity = 0.0
-3:2/0 = 0
-3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:2/0/physics_layer_0/angular_velocity = 0.0
-2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_84tfr"]
+resource_name = "ice hazards"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xmmug"]
+resource_name = "other hazards"
 
 [resource]
 physics_layer_0/collision_layer = 3
@@ -934,9 +838,9 @@ sources/0 = SubResource("TileSetAtlasSource_hg8w7")
 sources/1 = SubResource("TileSetAtlasSource_3us3y")
 sources/2 = SubResource("TileSetAtlasSource_bbh3d")
 sources/3 = SubResource("TileSetAtlasSource_jm0ia")
-sources/5 = SubResource("TileSetAtlasSource_bu3rc")
-sources/6 = SubResource("TileSetAtlasSource_t0fbe")
-sources/7 = SubResource("TileSetAtlasSource_4ixrw")
-sources/8 = SubResource("TileSetAtlasSource_wafes")
-sources/9 = SubResource("TileSetAtlasSource_55rmu")
-sources/10 = SubResource("TileSetAtlasSource_m7vnv")
+sources/4 = SubResource("TileSetAtlasSource_bu3rc")
+sources/5 = SubResource("TileSetAtlasSource_t0fbe")
+sources/6 = SubResource("TileSetAtlasSource_4ixrw")
+sources/7 = SubResource("TileSetAtlasSource_2j855")
+sources/8 = SubResource("TileSetAtlasSource_84tfr")
+sources/9 = SubResource("TileSetAtlasSource_xmmug")

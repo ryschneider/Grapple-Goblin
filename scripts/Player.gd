@@ -15,16 +15,19 @@ var GRAVITY = 980
 
 const MAX_CLIP = 10
 
+const JUMP_QUEUE_TIME = 6.0 / 60.0
+
 var moveVel = Vector2()
 var momentumVel = Vector2()
 
 @onready var Hook = get_node("../Hook")
 
 func die():
-#	position = Vector2()
 	get_tree().reload_current_scene()
 
 var direction = 0
+var jumpQueued = false
+var jumpQueueTime = 0.0
 func _physics_process(delta):
 	if not is_on_floor():
 		momentumVel.y += GRAVITY * delta
@@ -36,14 +39,26 @@ func _physics_process(delta):
 	elif Input.is_action_just_released("grapple"):
 		Hook.destroy()
 
-	if Input.is_action_just_pressed("jump"):
+	if jumpQueued:
+		jumpQueueTime += delta
+		if jumpQueueTime > JUMP_QUEUE_TIME:
+			jumpQueued = false
+	
+	if Input.is_action_just_pressed("jump") or jumpQueued:
 		if is_on_floor():
 			$AudioStreamPlayer2D.play()
+			if jumpQueued: jumpQueued = false
+			
 			momentumVel.y += FLOOR_JUMP
 		elif Hook.isHooked:
 			$AudioStreamPlayer2D.play()
+			if jumpQueued: jumpQueued = false
+			
 			momentumVel.y += GRAPPLE_JUMP
 			Hook.destroy()
+		elif not jumpQueued:
+			jumpQueued = true
+			jumpQueueTime = 0
 
 #	var direction = Input.get_axis("move_left", "move_right")
 	# handle inputs with priority for movement direction just pressed
