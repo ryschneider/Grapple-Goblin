@@ -9,6 +9,16 @@ extends Node2D
 @export var teleportStart = Vector2()
 @export var teleportEnd = Vector2()
 
+var teleported = false
+
+func teleportToStart():
+	player.position = teleportStart
+	teleported = true
+
+func teleportToEnd():
+	player.position = teleportEnd
+	teleported = true
+
 func switch(poof=true):
 	fireScene = not fireScene
 	Global.isFireScene = fireScene
@@ -20,12 +30,12 @@ func _ready():
 	fireScene = not fireScene
 	
 	switch(false)
-	player.position = playerStart
+	
+	if not teleported: player.position = playerStart
 	for i in player.get_children():
 		if i is Camera2D:
 			i.queue_free()
 	$Camera2D.reparent(player, false)
-
 
 func _process(delta):
 	if Input.is_action_just_pressed("switch_dimension") and not player.dead:

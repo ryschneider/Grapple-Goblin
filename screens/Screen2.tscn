@@ -11,10 +11,11 @@ size = Vector2(64.5, 301)
 
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_uyce1")
-playerStart = Vector2(-800, -150)
+playerStart = Vector2(-725, -130)
+teleportStart = Vector2(-870, -130)
 
 [node name="Camera2D" parent="." instance=ExtResource("2_8u4u0")]
-limit_left = -875
+limit_left = -890
 limit_right = 800
 limit_bottom = 350
 
@@ -42,7 +43,7 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
-position = Vector2(-438.5, -106.5)
+position = Vector2(-477.5, -106)
 shape = SubResource("RectangleShape2D_18pgo")
 
 [node name="NextScreen" type="Area2D" parent="."]

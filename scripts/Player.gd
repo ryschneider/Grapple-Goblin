@@ -179,7 +179,7 @@ func _physics_process(delta):
 	# kill if off camera
 #	if position.x+LIMIT_GRACE < $Camera2D.limit_left or position.x-LIMIT_GRACE > $Camera2D.limit_right\
 #		or position.y+LIMIT_GRACE < $Camera2D.limit_top or position.y-LIMIT_GRACE > $Camera2D.limit_bottom:
-	if $Camera2D:
+	if has_node("Camera2D"):
 		if position.y < $Camera2D.limit_top or position.y > $Camera2D.limit_bottom:
 			restart()
 

@@ -144,5 +144,4 @@ position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_1hfgo")
 
 [connection signal="area_entered" from="Player/CollisionShape2D/Area2D" to="Player" method="_on_area_2d_area_entered"]
-[connection signal="body_entered" from="Player/CollisionShape2D/Area2D" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_shape_entered" from="Player/CollisionShape2D/Area2D" to="Player" method="_on_area_2d_body_shape_entered"]
