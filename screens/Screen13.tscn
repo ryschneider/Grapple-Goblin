@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpe1dsvp2fklj"]
+[gd_scene load_steps=8 format=3 uid="uid://dpe1dsvp2fklj"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_ledn8"]
 [ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_f871q"]
@@ -6,8 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b555e1bxlwhv8" path="res://objects/Saw.tscn" id="4_av81i"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="5_y5wmq"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="6_oaxnk"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bb3j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5grm"]
 size = Vector2(64.5, 251)
@@ -47,10 +45,6 @@ script = ExtResource("6_oaxnk")
 position = Vector2(0, 1500)
 collision_layer = 8
 collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorder"]
-scale = Vector2(10, 10)
-shape = SubResource("WorldBoundaryShape2D_1bb3j")
 
 [node name="NextScreen" type="Area2D" parent="."]
 position = Vector2(0, 1)
