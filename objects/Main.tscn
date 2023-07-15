@@ -84,6 +84,8 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cuiim")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [node name="Screen1" parent="." instance=ExtResource("14_o1gn3")]
 
 [node name="PlayerNode" type="Node2D" parent="."]
@@ -123,8 +125,6 @@ shape = SubResource("RectangleShape2D_1hfgo")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_nkno8")
 animation = &"Jump"
-
-[node name="Camera2D" type="Camera2D" parent="PlayerNode/Player"]
 
 [node name="Area2D" type="Area2D" parent="PlayerNode/Player"]
 collision_layer = 0

@@ -9,6 +9,7 @@
 script = ExtResource("1_d36fw")
 
 [node name="BackgroundMap" type="TileMap" parent="."]
+visible = false
 tile_set = ExtResource("1_ftkki")
 format = 2
 layer_0/name = "toggle"
