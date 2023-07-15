@@ -1,0 +1,138 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba4b67x1wjtql"]
+
+[ext_resource type="Script" path="res://scripts/level_select.gd" id="1_ejulp"]
+[ext_resource type="Theme" uid="uid://dpi00ggkpyt4u" path="res://resources/levels.tres" id="2_jt7pf"]
+
+[node name="level_select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ejulp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 516.0
+offset_bottom = 516.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 400)
+layout_mode = 2
+columns = 5
+
+[node name="1" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "1"
+
+[node name="2" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "2"
+
+[node name="3" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "3"
+
+[node name="4" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "4"
+
+[node name="5" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "5"
+
+[node name="6" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "6"
+
+[node name="7" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "7"
+
+[node name="8" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "8"
+
+[node name="9" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "9"
+
+[node name="10" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "10"
+
+[node name="11" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "11"
+
+[node name="12" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "12"
+
+[node name="13" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "13"
+
+[node name="14" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "14"
+
+[node name="15" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "15"
+
+[node name="16" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "16"
+
+[node name="17" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "17"
+
+[node name="18" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "18"
+
+[node name="19" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "19"
+
+[node name="20" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("2_jt7pf")
+text = "20"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 100)
+layout_mode = 2
+text = "Back"
