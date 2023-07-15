@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="1_ftkki"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="2_6ms6y"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="3_x6yug"]
-[ext_resource type="PackedScene" uid="uid://b555e1bxlwhv8" path="res://objects/Saw.tscn" id="4_jq5cm"]
+[ext_resource type="PackedScene" path="res://objects/Saw.tscn" id="4_jq5cm"]
 [ext_resource type="Texture2D" uid="uid://ckh5o7jtrv0pk" path="res://assets/Level/Other/knight.png" id="6_cme6w"]
 [ext_resource type="Texture2D" uid="uid://cwqfgdjejvsmk" path="res://assets/Level/Other/cliffrope.png" id="7_srbws"]
 
