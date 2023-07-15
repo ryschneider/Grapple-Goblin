@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cirifw83h4ms7" path="res://assets/Level/New Assets not in game yet/pixil-frame-0 (9).png" id="1_0j6kg"]
 [ext_resource type="Script" path="res://objects/Snowball.gd" id="1_w61a5"]
-[ext_resource type="Texture2D" uid="uid://d260ftnm1acff" path="res://assets/Level/Other/Boulder.png" id="2_oeqij"]
+[ext_resource type="Texture2D" uid="uid://22qdupmc7xk" path="res://assets/Level/Other/Boulder.png" id="2_oeqij"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ya6ja"]
 radius = 8.0
