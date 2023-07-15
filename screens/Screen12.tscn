@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwliibt5f0jff"]
+[gd_scene load_steps=8 format=3 uid="uid://b4y26iilwisfb"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_isqi5"]
 [ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_i5b4p"]
@@ -44,11 +44,9 @@ position = Vector2(737, -296)
 
 [node name="Saw3" parent="." instance=ExtResource("6_q18id")]
 position = Vector2(603, -296)
-scale = Vector2(7, 7)
 
 [node name="Saw4" parent="." instance=ExtResource("6_q18id")]
 position = Vector2(3380, -195)
-scale = Vector2(7, 7)
 
 [node name="PreviousScreen" type="Area2D" parent="."]
 scale = Vector2(2, 2)
