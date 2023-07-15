@@ -11,10 +11,10 @@ extends Node2D
 
 func switch(poof=true):
 	fireScene = not fireScene
+	Global.isFireScene = fireScene
 	for i in get_children():
 		if i is TileMap:
 			i.switch(fireScene, poof)
-	$Background.switch(fireScene)
 
 func _ready():
 	fireScene = not fireScene
