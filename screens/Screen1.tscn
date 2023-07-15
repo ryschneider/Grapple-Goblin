@@ -9,6 +9,8 @@
 [node name="Screen1" type="Node2D"]
 script = ExtResource("1_d36fw")
 
+[node name="Area2D" type="Area2D" parent="."]
+
 [node name="Background" parent="." instance=ExtResource("2_6ms6y")]
 
 [node name="Saw" parent="." instance=ExtResource("4_jq5cm")]
