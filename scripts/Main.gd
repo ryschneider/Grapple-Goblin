@@ -1,7 +1,7 @@
 extends Node2D
 
 const NUM_SCREENS = 21
-var screens = ["res://screens/Template.tscn"]
+var screens = ["res://screens/test.tscn"]
 func _ready():
 	for i in range(NUM_SCREENS):
 		screens.push_back("res://screens/Screen" + str(i+1) + ".tscn")
