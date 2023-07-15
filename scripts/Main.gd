@@ -17,6 +17,3 @@ func loadScreen(id):
 func _ready():
 	loadScreen(7)
 	loadScreen(2)
-
-func _process(delta):
-	pass
