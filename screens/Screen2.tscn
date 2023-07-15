@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="5_4ksvu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18pgo"]
-size = Vector2(64.5, 301)
+size = Vector2(30.5, 301)
 
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_uyce1")
@@ -53,5 +53,5 @@ collision_layer = 32
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
-position = Vector2(232.25, -24.25)
+position = Vector2(249.25, -24.25)
 shape = SubResource("RectangleShape2D_18pgo")
