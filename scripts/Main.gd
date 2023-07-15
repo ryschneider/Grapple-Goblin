@@ -10,7 +10,7 @@ func loadScreen(id):
 	currentScreen = id
 	var screenLoad = load(screens[id])
 	for c in get_children():
-		if c != $PlayerNode:
+		if c != $Player and c != $Hook and c != $HookLine:
 			c.queue_free()
 	add_child(screenLoad.instantiate())
 
