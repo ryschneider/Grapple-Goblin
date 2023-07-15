@@ -6,7 +6,7 @@
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="4_3uphl"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="5_4ksvu"]
 
-[node name="Screen2" type="Node2D"]
+[node name="Screen" type="Node2D"]
 script = ExtResource("1_uyce1")
 playerStart = Vector2(-675, -150)
 

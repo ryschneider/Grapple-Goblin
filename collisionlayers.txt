@@ -1,0 +1,9 @@
+1 - terrain
+2 - hook
+3 - death screen
+4 - instant death
+5 - prev screen
+6 - next screen
+7 - pick up hook
+
+
