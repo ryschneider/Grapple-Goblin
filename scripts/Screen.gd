@@ -24,9 +24,9 @@ func _process(delta):
 	cameraController(0)
 
 func cameraController(followLineX):
-	if $Camera2D.position.x > followLineX && staticCamera == false:
-		$Camera2D.reparent(player,false)
+	if player.position.x > followLineX && staticCamera == false:
+		$Camera2D.position = player.position
+		$Camera2D.position.y = $Camera2D.position.y - 200
 	else:
-		$Camera2D.reparent(screenNode,false)
 		$Camera2D.position = Vector2(0, 0)
 

@@ -11,6 +11,8 @@ playerStart = Vector2(-550, 250)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-12, -14)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="Background" parent="." instance=ExtResource("2_2mcj0")]
 
