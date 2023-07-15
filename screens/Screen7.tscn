@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://busmejq27qfqk"]
+[gd_scene load_steps=8 format=3 uid="uid://dbw62grswjtwe"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_pyepu"]
+[ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_028xp"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="2_d7ms7"]
 [ext_resource type="PackedScene" path="res://objects/Saw.tscn" id="3_oa4ew"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="4_h72g6"]
@@ -10,6 +11,8 @@
 
 [node name="Screen1" type="Node2D"]
 script = ExtResource("1_pyepu")
+
+[node name="Camera2D" parent="." instance=ExtResource("2_028xp")]
 
 [node name="Background" parent="." instance=ExtResource("2_d7ms7")]
 

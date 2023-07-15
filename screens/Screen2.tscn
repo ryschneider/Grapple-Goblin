@@ -11,11 +11,8 @@ script = ExtResource("1_uyce1")
 playerStart = Vector2(-550, 250)
 
 [node name="Camera2D" parent="." instance=ExtResource("2_8u4u0")]
-enabled = false
-limit_left = -1000
-limit_top = -500
-limit_right = 5000
-limit_bottom = 500
+limit_left = -700
+limit_bottom = 350
 
 [node name="Background" parent="." instance=ExtResource("2_2mcj0")]
 
