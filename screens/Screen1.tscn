@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhsjfpa1k5plq"]
+[gd_scene load_steps=9 format=3 uid="uid://bhsjfpa1k5plq"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_d36fw"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="1_ftkki"]
@@ -17,7 +17,7 @@ script = ExtResource("1_d36fw")
 
 [node name="Saw" parent="." instance=ExtResource("4_jq5cm")]
 texture_filter = 1
-position = Vector2(145, -131)
+position = Vector2(231, -474)
 scale = Vector2(4, 4)
 
 [node name="ForegroundMap" type="TileMap" parent="."]
@@ -46,6 +46,7 @@ texture = ExtResource("7_srbws")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(0.8, 0.8)
+
 [node name="WorldBorder" type="Area2D" parent="."]
 position = Vector2(0, 1500)
 collision_layer = 8
