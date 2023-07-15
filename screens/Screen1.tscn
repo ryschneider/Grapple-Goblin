@@ -14,7 +14,7 @@ size = Vector2(35.2727, 63.6364)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aduq8"]
 size = Vector2(64.5, 301)
 
-[node name="Screen" type="Node2D"]
+[node name="Screen3" type="Node2D"]
 script = ExtResource("1_d36fw")
 teleportEnd = Vector2(2180, 210)
 
