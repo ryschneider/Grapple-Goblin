@@ -5,14 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="3_08k4x"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="4_utw8l"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="5_ge8xp"]
-[ext_resource type="PackedScene" uid="uid://cuo6od7gdkxxs" path="res://objects/Snowball.tscn" id="6_k21uo"]
+[ext_resource type="PackedScene" uid="uid://ddv6mb6emo23k" path="res://objects/Snowball.tscn" id="6_k21uo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1rj5v"]
 size = Vector2(64.5, 440.5)
 
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_17em7")
-playerStart = Vector2(0, 550)
+playerStart = Vector2(-130, 550)
 
 [node name="Camera2D" parent="." instance=ExtResource("2_oixnv")]
 limit_left = -140

@@ -13,7 +13,7 @@ size = Vector2(64.5, 251)
 
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_5nh22")
-playerStart = Vector2(0, -100)
+playerStart = Vector2(-430, 0)
 
 [node name="Camera2D" parent="." instance=ExtResource("2_y7xf8")]
 limit_left = -440
