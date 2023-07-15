@@ -7,10 +7,7 @@
 
 [node name="Screen2" type="Node2D"]
 script = ExtResource("1_uyce1")
-<<<<<<< Updated upstream
 playerStart = Vector2(-675, -150)
-=======
->>>>>>> Stashed changes
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-12, -14)

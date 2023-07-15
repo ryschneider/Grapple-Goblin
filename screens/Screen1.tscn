@@ -1,19 +1,11 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=9 format=3 uid="uid://bhsjfpa1k5plq"]
-=======
-[gd_scene load_steps=7 format=3 uid="uid://bhsjfpa1k5plq"]
->>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_d36fw"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="1_ftkki"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="2_6ms6y"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="3_x6yug"]
-<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://ckh5o7jtrv0pk" path="res://assets/Level/Other/knight.png" id="6_cme6w"]
 [ext_resource type="Texture2D" uid="uid://cwqfgdjejvsmk" path="res://assets/Level/Other/cliffrope.png" id="7_srbws"]
-=======
-[ext_resource type="PackedScene" uid="uid://b555e1bxlwhv8" path="res://objects/Saw.tscn" id="4_jq5cm"]
->>>>>>> Stashed changes
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bb3j"]
 
