@@ -151,6 +151,7 @@ func _physics_process(delta):
 		moveVel.y = 0
 		momentumVel.y = 0
 	
+	print(is_on_floor())
 	# animation stuff
 	if not dead:
 		if not is_on_floor():
@@ -197,9 +198,19 @@ func _on_area_2d_area_entered(area):
 	elif area.collision_layer & PREV_LAYER:
 		if not dead:
 			get_parent().prevScreen()
+		else:
+			hide()
+			velocity = Vector2()
+			moveVel = Vector2()
+			momentumVel = Vector2()
 	elif area.collision_layer & NEXT_LAYER:
 		if not dead:
 			get_parent().nextScreen()
+		else:
+			hide()
+			velocity = Vector2()
+			moveVel = Vector2()
+			momentumVel = Vector2()
 
 func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body is TileMap:
