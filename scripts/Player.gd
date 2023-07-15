@@ -22,13 +22,21 @@ var momentumVel = Vector2()
 
 @onready var Hook = get_node("../Hook")
 
+const DEATH_TIME = 2
+var died = false
+var diedTime = 0
 func die():
-	get_tree().reload_current_scene()
+	died = true
+	diedTime = 0
+	if $AnimatedSprite2D.animation != "Dead":
+		$AnimatedSprite2D.play("Dead")
 
 var direction = 0
 var jumpQueued = false
 var jumpQueueTime = 0.0
 func _physics_process(delta):
+	if died: return
+	
 	if not is_on_floor():
 		momentumVel.y += GRAVITY * delta
 	else:

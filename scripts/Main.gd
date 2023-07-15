@@ -2,7 +2,7 @@ extends Node2D
 
 const screens = ["res://screens/Screen1.tscn"]
 
-var currentScreen = 0
+var currentScreen
 
 func loadScreen(id):
 	if currentScreen == id: return
