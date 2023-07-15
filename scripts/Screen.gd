@@ -17,6 +17,9 @@ func switch(poof=true):
 func _ready():
 	switch(false)
 	player.position = playerStart
+	for i in player.get_children():
+		if i is Camera2D:
+			i.queue_free()
 	$Camera2D.reparent(player, false)
 
 
