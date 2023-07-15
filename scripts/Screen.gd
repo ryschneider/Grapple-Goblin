@@ -1,9 +1,9 @@
 extends Node2D
 
-var fireScene = false
 @onready var player = get_node("../Player")
 @onready var screenNode = get_node(".")
 
+@export var fireScene = false
 @export var staticCamera = false
 @export var playerStart = Vector2()
 
