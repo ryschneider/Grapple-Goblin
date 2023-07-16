@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvif42ghaytam"]
+[gd_scene load_steps=8 format=3 uid="uid://cvif42ghaytam"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_uyce1"]
 [ext_resource type="PackedScene" uid="uid://b6uny0lwh4s0l" path="res://objects/Background.tscn" id="2_2mcj0"]
@@ -8,6 +8,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18pgo"]
 size = Vector2(30.5, 301)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vadwl"]
 
 [node name="Screen3" type="Node2D"]
 script = ExtResource("1_uyce1")
@@ -57,3 +59,24 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
 position = Vector2(249.25, -24.25)
 shape = SubResource("RectangleShape2D_18pgo")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = -356.0
+offset_top = -126.0
+offset_right = -49.0
+offset_bottom = 9.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vadwl")
+
+[node name="Intro" type="Label" parent="MarginContainer/Panel"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 18.0
+offset_right = 317.0
+offset_bottom = 148.0
+text = "Hmm... there's a large hole here,
+better jump over it using
+SPACEBAR."

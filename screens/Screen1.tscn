@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhsjfpa1k5plq"]
+[gd_scene load_steps=11 format=3 uid="uid://bhsjfpa1k5plq"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_d36fw"]
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="1_ftkki"]
@@ -13,6 +13,8 @@ size = Vector2(35.2727, 63.6364)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aduq8"]
 size = Vector2(64.5, 301)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg3ki"]
 
 [node name="Screen3" type="Node2D"]
 script = ExtResource("1_d36fw")
@@ -67,3 +69,25 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
 position = Vector2(582.25, 19.5)
 shape = SubResource("RectangleShape2D_aduq8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_top = -338.0
+offset_right = 301.0
+offset_bottom = -150.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dg3ki")
+
+[node name="Intro" type="Label" parent="MarginContainer/Panel"]
+layout_mode = 2
+offset_left = 21.0
+offset_top = 27.0
+offset_right = 314.0
+offset_bottom = 157.0
+text = "You've escaped the castle with the
+ring of multidimensional travel!
+Quickly, venture into the caves to
+secure it in your goblin stash!
+Use WASD to move."

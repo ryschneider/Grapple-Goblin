@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://frsad8hdsmu7"]
+[gd_scene load_steps=10 format=3 uid="uid://frsad8hdsmu7"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_pyepu"]
 [ext_resource type="Texture2D" uid="uid://bkmewrygymlk8" path="res://assets/Level/Goblin/grapplegun.png" id="2_5h7iw"]
@@ -12,6 +12,8 @@ size = Vector2(23.5, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igruw"]
 size = Vector2(64.5, 301)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e40tb"]
 
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_pyepu")
@@ -77,3 +79,46 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
 position = Vector2(469.75, -23.75)
 shape = SubResource("RectangleShape2D_igruw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 52.0
+offset_top = -287.0
+offset_right = 391.0
+offset_bottom = -104.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e40tb")
+
+[node name="Intro" type="Label" parent="MarginContainer/Panel"]
+layout_mode = 2
+offset_left = 21.0
+offset_top = 12.0
+offset_right = 314.0
+offset_bottom = 142.0
+text = "A grappling hook - a surely useful tool
+navigating this cave!
+Aim the direction of your grapple
+with the mouse, and fire by clicking
+and holding LEFT CLICK.
+Release LEFT CLICK to ungrapple."
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+offset_left = 1338.0
+offset_top = -240.0
+offset_right = 1655.0
+offset_bottom = -193.0
+
+[node name="Panel" type="Panel" parent="MarginContainer2"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e40tb")
+
+[node name="Intro" type="Label" parent="MarginContainer2/Panel"]
+layout_mode = 2
+offset_left = 18.0
+offset_top = 10.0
+offset_right = 311.0
+offset_bottom = 36.0
+text = "Good luck, and have fun swinging!"

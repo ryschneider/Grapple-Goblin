@@ -61,7 +61,7 @@ func restartScreen():
 	add_child(sc)
 
 func loadScreen(id):
-#	id -= 1
+	id += 1
 	if currentScreen == id: return
 	
 	currentScreen = id
