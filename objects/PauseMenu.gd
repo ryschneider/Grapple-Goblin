@@ -21,6 +21,7 @@ func _ready():
 	var audio = FileAccess.open("user://audio.txt", FileAccess.READ).get_as_text()
 	if audio == "off":
 		Music.mute()
+		$AudioButton.set_pressed_no_signal(true)
 
 func _on_audio_button_toggled(audioOff):
 	var file = FileAccess.open("user://audio.txt", FileAccess.WRITE)

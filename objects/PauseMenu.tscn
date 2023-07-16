@@ -38,6 +38,7 @@ theme = ExtResource("2_i60xi")
 layout_mode = 2
 
 [node name="Continue" type="Button" parent="VBoxContainer/MarginContainer"]
+z_index = 5
 layout_mode = 2
 text = "Continue"
 
@@ -46,6 +47,7 @@ visible = false
 layout_mode = 2
 
 [node name="Settings" type="Button" parent="VBoxContainer/MarginContainer2"]
+z_index = 5
 layout_mode = 2
 text = "Settings"
 
@@ -53,6 +55,7 @@ text = "Settings"
 layout_mode = 2
 
 [node name="MainMenu" type="Button" parent="VBoxContainer/MarginContainer3"]
+z_index = 5
 layout_mode = 2
 text = "Main Menu"
 
