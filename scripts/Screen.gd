@@ -9,7 +9,9 @@ enum MUSIC { MAIN, BOSS }
 
 @export var fireScene = true
 @export var forceDimension = false
-@export var staticCamera = false
+
+@export var startWithGrapple = true
+
 @export var playerStart = Vector2()
 
 enum DIRECTION { LEFT, RIGHT, UP, DOWN }
@@ -81,6 +83,9 @@ func switch(poof=true):
 			i.switch(fireScene, poof)
 
 func _ready():
+	if startWithGrapple:
+		Global.canGrapple = true
+	
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	
 	if theme == MUSIC.MAIN:

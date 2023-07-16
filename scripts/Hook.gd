@@ -31,7 +31,7 @@ func hook():
 
 var oldPlayerPos = Vector2()
 func shootHook(): # called from Player.gd
-	if Global.canGrapple == true:
+	if Global.canGrapple:
 		direction = (get_global_mouse_position() - Player.position).normalized()
 		position = Player.position + direction # to fix rotation setting in physics
 		oldPlayerPos = Player.position

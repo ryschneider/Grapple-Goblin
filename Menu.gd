@@ -1,6 +1,8 @@
 extends Control
 
 func _ready():
+	Global.canGrapple = false
+	
 	if FileAccess.file_exists("user://save.txt"):
 		$MarginContainer/VBoxContainer/Continue.show()
 		$MarginContainer/VBoxContainer/Play.show()

@@ -11,6 +11,7 @@ size = Vector2(64.5, 301)
 
 [node name="Screen2" type="Node2D"]
 script = ExtResource("1_7a0xx")
+startWithGrapple = false
 playerStart = Vector2(300, 0)
 startTeleportBase = 31
 
