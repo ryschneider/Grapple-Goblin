@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dyajryotewoig"]
+[gd_scene load_steps=10 format=3 uid="uid://dqnfd8o7wkxvu"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_bgqy0"]
 [ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_vu16s"]
@@ -7,7 +7,7 @@
 [ext_resource type="TileSet" uid="uid://bqamqd2q5hb2w" path="res://resources/TileSet.tres" id="5_ilt2k"]
 [ext_resource type="Script" path="res://scripts/IceFireMap.gd" id="6_qy0lw"]
 [ext_resource type="Script" path="res://screens/fallingRocks.gd" id="7_14gj5"]
-[ext_resource type="PackedScene" uid="uid://bh4as3xvyg8no" path="res://objects/Fallingrock.tscn" id="8_b60x3"]
+[ext_resource type="PackedScene" path="res://objects/Fallingrock.tscn" id="8_b60x3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1rj5v"]
 size = Vector2(64.5, 440.5)
