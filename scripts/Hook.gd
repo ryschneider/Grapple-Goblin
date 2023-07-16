@@ -10,6 +10,8 @@ var isHooked = false
 var isTaut = false
 var ropeLength = 0
 
+@export var allowGrapple = false
+
 @onready var Player = get_node("../Player")
 var PinJoint = null
 
@@ -31,7 +33,7 @@ func hook():
 
 var oldPlayerPos = Vector2()
 func shootHook(): # called from Player.gd
-	if Global.canGrapple:
+	if Global.canGrapple or allowGrapple:
 		direction = (get_global_mouse_position() - Player.position).normalized()
 		position = Player.position + direction # to fix rotation setting in physics
 		oldPlayerPos = Player.position
