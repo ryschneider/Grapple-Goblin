@@ -8,6 +8,11 @@ func _ready():
 #	mainTheme.loop_begin = 0
 	pass
 
+func mute():
+	volume_db = -1000
+func unmute():
+	volume_db = 0
+
 func playMain():
 	if stream != mainTheme:
 		stream = mainTheme
