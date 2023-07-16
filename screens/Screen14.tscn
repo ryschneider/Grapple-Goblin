@@ -30,7 +30,7 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
-position = Vector2(-82.5, 138)
+position = Vector2(-233, 130.5)
 shape = SubResource("RectangleShape2D_1rj5v")
 
 [node name="NextScreen" type="Area2D" parent="."]
