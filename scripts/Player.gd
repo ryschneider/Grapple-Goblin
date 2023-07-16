@@ -22,6 +22,7 @@ const HAZARD_LAYER = 1 << (3 - 1)
 const RESTART_LAYER = 1 << (4 - 1)
 const PREV_LAYER = 1 << (5 - 1)
 const NEXT_LAYER = 1 << (6 - 1)
+const PICKUP_LAYER = 1 << (7 - 1)
 
 var moveVel = Vector2()
 var momentumVel = Vector2()
@@ -58,6 +59,8 @@ var direction = 0
 var jumpQueued = false
 var jumpQueueTime = 0.0
 func _physics_process(delta):
+	if $SFX.inPickup(): return
+	
 	if Input.is_action_just_pressed("restart"):
 		restart()
 	
@@ -77,7 +80,7 @@ func _physics_process(delta):
 	if not dead:
 		if Input.is_action_just_pressed("grapple"):
 			Hook.shootHook()
-		elif Input.is_action_just_released("grapple"):
+		elif not Input.is_action_pressed("grapple"):
 			Hook.destroy()
 
 		if jumpQueued:
@@ -231,6 +234,9 @@ func _on_area_2d_area_entered(area):
 			velocity = Vector2()
 			moveVel = Vector2()
 			momentumVel = Vector2()
+	elif area.collision_layer & PICKUP_LAYER:
+		$SFX.playPickup()
+		FileAccess.open("user://cangrapple.txt", FileAccess.WRITE).store_string("yes")
 
 func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body is TileMap:

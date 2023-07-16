@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bdfcg20nyh2yc"]
+[gd_scene load_steps=10 format=3 uid="uid://bdfcg20nyh2yc"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_8u1em"]
 [ext_resource type="Theme" uid="uid://qho5kbeok0m6" path="res://resources/main_menu_buttons.tres" id="2_cvqu3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dnb0x73n5m7fi" path="res://assets/Level/Other/snowman.png" id="4_8b3m4"]
 [ext_resource type="Texture2D" uid="uid://bl4ofskdlqj3e" path="res://assets/Level/Goblin/Goblin-jump.png" id="5_3g1h6"]
 [ext_resource type="Texture2D" uid="uid://bkcshn27xq0uk" path="res://assets/Level/Goblin/knight.png" id="6_r7cwy"]
+[ext_resource type="AudioStream" uid="uid://diy1wb36uhrhe" path="res://assets/SFX/button.wav" id="7_bim68"]
 
 [sub_resource type="SystemFont" id="SystemFont_r5rs4"]
 
@@ -70,10 +71,6 @@ custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 text = "Level Select"
 
-[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Quit"
-
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(259.42, 788.406)
 scale = Vector2(8.125, 8.125)
@@ -94,7 +91,11 @@ position = Vector2(1511.59, 715.942)
 scale = Vector2(3.42188, 3.42188)
 texture = ExtResource("6_r7cwy")
 
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_bim68")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Level Select" to="." method="_on_level_select_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

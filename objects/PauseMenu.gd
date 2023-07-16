@@ -1,11 +1,14 @@
 extends Control
 
 @onready var Music = get_node("../Player/Music")
+@onready var SFX = get_node("../Player/SFX")
 
 func _on_continue_pressed():
+	SFX.playButton()
 	get_parent().unpause()
 
 func _on_settings_pressed():
+	SFX.playButton()
 	pass # Replace with function body.
 
 func _on_main_menu_pressed():
