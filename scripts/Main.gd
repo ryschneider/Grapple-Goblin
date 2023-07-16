@@ -9,11 +9,11 @@ func _ready():
 	for i in range(NUM_SCREENS):
 		screens.push_back("res://screens/Screen" + str(i+1) + ".tscn")
 	
-#	if Global.continueSave:
-#		loadSave()
-#	else:
-#		newGame()
-	loadScreen(3)
+	if Global.continueSave:
+		loadSave()
+	else:
+		newGame()
+#	loadScreen(3)
 
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):

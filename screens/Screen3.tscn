@@ -66,6 +66,7 @@ position = Vector2(938.5, 27.5)
 shape = SubResource("RectangleShape2D_pqvwe")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+z_index = -1
 offset_left = 467.0
 offset_top = -214.0
 offset_right = 788.0
@@ -87,6 +88,7 @@ dimensions with that ring you stole
 by pressing SHIFT."
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
+z_index = -1
 offset_left = 1184.0
 offset_top = -241.0
 offset_right = 1516.0
