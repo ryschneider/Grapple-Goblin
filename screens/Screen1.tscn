@@ -18,6 +18,8 @@ size = Vector2(64.5, 301)
 
 [node name="Screen1" type="Node2D"]
 script = ExtResource("1_d36fw")
+forceDimension = true
+noSwitch = true
 startWithGrapple = false
 endTeleportBase = 224
 

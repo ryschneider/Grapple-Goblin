@@ -7,8 +7,9 @@ extends Node2D
 enum MUSIC { MAIN, BOSS }
 @export var theme = MUSIC.MAIN
 
-@export var fireScene = true
+@export var fireScene = false
 @export var forceDimension = false
+@export var noSwitch = false
 
 @export var startWithGrapple = true
 
@@ -76,6 +77,8 @@ func teleportToEnd():
 	atEnd = true
 
 func switch(poof=true):
+	if noSwitch: return
+	
 	fireScene = not fireScene
 	Global.isFireScene = fireScene
 	for i in get_children():
