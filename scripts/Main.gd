@@ -50,6 +50,7 @@ func saveGame():
 	print("Saving")
 
 func newGame():
+	FileAccess.open("user://cangrapple.txt", FileAccess.WRITE).store_string("no")
 	loadScreen(1) # eg. 7 for Screen7.tscn
 
 
