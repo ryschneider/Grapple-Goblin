@@ -17,7 +17,8 @@ script = ExtResource("1_bgqy0")
 playerStart = Vector2(750, 250)
 
 [node name="Camera2D" parent="." instance=ExtResource("2_vu16s")]
-limit_left = -140
+limit_left = 250
+limit_right = 11000
 limit_bottom = 750
 
 [node name="Background" parent="." instance=ExtResource("3_wvvyu")]
@@ -39,7 +40,7 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
-position = Vector2(-102.5, 137.5)
+position = Vector2(92, 154)
 shape = SubResource("RectangleShape2D_1rj5v")
 
 [node name="NextScreen" type="Area2D" parent="."]
