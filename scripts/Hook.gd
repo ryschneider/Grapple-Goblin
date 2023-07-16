@@ -27,7 +27,7 @@ func destroy():
 	hide()
 
 func hook():
-	SFX.playButton()
+	SFX.playHook()
 	isHooked = true
 	
 	var rope = position - Player.position

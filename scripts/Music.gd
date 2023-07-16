@@ -4,9 +4,9 @@ var mainTheme = preload("res://assets/SFX/RepeatingSong.wav")
 var bossTheme = preload("res://assets/SFX/GameMusic.wav")
 
 func _ready():
-#	mainTheme.loop_mode = AudioStreamWAV.LOOP_FORWARD
-#	mainTheme.loop_begin = 0
 	pass
+
+var offset = 0
 
 func mute():
 	volume_db = -1000
@@ -16,11 +16,14 @@ func unmute():
 func playMain():
 	if stream != mainTheme:
 		stream = mainTheme
-		mainTheme.loop_mode = AudioStreamWAV.LOOP_FORWARD
-		mainTheme.loop_begin = 0
+		offset = 8
 		play()
 
 func playBoss():
 	if stream != bossTheme:
 		stream = bossTheme
+		offset = 0
 		play()
+
+func _on_finished():
+	play(offset)
