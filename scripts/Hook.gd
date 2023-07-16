@@ -74,4 +74,5 @@ func _physics_process(dt):
 			Player.velocity -= ropeDir * Player.velocity.dot(ropeDir)
 			isTaut = true
 		else:
-			isTaut = false
+#			isTaut = false
+			isTaut = true # always taut

@@ -160,10 +160,18 @@ func _physics_process(delta):
 	if not dead:
 		if not is_on_floor():
 			if $AnimatedSprite2D.animation != "Jump":
+#				print("Jump")
+#				print(moveVel)
+#				print(momentumVel)
+#				print()
 				$AnimatedSprite2D.play("Jump")
 		elif direction != 0:
 			$AnimatedSprite2D.play("Run")
 		else:
+#			print("Idle")
+#			print(moveVel)
+#			print(momentumVel)
+#			print()
 			$AnimatedSprite2D.play("Idle")
 	
 	# combine velocities
@@ -173,11 +181,19 @@ func _physics_process(delta):
 	velocity = moveVel + momentumVel
 	move_and_slide()
 	
+#	print("Velocity")
+#	print(velocity)
+#	print()
+	
+	apply_floor_snap()
+	
 	# seperate velocities
 	if moveVel.length() > velocity.length():
 		moveVel *= velocity.length() / moveVel.length()
 #	moveVel = moveDir * min(TOP_SPEED, velocity.dot(moveDir))
-	momentumDir = velocity - moveVel
+	momentumVel = velocity - moveVel
+	
+#	print(momentum)
 	
 	# flips sprite
 	if velocity.x < 0:
