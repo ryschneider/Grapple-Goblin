@@ -8,7 +8,7 @@ func _ready():
 	$Second.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-var time = -10
+var time = -8
 const STAGE_2 = 2
 const PROD_DELAY = 2
 const STAGE_3 = STAGE_2 + 5

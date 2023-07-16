@@ -15,7 +15,7 @@ size = Vector2(90.125, 263.438)
 [node name="Screen3" type="Node2D"]
 script = ExtResource("1_bgqy0")
 theme = 1
-playerStart = Vector2(750, 250)
+playerStart = Vector2(10750, 1500)
 startTeleportBase = 380
 endTeleportBase = 1598
 
