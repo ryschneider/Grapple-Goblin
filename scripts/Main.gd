@@ -5,6 +5,7 @@ var screens = ["res://screens/Template.tscn"]
 
 func _ready():
 	$PauseMenu.hide()
+	$Player/SFX.playButton()
 	
 	for i in range(NUM_SCREENS):
 		screens.push_back("res://screens/Screen" + str(i+1) + ".tscn")

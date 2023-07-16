@@ -152,5 +152,6 @@ shape = SubResource("RectangleShape2D_1hfgo")
 
 [node name="PauseMenu" parent="." instance=ExtResource("17_ipfke")]
 
+[connection signal="finished" from="Player/Music" to="Player/Music" method="_on_finished"]
 [connection signal="area_entered" from="Player/CollisionShape2D/Area2D" to="Player" method="_on_area_2d_area_entered"]
 [connection signal="body_shape_entered" from="Player/CollisionShape2D/Area2D" to="Player" method="_on_area_2d_body_shape_entered"]
