@@ -12,7 +12,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1rj5v"]
 size = Vector2(90.125, 263.438)
 
-[node name="Screen" type="Node2D"]
+[node name="Screen2" type="Node2D"]
 script = ExtResource("1_bgqy0")
 playerStart = Vector2(750, 250)
 

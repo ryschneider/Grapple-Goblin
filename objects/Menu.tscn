@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://bdfcg20nyh2yc"]
+[gd_scene load_steps=12 format=3 uid="uid://bdfcg20nyh2yc"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_8u1em"]
 [ext_resource type="Theme" uid="uid://qho5kbeok0m6" path="res://resources/main_menu_buttons.tres" id="2_cvqu3"]
 [ext_resource type="Texture2D" uid="uid://cx510vsl7hfu6" path="res://assets/Level/Other/logo.png" id="3_u8bvo"]
 [ext_resource type="Texture2D" uid="uid://dnb0x73n5m7fi" path="res://assets/Level/Other/snowman.png" id="4_8b3m4"]
+[ext_resource type="Texture2D" uid="uid://d2s6clm37w56c" path="res://assets/Level/Goblin/Goblin-grapplegun-pickup.png" id="5_1jhoc"]
 [ext_resource type="Texture2D" uid="uid://bl4ofskdlqj3e" path="res://assets/Level/Goblin/Goblin-jump.png" id="5_3g1h6"]
 [ext_resource type="Texture2D" uid="uid://bkcshn27xq0uk" path="res://assets/Level/Goblin/knight.png" id="6_r7cwy"]
+[ext_resource type="Texture2D" uid="uid://bk2rm8iy3gihg" path="res://assets/Level/Other/crown.png" id="6_sttv8"]
 [ext_resource type="AudioStream" uid="uid://diy1wb36uhrhe" path="res://assets/SFX/button.wav" id="7_bim68"]
 
 [sub_resource type="SystemFont" id="SystemFont_r5rs4"]
@@ -66,25 +68,39 @@ custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 text = "New Game"
 
-[node name="Level Select" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="LevelSelect" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 text = "Level Select"
 
 [node name="Logo" type="Sprite2D" parent="."]
-position = Vector2(259.42, 788.406)
+position = Vector2(246.377, 837.681)
 scale = Vector2(8.125, 8.125)
 texture = ExtResource("3_u8bvo")
 
+[node name="loser" type="Node" parent="."]
+
+[node name="Goblinjump" type="Sprite2D" parent="loser"]
+position = Vector2(179, 263)
+scale = Vector2(3.95836, 3.95836)
+texture = ExtResource("5_3g1h6")
+
+[node name="winner" type="Node" parent="."]
+
+[node name="goblin" type="Sprite2D" parent="winner"]
+position = Vector2(152, 266)
+scale = Vector2(5.98453, 5.98453)
+texture = ExtResource("5_1jhoc")
+
+[node name="Crown" type="Sprite2D" parent="winner/goblin"]
+position = Vector2(1.34247, -33.338)
+scale = Vector2(1.2622, 1.2622)
+texture = ExtResource("6_sttv8")
+
 [node name="Snowman" type="Sprite2D" parent="."]
-position = Vector2(279.71, 334.783)
+position = Vector2(1560.87, 353.623)
 scale = Vector2(10.0625, 10.0625)
 texture = ExtResource("4_8b3m4")
-
-[node name="Goblin-jump" type="Sprite2D" parent="."]
-position = Vector2(1670, 344)
-scale = Vector2(2.23438, 2.23438)
-texture = ExtResource("5_3g1h6")
 
 [node name="Knight" type="Sprite2D" parent="."]
 position = Vector2(1511.59, 715.942)
@@ -98,4 +114,4 @@ stream = ExtResource("7_bim68")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Level Select" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/LevelSelect" to="." method="_on_level_select_pressed"]
