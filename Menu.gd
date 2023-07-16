@@ -1,6 +1,9 @@
 extends Control
 
 func _ready():
+	if not Global.firstMainMenu:
+		$ButtonSound.play()
+	Global.firstMainMenu = false
 	Global.canGrapple = false
 	
 	if FileAccess.file_exists("user://save.txt"):
@@ -11,7 +14,7 @@ func _ready():
 	else:
 		$MarginContainer/VBoxContainer/Continue.hide()
 		$MarginContainer/VBoxContainer/Play.custom_minimum_size.y = 300
-		$MarginContainer/VBoxContainer/Play.text = "Play"
+		$MarginContainer/VBoxContainer/Play.text = "New Game"
 
 func _on_play_pressed():
 	Global.continueSave = false
