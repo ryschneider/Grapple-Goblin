@@ -50,7 +50,11 @@ offset_bottom = 755.0
 layout_mode = 2
 theme = ExtResource("2_cvqu3")
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 50
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.129412, 0.541176, 0.313726, 1)
 theme_override_font_sizes/font_size = 98
