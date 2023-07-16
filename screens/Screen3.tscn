@@ -86,7 +86,7 @@ offset_right = 312.0
 offset_bottom = 107.0
 text = "No jumping this gap. Try swapping
 dimensions with that ring you stole
-by pressing SHIFT."
+by pressing SHIFT/RIGHT CLICK            . "
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 z_index = -1
@@ -109,5 +109,5 @@ offset_bottom = 140.0
 text = "The two dimensions, ice and fire, each
 contain their respective red and blue
 platforms.
-Purple platforms will appear in both
+Crystal platforms will appear in both
 dimensions."

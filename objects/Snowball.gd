@@ -1,5 +1,7 @@
 extends Node2D
 
+var right = 1700
+var left = -125
 func switch(fireScene):
 	if fireScene:
 		toFire()
@@ -12,7 +14,9 @@ func _physics_process(_delta):
 		wasFireScene = Global.isFireScene
 		if Global.isFireScene: toFire()
 		else: toIce()
-
+	if position.x > right or position.x < left:
+		queue_free() 
+		
 func toFire():
 	$FireBg.show()
 	$IceBg.hide()
