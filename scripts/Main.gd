@@ -1,7 +1,7 @@
 extends Node2D
 
 const NUM_SCREENS = 21
-var screens = ["res://screens/test.tscn"]
+var screens = ["res://screens/Template.tscn"]
 
 func _ready():
 	$PauseMenu.hide()

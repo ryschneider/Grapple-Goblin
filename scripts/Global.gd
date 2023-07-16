@@ -1,5 +1,5 @@
 extends Node
 
-var canGrapple = true
+var canGrapple = false
 var isFireScene = null
 var continueSave = false
