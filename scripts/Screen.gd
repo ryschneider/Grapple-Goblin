@@ -1,7 +1,11 @@
 extends Node2D
 
 @onready var player = get_node("../Player")
+@onready var music = get_node("../Player/Music")
 @onready var screenNode = get_node(".")
+
+enum MUSIC { MAIN, BOSS }
+@export var theme = MUSIC.MAIN
 
 @export var fireScene = true
 @export var forceDimension = false
@@ -78,6 +82,11 @@ func switch(poof=true):
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_PAUSABLE
+	
+	if theme == MUSIC.MAIN:
+		music.playMain()
+	elif theme == MUSIC.BOSS:
+		music.playBoss()
 	
 	if forceDimension or not Global.isFireScene is bool:
 		fireScene = not fireScene

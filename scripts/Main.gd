@@ -4,18 +4,33 @@ const NUM_SCREENS = 21
 var screens = ["res://screens/test.tscn"]
 
 func _ready():
+	$PauseMenu.hide()
+	
 	for i in range(NUM_SCREENS):
 		screens.push_back("res://screens/Screen" + str(i+1) + ".tscn")
 	
-	if Global.continueSave:
-		loadSave()
-	else:
-		newGame()
-#	loadScreen(1)
+#	if Global.continueSave:
+#		loadSave()
+#	else:
+#		newGame()
+	loadScreen(3)
 
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
 		get_tree().paused = not get_tree().paused
+		
+		if get_tree().paused:
+			for i in $Player.get_children():
+				if i is Camera2D:
+					$PauseMenu.position = i.get_screen_center_position()
+					break
+			$PauseMenu.show()
+		else:
+			$PauseMenu.hide()
+
+func unpause():
+	get_tree().paused = false
+	$PauseMenu.hide()
 
 var currentScreen
 var currentScreenLoad
@@ -35,7 +50,7 @@ func saveGame():
 	print("Saving")
 
 func newGame():
-	loadScreen(1) # eg. 7 for Screen7.tscn
+	loadScreen(0) # eg. 7 for Screen7.tscn
 
 
 func restartScreen():
@@ -46,13 +61,13 @@ func restartScreen():
 	add_child(sc)
 
 func loadScreen(id):
-	id += 1
+#	id += 1
 	if currentScreen == id: return
 	
 	currentScreen = id
 	currentScreenLoad = load(screens[id])
 	for c in get_children():
-		if c != $Player and c != $Hook and c != $HookLine:
+		if c.has_method("teleportToStart"): # if is scene
 			c.queue_free()
 #	add_child(currentScreenLoad.instantiate())
 	call_deferred("add_child", currentScreenLoad.instantiate())
