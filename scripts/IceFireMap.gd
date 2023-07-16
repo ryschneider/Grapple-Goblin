@@ -50,13 +50,14 @@ func switch(fireScene, poof = true):
 			hiddenTiles.push_back(cell)
 			
 			if poof and (source == 0 || source == 1): # only poof platforms
-				var particle
-				if fireScene:
-					particle = Snowflake.instantiate()
-				else:
-					particle = Ember.instantiate()
-				particle.position = cell.xy * 16
-				add_child(particle)
+				if Player.position.distance_to(cell.xy * 16) < 1000:
+					var particle
+					if fireScene:
+						particle = Snowflake.instantiate()
+					else:
+						particle = Ember.instantiate()
+					particle.position = cell.xy * 16
+					add_child(particle)
 	
 	# flip layer 1 tiles
 	for i in FLIP_PAIRS:
