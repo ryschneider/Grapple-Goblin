@@ -4,6 +4,8 @@ const NUM_SCREENS = 21
 var screens = ["res://screens/test.tscn"]
 
 func _ready():
+	$PauseMenu.hide()
+	
 	for i in range(NUM_SCREENS):
 		screens.push_back("res://screens/Screen" + str(i+1) + ".tscn")
 	
@@ -16,6 +18,19 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
 		get_tree().paused = not get_tree().paused
+		
+		if get_tree().paused:
+			for i in $Player.get_children():
+				if i is Camera2D:
+					$PauseMenu.position = i.get_screen_center_position()
+					break
+			$PauseMenu.show()
+		else:
+			$PauseMenu.hide()
+
+func unpause():
+	get_tree().paused = false
+	$PauseMenu.hide()
 
 var currentScreen
 var currentScreenLoad
@@ -51,9 +66,9 @@ func loadScreen(id):
 	
 	currentScreen = id
 	currentScreenLoad = load(screens[id])
-	for c in get_children():
-		if c != $Player and c != $Hook and c != $HookLine:
-			c.queue_free()
+#	for c in get_children():
+#		if c != $Player and c != $Hook and c != $HookLine:
+#			c.queue_free()
 #	add_child(currentScreenLoad.instantiate())
 	call_deferred("add_child", currentScreenLoad.instantiate())
 	

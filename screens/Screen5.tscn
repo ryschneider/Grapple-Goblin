@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://vx6yborph6ej"]
+[gd_scene load_steps=9 format=3 uid="uid://vx6yborph6ej"]
 
 [ext_resource type="Script" path="res://scripts/Screen.gd" id="1_dpl35"]
 [ext_resource type="PackedScene" uid="uid://bx1oxbp1a0lgg" path="res://objects/Camera.tscn" id="2_d8pow"]
@@ -9,6 +9,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncxnx"]
 size = Vector2(64.5, 301)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfaql"]
 
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_dpl35")
@@ -59,3 +61,22 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
 position = Vector2(544.75, 1079.5)
 shape = SubResource("RectangleShape2D_ncxnx")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 578.0
+offset_top = -158.0
+offset_right = 930.0
+offset_bottom = -121.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nfaql")
+
+[node name="Intro" type="Label" parent="MarginContainer/Panel"]
+layout_mode = 2
+offset_left = 26.0
+offset_top = 6.0
+offset_right = 330.0
+offset_bottom = 35.0
+text = "Avoid saw blades and spikes to survive."

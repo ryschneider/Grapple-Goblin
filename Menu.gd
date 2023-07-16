@@ -8,6 +8,8 @@ func _ready():
 		$MarginContainer/VBoxContainer/Play.text = "New Game"
 	else:
 		$MarginContainer/VBoxContainer/Continue.hide()
+		$MarginContainer/VBoxContainer/Play.custom_minimum_size.y = 300
+		$MarginContainer/VBoxContainer/Play.text = "Play"
 
 func _on_play_pressed():
 	Global.continueSave = false
