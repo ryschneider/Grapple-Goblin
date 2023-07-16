@@ -87,3 +87,5 @@ func nextScreen():
 		loadScreen(currentScreen + 1)
 		await get_tree().process_frame
 		get_children()[get_child_count() - 1].teleportToStart()
+	else:
+		get_tree().change_scene_to_file("res://objects/Credits.tscn")
