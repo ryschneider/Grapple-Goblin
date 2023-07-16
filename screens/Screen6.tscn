@@ -81,6 +81,7 @@ position = Vector2(469.75, -23.75)
 shape = SubResource("RectangleShape2D_igruw")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+z_index = -1
 offset_left = 52.0
 offset_top = -287.0
 offset_right = 391.0
@@ -105,6 +106,7 @@ and holding LEFT CLICK.
 Release LEFT CLICK to ungrapple."
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
+z_index = -1
 offset_left = 1338.0
 offset_top = -240.0
 offset_right = 1655.0

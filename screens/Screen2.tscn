@@ -61,6 +61,7 @@ position = Vector2(249.25, -24.25)
 shape = SubResource("RectangleShape2D_18pgo")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+z_index = -1
 offset_left = -356.0
 offset_top = -126.0
 offset_right = -49.0
