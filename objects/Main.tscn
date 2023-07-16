@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dvoeaxt7pbbo"]
+[gd_scene load_steps=22 format=3 uid="uid://dvoeaxt7pbbo"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_cuiim"]
 [ext_resource type="Script" path="res://scripts/HookLine.gd" id="2_i3aqy"]
@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://dasef0456mmto" path="res://assets/Level/Goblin/Goblin-runhalf-rightarm.png" id="11_oqll3"]
 [ext_resource type="Texture2D" uid="uid://cdg70tkaxw82b" path="res://assets/Level/Goblin/Goblin-runfull-rightarm.png" id="12_1ir6f"]
 [ext_resource type="AudioStream" uid="uid://cb2ol5n4fc13v" path="res://assets/SFX/jump.wav" id="13_5m1e0"]
+[ext_resource type="Script" path="res://objects/PauseMenu.gd" id="15_bdekf"]
+[ext_resource type="Theme" uid="uid://dh6bxteu5ltau" path="res://resources/pause_buttons.tres" id="15_fgvk5"]
+[ext_resource type="Script" path="res://scripts/SFX.gd" id="15_h85ma"]
+[ext_resource type="Script" path="res://scripts/Music.gd" id="15_irsmb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nf3rq"]
 radius = 3.0
@@ -128,8 +132,14 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_nkno8")
 animation = &"Run"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+[node name="SFX" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("13_5m1e0")
+script = ExtResource("15_h85ma")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="Player"]
+process_mode = 3
+stream = ExtResource("13_5m1e0")
+script = ExtResource("15_irsmb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-1.5, -2.5)
@@ -144,5 +154,59 @@ collision_mask = 125
 position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_1hfgo")
 
+[node name="PauseMenu" type="Control" parent="."]
+process_mode = 3
+z_index = 2
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("15_bdekf")
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+layout_mode = 0
+offset_left = -952.0
+offset_top = -470.0
+offset_right = 997.0
+offset_bottom = 547.0
+color = Color(0.0196078, 0.0196078, 0.0196078, 0.360784)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu"]
+layout_mode = 0
+offset_left = -400.0
+offset_top = -180.0
+offset_right = 400.0
+offset_bottom = 266.0
+theme = ExtResource("15_fgvk5")
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="Continue" type="Button" parent="PauseMenu/VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Continue"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PauseMenu/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Settings" type="Button" parent="PauseMenu/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "Settings"
+
+[node name="MarginContainer3" type="MarginContainer" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="MainMenu" type="Button" parent="PauseMenu/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+text = "Main Menu"
+
 [connection signal="area_entered" from="Player/CollisionShape2D/Area2D" to="Player" method="_on_area_2d_area_entered"]
 [connection signal="body_shape_entered" from="Player/CollisionShape2D/Area2D" to="Player" method="_on_area_2d_body_shape_entered"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/MarginContainer/Continue" to="PauseMenu" method="_on_continue_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/MarginContainer2/Settings" to="PauseMenu" method="_on_settings_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/MarginContainer3/MainMenu" to="PauseMenu" method="_on_main_menu_pressed"]
