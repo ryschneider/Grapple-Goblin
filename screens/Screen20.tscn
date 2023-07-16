@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://wsnx8flgrx5o" path="res://assets/Level/Tiles/Decorations/other/arrow.png" id="6_yixpr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1rj5v"]
-size = Vector2(70.25, 224.75)
+size = Vector2(70.25, 365)
 
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_5a3h7")
@@ -19,7 +19,7 @@ startTeleportBase = 540
 scale = Vector2(1.19433, 2.27859)
 limit_left = 1000
 limit_top = -160
-limit_right = 3765
+limit_right = 3762
 limit_bottom = 2000
 
 [node name="Background" parent="." instance=ExtResource("3_h4byg")]
@@ -31,7 +31,7 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousScreen"]
-position = Vector2(1921, 156.5)
+position = Vector2(1916, 156)
 shape = SubResource("RectangleShape2D_1rj5v")
 
 [node name="NextScreen" type="Area2D" parent="."]
@@ -41,7 +41,7 @@ collision_layer = 32
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextScreen"]
-position = Vector2(977, 470.75)
+position = Vector2(975, 415.75)
 shape = SubResource("RectangleShape2D_1rj5v")
 
 [node name="ForegroundMap" type="TileMap" parent="."]

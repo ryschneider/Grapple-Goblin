@@ -19,7 +19,7 @@ endTeleportBase = -706
 
 [node name="Camera2D" parent="." instance=ExtResource("2_oixnv")]
 limit_left = -400
-limit_right = 2000
+limit_right = 1880
 limit_bottom = 750
 
 [node name="Background" parent="." instance=ExtResource("3_08k4x")]
