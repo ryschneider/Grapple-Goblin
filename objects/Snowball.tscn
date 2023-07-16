@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cirifw83h4ms7" path="res://assets/Level/New Assets not in game yet/pixil-frame-0 (9).png" id="1_0j6kg"]
 [ext_resource type="Script" path="res://objects/Snowball.gd" id="1_w61a5"]
-[ext_resource type="Texture2D" uid="uid://22qdupmc7xk" path="res://assets/Level/Other/Boulder.png" id="2_oeqij"]
+[ext_resource type="Texture2D" uid="uid://x26yfjenixcq" path="res://assets/Level/Tiles/Decorations/other/fireball.png" id="2_tm75i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ya6ja"]
 radius = 8.0
@@ -15,7 +15,7 @@ script = ExtResource("1_w61a5")
 
 [node name="FireBg" type="Sprite2D" parent="."]
 scale = Vector2(10, 10)
-texture = ExtResource("2_oeqij")
+texture = ExtResource("2_tm75i")
 
 [node name="IceBg" type="Sprite2D" parent="."]
 scale = Vector2(10, 10)
