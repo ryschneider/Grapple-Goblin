@@ -59,7 +59,9 @@ var direction = 0
 var jumpQueued = false
 var jumpQueueTime = 0.0
 func _physics_process(delta):
-	if $SFX.inPickup(): return
+	if $SFX.inPickup():
+		$AnimatedSprite2D.play("Pickup")
+		return
 	
 	if Input.is_action_just_pressed("restart"):
 		restart()
