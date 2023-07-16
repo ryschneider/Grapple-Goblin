@@ -15,6 +15,24 @@ func _ready():
 		$MarginContainer/VBoxContainer/Continue.hide()
 		$MarginContainer/VBoxContainer/Play.custom_minimum_size.y = 300
 		$MarginContainer/VBoxContainer/Play.text = "New Game"
+	
+	if FileAccess.file_exists("user://showlevels.txt"):
+		$MarginContainer/VBoxContainer/LevelSelect.show()
+	else:
+		$MarginContainer/VBoxContainer/LevelSelect.hide()
+	
+	if FileAccess.file_exists("user://beatgame.txt"):
+		$winner/goblin.show()
+		$winner/goblin/Crown.show()
+		$loser/Goblinjump.hide()
+	else:
+		$loser/Goblinjump.show()
+		$winner/goblin.hide()
+		$winner/goblin/Crown.hide()
+
+func _process(delta):
+	if Input.is_action_just_pressed("levelselect"):
+		$MarginContainer/VBoxContainer/LevelSelect.show()
 
 func _on_play_pressed():
 	Global.continueSave = false

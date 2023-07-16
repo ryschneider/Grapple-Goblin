@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dvoeaxt7pbbo"]
+[gd_scene load_steps=21 format=3 uid="uid://dvoeaxt7pbbo"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_cuiim"]
 [ext_resource type="Script" path="res://scripts/HookLine.gd" id="2_i3aqy"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://0xmoj35mt7vo" path="res://assets/Level/Goblin/Goblin-jumpstart.png" id="7_2k4q8"]
 [ext_resource type="Texture2D" uid="uid://bl4ofskdlqj3e" path="res://assets/Level/Goblin/Goblin-jump.png" id="8_gqpk4"]
 [ext_resource type="Texture2D" uid="uid://de51reotmp4ta" path="res://assets/Level/Goblin/Goblin-runfull-leftarm.png" id="9_3fd56"]
+[ext_resource type="Texture2D" uid="uid://d2s6clm37w56c" path="res://assets/Level/Goblin/Goblin-grapplegun-pickup.png" id="10_ly87l"]
 [ext_resource type="Texture2D" uid="uid://dtele23flyla8" path="res://assets/Level/Goblin/Goblin-runhalf-leftarm.png" id="10_sciwe"]
 [ext_resource type="Texture2D" uid="uid://dasef0456mmto" path="res://assets/Level/Goblin/Goblin-runhalf-rightarm.png" id="11_oqll3"]
 [ext_resource type="Texture2D" uid="uid://cdg70tkaxw82b" path="res://assets/Level/Goblin/Goblin-runfull-rightarm.png" id="12_1ir6f"]
@@ -56,6 +57,14 @@ animations = [{
 }],
 "loop": false,
 "name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ly87l")
+}],
+"loop": true,
+"name": &"Pickup",
 "speed": 5.0
 }, {
 "frames": [{
@@ -128,7 +137,7 @@ script = ExtResource("5_uastf")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_nkno8")
-animation = &"Run"
+animation = &"Idle"
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="Player"]
 script = ExtResource("15_h85ma")
