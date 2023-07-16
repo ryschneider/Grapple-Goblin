@@ -8,14 +8,17 @@ func _ready():
 	pass
 
 func playJump():
+	volume_db = -5
 	stream = jump
 	play()
 
 func playButton():
+	volume_db = -5
 	stream = button
 	play()
 
 func playPickup():
+	volume_db = 0
 	stream = pickup
 	play()
 
