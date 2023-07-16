@@ -16,6 +16,8 @@ func unmute():
 func playMain():
 	if stream != mainTheme:
 		stream = mainTheme
+		mainTheme.loop_mode = AudioStreamWAV.LOOP_FORWARD
+		mainTheme.loop_begin = 0
 		play()
 
 func playBoss():

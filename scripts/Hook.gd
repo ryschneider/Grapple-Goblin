@@ -13,6 +13,7 @@ var ropeLength = 0
 @export var allowGrapple = false
 
 @onready var Player = get_node("../Player")
+@onready var SFX = get_node("../Player/SFX")
 var PinJoint = null
 
 func _ready():
@@ -26,6 +27,7 @@ func destroy():
 	hide()
 
 func hook():
+	SFX.playButton()
 	isHooked = true
 	
 	var rope = position - Player.position

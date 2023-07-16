@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dvoeaxt7pbbo"]
+[gd_scene load_steps=20 format=3 uid="uid://dvoeaxt7pbbo"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_cuiim"]
 [ext_resource type="Script" path="res://scripts/HookLine.gd" id="2_i3aqy"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://dtele23flyla8" path="res://assets/Level/Goblin/Goblin-runhalf-leftarm.png" id="10_sciwe"]
 [ext_resource type="Texture2D" uid="uid://dasef0456mmto" path="res://assets/Level/Goblin/Goblin-runhalf-rightarm.png" id="11_oqll3"]
 [ext_resource type="Texture2D" uid="uid://cdg70tkaxw82b" path="res://assets/Level/Goblin/Goblin-runfull-rightarm.png" id="12_1ir6f"]
-[ext_resource type="AudioStream" uid="uid://cb2ol5n4fc13v" path="res://assets/SFX/jump.wav" id="13_5m1e0"]
 [ext_resource type="Script" path="res://scripts/SFX.gd" id="15_h85ma"]
 [ext_resource type="Script" path="res://scripts/Music.gd" id="15_irsmb"]
 [ext_resource type="PackedScene" uid="uid://dqqvsineiu3l8" path="res://objects/PauseMenu.tscn" id="17_ipfke"]
@@ -132,12 +131,10 @@ sprite_frames = SubResource("SpriteFrames_nkno8")
 animation = &"Run"
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="Player"]
-stream = ExtResource("13_5m1e0")
 script = ExtResource("15_h85ma")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="Player"]
 process_mode = 3
-stream = ExtResource("13_5m1e0")
 script = ExtResource("15_irsmb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]

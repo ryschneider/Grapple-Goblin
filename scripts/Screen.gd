@@ -83,6 +83,9 @@ func switch(poof=true):
 			i.switch(fireScene, poof)
 
 func _ready():
+	if FileAccess.file_exists("user://cangrapple.txt"):
+		if FileAccess.open("user://cangrapple.txt", FileAccess.READ).get_as_text() == "yes":
+			Global.canGrapple = true
 	if startWithGrapple:
 		Global.canGrapple = true
 	
