@@ -9,11 +9,11 @@ func _ready():
 	for i in range(NUM_SCREENS):
 		screens.push_back("res://screens/Screen" + str(i+1) + ".tscn")
 	
-	if Global.continueSave:
-		loadSave()
-	else:
-		newGame()
-#	loadScreen(1)
+#	if Global.continueSave:
+#		loadSave()
+#	else:
+#		newGame()
+	loadScreen(3)
 
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
@@ -61,14 +61,14 @@ func restartScreen():
 	add_child(sc)
 
 func loadScreen(id):
-	id += 1
+#	id += 1
 	if currentScreen == id: return
 	
 	currentScreen = id
 	currentScreenLoad = load(screens[id])
-#	for c in get_children():
-#		if c != $Player and c != $Hook and c != $HookLine:
-#			c.queue_free()
+	for c in get_children():
+		if c.has_method("teleportToStart"): # if is scene
+			c.queue_free()
 #	add_child(currentScreenLoad.instantiate())
 	call_deferred("add_child", currentScreenLoad.instantiate())
 	
