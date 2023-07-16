@@ -75,3 +75,4 @@ script = ExtResource("7_14gj5")
 [node name="rock" parent="." instance=ExtResource("8_b60x3")]
 position = Vector2(119, -47)
 scale = Vector2(0.990966, 0.924902)
+constant_force = Vector2(-100, 0)
