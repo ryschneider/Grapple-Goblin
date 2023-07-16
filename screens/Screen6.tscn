@@ -105,7 +105,7 @@ navigating this cave!
 Aim the direction of your grapple
 with the mouse, and fire by clicking
 and holding LEFT CLICK.
-Release LEFT CLICK to ungrapple."
+You can jump while grappling!"
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 z_index = -1
@@ -121,11 +121,11 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_e40tb")
 
 [node name="Intro" type="Label" parent="MarginContainer2/Panel"]
 layout_mode = 2
-offset_left = 18.0
-offset_top = 10.0
-offset_right = 311.0
-offset_bottom = 36.0
-text = "Good luck, and have fun swinging!"
+offset_left = 25.0
+offset_top = 11.0
+offset_right = 318.0
+offset_bottom = 37.0
+text = "Good luck, and have fun grappling!"
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
