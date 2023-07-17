@@ -18,3 +18,4 @@ func _on_body_entered(body):
 
 func _on_area_entered(area):
 	Global.canGrapple = true # Replace with
+	queue_free()
