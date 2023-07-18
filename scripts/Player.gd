@@ -26,7 +26,7 @@ const PICKUP_LAYER = 1 << (7 - 1)
 
 var moveVel = Vector2()
 var momentumVel = Vector2()
-
+var pickedUP = false
 @onready var Hook = get_node("../Hook")
 
 func _ready():
@@ -59,7 +59,8 @@ var direction = 0
 var jumpQueued = false
 var jumpQueueTime = 0.0
 func _physics_process(delta):
-	if $SFX.inPickup():
+	if $SFX.inPickup() and (not pickedUP):
+		#pickedUP = true
 		$AnimatedSprite2D.play("Pickup")
 		return
 	
@@ -266,3 +267,8 @@ func clipUp():
 	
 	die() # failed to clip out
 
+
+
+func _on_animated_sprite_2d_animation_finished():
+	if $AnimatedSprite2D.animation == "Pickup":
+		pickedUP = true
