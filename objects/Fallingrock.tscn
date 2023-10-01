@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bh4as3xvyg8no"]
+[gd_scene load_steps=5 format=3 uid="uid://dmig7cfnsqkg8"]
 
 [ext_resource type="Script" path="res://objects/Fallingrock.gd" id="1_5tvah"]
 [ext_resource type="Texture2D" uid="uid://x26yfjenixcq" path="res://assets/Level/Tiles/Decorations/other/fireball.png" id="2_8trpf"]
@@ -8,17 +8,20 @@
 radius = 8.0
 
 [node name="RigidBody2D" type="RigidBody2D"]
+scale = Vector2(4, 4)
 collision_layer = 4
 collision_mask = 4
 mass = 13.89
-gravity_scale = 1.1
+gravity_scale = 0.3
 linear_velocity = Vector2(-200, 0)
 script = ExtResource("1_5tvah")
 
 [node name="FireBg" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
 texture = ExtResource("2_8trpf")
 
 [node name="IceBg" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
 texture = ExtResource("3_nig8g")
 
 [node name="Area2D" type="Area2D" parent="."]

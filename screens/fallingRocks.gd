@@ -3,7 +3,7 @@ extends Node2D
 var left = 0 
 var right = 11000
 var lastRockTime = 0
-var newRockTime = 0.05
+var newRockTime = 0.5
 var rock = preload("res://objects/Fallingrock.tscn")
 
 #@onready var rock = get_node("../rock")

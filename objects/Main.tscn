@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cdg70tkaxw82b" path="res://assets/Level/Goblin/Goblin-runfull-rightarm.png" id="12_1ir6f"]
 [ext_resource type="Script" path="res://scripts/SFX.gd" id="15_h85ma"]
 [ext_resource type="Script" path="res://scripts/Music.gd" id="15_irsmb"]
-[ext_resource type="PackedScene" uid="uid://dqqvsineiu3l8" path="res://objects/PauseMenu.tscn" id="17_ipfke"]
+[ext_resource type="PackedScene" path="res://objects/PauseMenu.tscn" id="17_ipfke"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nf3rq"]
 radius = 3.0
